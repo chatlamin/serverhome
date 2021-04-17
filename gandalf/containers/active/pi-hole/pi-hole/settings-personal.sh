@@ -12,11 +12,11 @@ EXPLORE=pihole/pihole
 #Тэг образа старый
 TAG_OLD=v5.7
 #Тэг образа новый
-TAG_NEW=v5.7
+TAG_NEW=v5.8
 
 ##
 #DNS сервер для самого pi-hole
-PIHOLE_DNS="192.168.88.1;8.8.8.8;8.8.4.4"
+PIHOLE_DNS="8.8.8.8;8.8.4.4"
 #Пароль от вэб-интерфейса
 WEBPASSWORD=eeleBarudah0an
 
