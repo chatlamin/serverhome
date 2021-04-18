@@ -14,12 +14,15 @@ source ../../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo --preserve-env=VERSION bash "$0" "$@"
 
-#https://github.com/alexanderfefelov/docker-backpack/blob/main/utils/cleanup/prune-all.sh
-read -p "WARNING: The data will be deleted. Press Y to continue: " -n 1 -r
-echo
-if [ "$REPLY" != "Y" ]; then
-  exit
-fi
+docker run \
+    --name $CONTAINER_NAME \
+    --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
+    --detach \
+    --restart unless-stopped \
+    --volume $CONTAINER_NAME-conf:/etc/influxdb \
+    --volume $CONTAINER_NAME-data:/var/lib/influxdb \
+    --env TZ=Europe/Moscow \
+    --publish 8086:8086 \
+    $IMAGE_TARGET
 
-docker volume rm $CONTAINER_NAME-conf
-docker volume rm $CONTAINER_NAME-data
+docker logs --follow $CONTAINER_NAME
