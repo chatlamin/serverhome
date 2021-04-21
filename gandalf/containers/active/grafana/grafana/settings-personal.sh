@@ -27,6 +27,10 @@ DB_PASSWORD=shohg5Sei3igh3
 DB_CONTAINER_NAME=mysql
 # Пароль от root
 MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
+# Логин дэфолтного администратора
+ADMIN_USER=admin
+# Пароль дэфолтного администратора
+ADMIN_PASS=Thee2veih0hoo4
 
 #--------------------------------------------------------------------
 # End settings
