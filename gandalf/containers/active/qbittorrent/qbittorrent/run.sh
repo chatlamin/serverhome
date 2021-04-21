@@ -30,8 +30,3 @@ docker run \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
-
-#   --env WEBUI_PORT=65004 \
-#    --publish 65004:65004 \
-#    --publish 6881:6881 \
-#    --publish 6881:6881/udp \
