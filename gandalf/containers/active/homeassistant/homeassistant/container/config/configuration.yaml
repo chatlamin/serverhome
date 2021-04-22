@@ -1,0 +1,40 @@
+homeassistant:
+  name: homeassistant
+  latitude: 55.753995
+  longitude: 37.614069
+  elevation: 120
+  unit_system: metric
+  time_zone: Europe/Moscow
+  packages: !include_dir_merge_named blocks/packages
+
+# Ручная конфигурация
+# Отображение панели настроек в интерфейсе
+config:
+# Сканирование доступных устройств в сети
+ssdp:
+# Включение карты
+map:
+# Включение поддержки приложения
+mobile_app:
+# Отслеживание солнца
+sun:
+# API для предоставления информации о системе и ее компонентах
+system_health:
+# Сенсор для отображения последней версии НА
+updater:
+# Потоковое изображение с камер
+stream:
+# Включение истории
+history:
+# Включение журнала
+logbook:
+
+lovelace:
+  mode: yaml
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+# Читай эти блоки из других файлов
+recorder: !include blocks/recorder.yaml
