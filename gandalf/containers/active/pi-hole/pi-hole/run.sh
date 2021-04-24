@@ -19,7 +19,7 @@ docker run \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
-    --restart unless-stopped \
+    --restart always \
     --network host \
     --volume $CONTAINER_NAME-conf1:/etc/pihole \
     --volume $CONTAINER_NAME-conf2:/etc/dnsmasq.d \

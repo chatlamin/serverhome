@@ -19,7 +19,7 @@ docker run \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
-    --restart unless-stopped \
+    --restart always \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume /var/run/docker.sock:/var/run/docker.sock \

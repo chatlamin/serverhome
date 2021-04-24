@@ -19,7 +19,7 @@ docker run \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
-    --restart unless-stopped \
+    --restart always \
     --cap-add sys_nice \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
