@@ -7,6 +7,9 @@
 source settings-personal.sh
 source ../../settings/settings-common.sh
 
+# optional
+source settings-secret.sh
+
 #--------------------------------------------------------------------
 # End settings
 #--------------------------------------------------------------------
