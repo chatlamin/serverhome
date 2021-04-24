@@ -26,8 +26,8 @@ docker run \
     --restart unless-stopped \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
-    --volume $HA:/hass-config \
     --volume $CONTAINER_NAME-conf:/config \
+    --volume $CONTAINERS_VOLUMES/$HA:/hass-config \
     --publish 65007:3218 \
     $IMAGE_TARGET
 

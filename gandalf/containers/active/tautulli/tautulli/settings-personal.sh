@@ -14,7 +14,7 @@ TAG_NEW=v2.7.1
 
 ##
 # Путь к логам plex
-PLEX_LOGS=/var/lib/docker/volumes/plex-conf/_data/Library/Application\ Support/Plex\ Media\ Server/Logs
+PLEX_LOGS=plex-conf/_data/Library/Application\ Support/Plex\ Media\ Server/Logs
 
 #--------------------------------------------------------------------
 # End settings

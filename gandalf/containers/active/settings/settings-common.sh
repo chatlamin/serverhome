@@ -18,6 +18,9 @@ export CONTAINER_NAME=$NAME
 export DOCKER_HOST_DOMEN=$(hostname | awk -F '.' '{print $2"."$3}')
 # Имя хост-машины
 export HOST_NAME_HOST=$(hostname)
+# Путь в точкам монтирования томов докер-контейнеров на хост машине
+CONTAINERS_VOLUMES=/var/lib/docker/volumes
+
 
 #--------------------------------------------------------------------
 # End settings

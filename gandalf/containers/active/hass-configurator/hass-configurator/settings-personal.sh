@@ -14,7 +14,7 @@ TAG_NEW=0.4.0-x86_64
 
 ##
 # Путь к конфигам homeassistant
-HA=/var/lib/docker/volumes/homeassistant-conf/_data
+HA=homeassistant-conf/_data
 
 #--------------------------------------------------------------------
 # End settings
