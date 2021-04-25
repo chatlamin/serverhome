@@ -1,3 +1,4 @@
 gandalf/experemental/
 gandalf/containers/active/plex/plex/settings-secret.sh
 gandalf/containers/active/dkron/tools/populator/
+gandalf/containers/active/healthchecks/tools/populator/

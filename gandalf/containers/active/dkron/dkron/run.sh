@@ -31,6 +31,6 @@ docker run \
     --server \
     --bootstrap-expect=1 \
     --ui=true \
-    --node-name=$CONTAINER_NAME-server.$HOST_NAME_HOST
+    --node-name=$CONTAINER_NAME.$DOCKER_HOST_DOMEN
 
 docker logs --follow $CONTAINER_NAME

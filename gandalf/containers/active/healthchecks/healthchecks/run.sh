@@ -23,8 +23,8 @@ docker run \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume $CONTAINER_NAME-conf:/config \
-    --env SITE_ROOT=http://$CONTAINER_NAME.$DOCKERHOST \
-    --env SITE_NAME=$CONTAINER_NAME \
+    --env SITE_ROOT=http://$CONTAINER_NAME.$DOCKER_HOST_DOMEN \
+    --env SITE_NAME=$CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --env ALLOWED_HOSTS="*" \
     --env SUPERUSER_EMAIL=$SUPERUSER_EMAIL \
     --env SUPERUSER_PASSWORD=$SUPERUSER_PASSWORD \

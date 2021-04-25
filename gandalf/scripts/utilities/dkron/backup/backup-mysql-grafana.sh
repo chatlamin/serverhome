@@ -18,10 +18,12 @@ DB_PASSWORD=Dae2fiiChohng0
 DB_DATABASE=grafana
 # Путь сохранения дампа
 BACKUP_DIR=/data2/backup/mysql/$DB_DATABASE
-#Удалить копии старше COUNT дней
+# Удалить копии старше COUNT дней
 COUNT=7
-#Минимальный размер бэкапа в килобайтах
+# Минимальный размер бэкапа в килобайтах
 SIZE_MIN=100
+# healthchecks ping url
+PING_URL=http://healthchecks.serverhome.home:8000/ping/501abdc3-25d6-4567-a8a7-1e7b50c6d467
 
 #--------------------------------------------------------------------
 #End settings
@@ -62,6 +64,7 @@ if
 [ $CURRENT -gt $SIZE_MIN ];
 then
 echo "ВСЕ ХОРОШО: Размер записанного архива нормальный"
+curl -m 10 --retry 5 $PING_URL
 else
 echo "ОШИБКА: Размер записанного архива менее $SIZE_MIN киллобайт"
 exit 1

@@ -31,6 +31,8 @@ docker run \
     --env WEBPASSWORD=$WEBPASSWORD \
     --env QUERY_LOGGING=true \
     --env SKIPGRAVITYONBOOT=1 \
+    --env WEB_PORT=65010 \
+    --publish 65010:65010 \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
