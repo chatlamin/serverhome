@@ -8,9 +8,9 @@ export NAME=dkron
 # Репозиторий
 EXPLORE=dkron/dkron
 # Тэг образа старый
-TAG_OLD=v3.1.6
+TAG_OLD=v3.1.5
 # Тэг образа новый
-TAG_NEW=v3.1.6
+TAG_NEW=v3.1.5
 
 #--------------------------------------------------------------------
 # End settings
