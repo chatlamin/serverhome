@@ -4,8 +4,10 @@
 # Settings
 #---------------------------------------------------------------------
 
+# Тип OS
+export OS=linux
 # Основная архитектура
-ARCHITECTURE=$(dpkg --print-architecture)
+export ARCHITECTURE=$(dpkg --print-architecture)
 # Образ итоговый
 IMAGE_TARGET=chatlamin/$ARCHITECTURE-$NAME:latest
 # Образ источника старый
