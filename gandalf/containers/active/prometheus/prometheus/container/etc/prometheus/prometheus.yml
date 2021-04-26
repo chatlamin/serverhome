@@ -16,3 +16,15 @@ scrape_configs:
     scheme: http
     static_configs:
     - targets: ['grafana.serverhome.home:3000']
+
+  - job_name: 'pi-hole_exporter'
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+    - targets: ['pi-hole_exporter.serverhome.home:65100']
+
+  - job_name: 'qbittorrent_exporter'
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+    - targets: ['qbittorrent_exporter.serverhome.home:65101']
