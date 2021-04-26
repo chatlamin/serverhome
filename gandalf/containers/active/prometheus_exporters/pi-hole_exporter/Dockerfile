@@ -6,7 +6,9 @@ ARG ARCHITECTURE
 FROM $IMAGE_BUILDER as builder
 WORKDIR /go/src/github.com/eko/pihole-exporter
 RUN mkdir -p /tmp
+
 ARG VERS
+
 ADD https://github.com/eko/pihole-exporter/archive/v$VERS.tar.gz /tmp/pihole_exporter.tar.gz
 RUN tar -C /tmp -xvf /tmp/pihole_exporter.tar.gz
 RUN ls /tmp
