@@ -16,6 +16,10 @@ source ../../settings/settings-common.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker run \
+    --log-driver=loki \
+    --log-opt loki-url=$LOKI_URL \
+    --log-opt loki-retries=5 \
+    --log-opt loki-batch-size=400 \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
@@ -30,6 +34,7 @@ docker run \
     --env GF_DATABASE_PASSWORD=$DB_PASSWORD \
     --env GF_SECURITY_ADMIN_USER=$ADMIN_USER \
     --env GF_SECURITY_ADMIN_PASSWORD=$ADMIN_PASS \
+    --env GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=$DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH \
     --publish 3000:3000 \
     $IMAGE_TARGET
 

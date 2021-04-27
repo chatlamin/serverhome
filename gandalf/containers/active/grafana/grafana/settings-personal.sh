@@ -31,6 +31,8 @@ MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
 ADMIN_USER=admin
 # Пароль дэфолтного администратора
 ADMIN_PASS=Thee2veih0hoo4
+# Путь к дэфолтному дэшборду
+DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/etc/grafana/provisioning/dashboards/common/telegraf-system.json
 
 #--------------------------------------------------------------------
 # End settings

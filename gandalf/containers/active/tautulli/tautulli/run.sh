@@ -18,6 +18,10 @@ source ../../settings/settings-common.sh
 echo $CONTAINERS_VOLUMES/"$PLEX_LOGS"
 
 docker run \
+    --log-driver=loki \
+    --log-opt loki-url=$LOKI_URL \
+    --log-opt loki-retries=5 \
+    --log-opt loki-batch-size=400 \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \

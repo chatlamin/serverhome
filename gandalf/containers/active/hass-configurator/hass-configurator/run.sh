@@ -16,6 +16,10 @@ source ../../settings/settings-common.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker run \
+    --log-driver=loki \
+    --log-opt loki-url=$LOKI_URL \
+    --log-opt loki-retries=5 \
+    --log-opt loki-batch-size=400 \
     --health-timeout=5s \
     --health-retries=3 \
     --health-interval=30s \

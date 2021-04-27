@@ -22,6 +22,8 @@ export DOCKER_HOST_DOMEN=$(hostname | awk -F '.' '{print $2"."$3}')
 export HOST_NAME_HOST=$(hostname)
 # Путь в точкам монтирования томов докер-контейнеров на хост машине
 CONTAINERS_VOLUMES=/var/lib/docker/volumes
+# Путь к Loki для отправки логов
+LOKI_URL=http://loki.$DOCKER_HOST_DOMEN:3100/loki/api/v1/push
 
 
 #--------------------------------------------------------------------
