@@ -22,5 +22,5 @@ if [ "$REPLY" != "Y" ]; then
   exit
 fi
 
-docker volume rm $CONTAINER_NAME-conf1
-docker volume rm $CONTAINER_NAME-conf2
+docker volume rm $CONTAINER_NAME-conf
+docker volume rm $CONTAINER_NAME-data

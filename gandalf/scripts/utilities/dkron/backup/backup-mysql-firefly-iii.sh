@@ -24,6 +24,8 @@ COUNT=7
 SIZE_MIN=100
 # healthchecks ping url
 PING_URL=http://healthchecks.serverhome.home:8000/ping/65001802-b3f3-4b62-aa4d-0b4f4b142772
+# Путь для удаленной копии
+REMOTE_DIR=/data2/duplicati-backups/_data/mysql/firefly-iii
 
 #--------------------------------------------------------------------
 #End settings
@@ -69,3 +71,12 @@ else
 echo "ОШИБКА: Размер записанного архива менее $SIZE_MIN киллобайт"
 exit 1
 fi
+
+# Удаляем все из папки для удаленной копии
+sudo rm -dr $REMOTE_DIR/*
+
+# Создаем папку для удаленной копии
+sudo mkdir -p $REMOTE_DIR/$TIMESTAMP
+
+# Делаем удаленную копию
+sudo cp -a $BACKUP_DIR/$TIMESTAMP/. $REMOTE_DIR/$TIMESTAMP

@@ -21,8 +21,8 @@ docker run \
     --detach \
     --restart always \
     --network host \
-    --volume $CONTAINER_NAME-conf1:/etc/pihole \
-    --volume $CONTAINER_NAME-conf2:/etc/dnsmasq.d \
+    --volume $CONTAINER_NAME-conf:/etc/dnsmasq.d \
+    --volume $CONTAINER_NAME-data:/etc/pihole \
     --env TZ=Europe/Moscow \
     --env IPv6=false \
     --env DNSMASQ_LISTENING=local \
