@@ -31,10 +31,21 @@ logbook:
 
 lovelace:
   mode: yaml
+  resources:
+   - url: /local/vacuum-card.js # https://github.com/denysdovhan/vacuum-card/releases/tag/v1.17.0
+     type: module
+   - url: /local/mini-humidifier-bundle.js # https://github.com/artem-sedykh/mini-humidifier/releases/tag/v2.3.2
+     type: module
 
 # Text to speech
 tts:
   - platform: google_translate
 
 # Читай эти блоки из других файлов
-recorder: !include blocks/recorder.yaml
+recorder: !include blocks/recorder.yaml # База данных
+vacuum: !include blocks/vacuum.yaml # Пылесосы
+fan: !include blocks/fan.yaml # Увлажнители
+
+# Читай эти блоки из других файлов (весь каталог)
+automation: !include_dir_merge_list blocks/automation
+sensor: !include_dir_merge_list blocks/sensors # Сенсоры

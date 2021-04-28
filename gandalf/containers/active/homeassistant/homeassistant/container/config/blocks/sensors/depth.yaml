@@ -1,0 +1,6 @@
+  - platform: template
+    sensors:
+      humidifier_1_depth:
+        value_template: "{{ state_attr('fan.humidifier_1', 'depth') | float / 1.2 }}"  # https://github.com/aholstenson/miio/issues/131#issuecomment-376881949
+        unit_of_measurement: '%'
+        friendly_name: 'Увлажнитель уровень воды'
