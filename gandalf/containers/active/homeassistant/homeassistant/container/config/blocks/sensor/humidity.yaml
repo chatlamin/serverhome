@@ -1,0 +1,15 @@
+  - platform: template
+    sensors:
+      humidifier_1_humidity:
+        value_template: "{{ state_attr('fan.humidifier_1', 'humidity') }}"
+        unit_of_measurement: '%'
+        device_class: humidity
+        friendly_name: 'Увлажнитель влажность'
+
+  - platform: template
+    sensors:
+      homeassistant_1_humidity:
+        value_template: "{{ state_attr('weather.homeassistant_1', 'humidity') }}"
+        unit_of_measurement: '%'
+        device_class: humidity
+        friendly_name: 'Погода влажность'

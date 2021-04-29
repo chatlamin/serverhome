@@ -1,0 +1,7 @@
+  - name: privat
+    platform: telegram
+    chat_id: !secret privat_chat_id
+
+  - name: group
+    platform: telegram
+    chat_id: !secret group_chat_id

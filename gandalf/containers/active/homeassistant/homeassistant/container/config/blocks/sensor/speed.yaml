@@ -1,0 +1,6 @@
+  - platform: template
+    sensors:
+      homeassistant_1_wind_speed:
+        value_template: "{{ state_attr('weather.homeassistant_1', 'wind_speed') }}"
+        unit_of_measurement: 'м/с'
+        friendly_name: 'Погода скорость ветра'

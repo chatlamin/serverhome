@@ -10,7 +10,7 @@ EXPLORE=grafana/grafana
 # Тэг образа старый
 TAG_OLD=7.5.4
 # Тэг образа новый
-TAG_NEW=7.5.4
+TAG_NEW=7.5.5
 
 ##
 # Тип базы данных
