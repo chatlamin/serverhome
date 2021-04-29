@@ -1,0 +1,11 @@
+  - platform: gismeteo
+    monitored_conditions:
+      - weather
+      - temperature
+      - wind_speed
+      - wind_bearing
+      - humidity
+      - pressure
+      - clouds
+      - rain
+      - snow

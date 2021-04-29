@@ -39,6 +39,8 @@ lovelace:
   resources:
    - url: /local/vacuum-card.js # https://github.com/denysdovhan/vacuum-card/releases/tag/v1.17.0
      type: module
+   - url: /local/simple-weather-card-bundle.js # https://github.com/kalkih/simple-weather-card/releases/tag/v0.8.1
+     type: module
    - url: /local/mini-humidifier-bundle.js # https://github.com/artem-sedykh/mini-humidifier/releases/tag/v2.3.2
      type: module
 

@@ -31,3 +31,12 @@ cards:
                   - attribute: cleaning_time
                     unit: minutes
                     subtitle: Cleaning time
+
+      - type: horizontal-stack
+        cards:
+            - type: custom:simple-weather-card
+              entity: weather.homeassistant_1
+              custom:
+                - temp: sensor.gismeteo_temperature
+                - humidity: sensor.gismeteo_humidity
+                - wind_speed: sensor.gismeteo_wind_speed
