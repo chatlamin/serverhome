@@ -10,7 +10,7 @@ EXPLORE=linuxserver/bookstack
 # Тэг образа старый
 TAG_OLD=version-v21.04.2
 # Тэг образа новый
-TAG_NEW=version-v21.04.2
+TAG_NEW=version-v21.04.3
 
 ##
 # URL приложения
