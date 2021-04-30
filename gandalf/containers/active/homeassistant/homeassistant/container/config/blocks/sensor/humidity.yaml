@@ -9,7 +9,7 @@
   - platform: template
     sensors:
       homeassistant_1_humidity:
-        value_template: "{{ state_attr('weather.homeassistant_1', 'humidity') }}"
+        value_template: "{{ state_attr('weather.gismeteo', 'humidity') }}"
         unit_of_measurement: '%'
         device_class: humidity
         friendly_name: 'Погода влажность'

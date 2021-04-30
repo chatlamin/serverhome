@@ -1,8 +1,8 @@
 homeassistant:
   name: homeassistant
-  latitude: 55.753995
-  longitude: 37.614069
-  elevation: 120
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: !secret elevation
   unit_system: metric
   time_zone: Europe/Moscow
   customize: !include_dir_merge_named blocks/customize
