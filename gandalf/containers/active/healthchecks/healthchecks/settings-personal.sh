@@ -13,7 +13,7 @@ TAG_OLD=version-v1.19.0
 TAG_NEW=version-v1.19.0
 
 ##
-# Логин он вэб-интерфейса
+# Логин от вэб-интерфейса
 SUPERUSER_EMAIL=admin@serverhome.home
 # Пароль от вэб-интерфейса
 SUPERUSER_PASSWORD=chorooK0ue7uwe
