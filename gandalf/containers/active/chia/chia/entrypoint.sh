@@ -2,7 +2,16 @@ cd /chia-blockchain
 
 . ./activate
 
+# https://github.com/pmenager/chia-docker/blob/main/entrypoint.sh
+
 chia init
+
+if [[ -z $farmer_ca_directory || $farmer_ca_directory == "null" ]]; then
+    echo "nothing to do"
+else
+    echo "Using farmer certificate directory: $farmer_ca_directory"
+    chia init -c ${farmer_ca_directory}
+fi
 
 if [[ ${keys} == "generate" ]]; then
   echo "to use your own keys pass them as a text file -v /path/to/keyfile:/path/in/container and -e keys=\"/path/in/container\""
@@ -40,5 +49,8 @@ if [[ ${testnet} == "true" ]]; then
     chia configure --set-fullnode-port ${var.full_node_port}
   fi
 fi
+
+chia configure --set-log-level=INFO
+while ! tail -f ~/.chia/mainnet/log/debug.log ; do sleep 1 ; done
 
 while true; do sleep 30; done;

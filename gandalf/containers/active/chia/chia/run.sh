@@ -7,6 +7,9 @@
 source settings-personal.sh
 source ../../settings/settings-common.sh
 
+# optional
+source settings-secret.sh
+
 #--------------------------------------------------------------------
 # End settings
 #--------------------------------------------------------------------
@@ -30,12 +33,14 @@ docker run \
     --restart unless-stopped \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-keys:/etc/chia/keys/ \
-    --env keys="/etc/chia/keys/" \
+    --volume $CONTAINER_NAME-ca:/etc/chia \
+    --env keys="/etc/chia/keys/mnemonic.cfg" \
+    --env farmer_ca_directory="/etc/chia/ca/" \
     --env harvester="true" \
-    --env farmer_address="192.168.88.59" \
-    --env farmer_port="8447" \
+    --env farmer_address="$FARMER_ADDRESS" \
+    --env farmer_port="$FARMER_PORT" \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
 #-e harvester="true" -e farmer_address="addres.of.farmer" -e farmer_port="portnumber"
+#   --env keys="/etc/chia/keys/cryptfile_pass.cfg"

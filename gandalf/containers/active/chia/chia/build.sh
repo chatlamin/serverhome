@@ -16,5 +16,5 @@ source ../../settings/settings-common.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker build \
-    --build-arg IMAGE_SOURCE_NEW \
+    --build-arg TAG_NEW \
     --tag $IMAGE_TARGET .

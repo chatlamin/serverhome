@@ -22,4 +22,4 @@ if [ "$REPLY" != "Y" ]; then
   exit
 fi
 
-docker volume rm $CONTAINER_NAME-keys
+docker volume rm $CONTAINER_NAME-ca
