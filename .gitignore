@@ -3,3 +3,4 @@ gandalf/containers/active/plex/plex/settings-secret.sh
 gandalf/containers/active/dkron/tools/populator/
 gandalf/containers/active/healthchecks/tools/populator/
 gandalf/containers/active/homeassistant/homeassistant/container/config/secrets.yaml
+gandalf/containers/active/chia/chia/container/

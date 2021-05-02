@@ -17,7 +17,7 @@ DB_PASSWORD=Dae2fiiChohng0
 # Имя базы данных
 DB_DATABASE=bookstack
 # Путь сохранения дампа
-BACKUP_DIR=/data2/backup/mysql/$DB_DATABASE
+BACKUP_DIR=/data1/backup/mysql/$DB_DATABASE
 # Удалить копии старше COUNT дней
 COUNT=7
 # Минимальный размер бэкапа в килобайтах
@@ -25,7 +25,7 @@ SIZE_MIN=100
 # healthchecks ping url
 PING_URL=http://healthchecks.serverhome.home:8000/ping/43107c7d-4115-429a-aaee-5121d1cef0d2
 # Путь для удаленной копии
-REMOTE_DIR=/data2/duplicati-backups/_data/mysql/bookstack
+REMOTE_DIR=/data1/duplicati-backups/_data/mysql/bookstack
 
 #--------------------------------------------------------------------
 #End settings
