@@ -23,7 +23,7 @@ RUN git clone --branch ${TAG_NEW} https://github.com/Chia-Network/chia-blockchai
 && /usr/bin/sh ./install.sh
 
 WORKDIR /chia-blockchain
-RUN mkdir /plots
+RUN mkdir /plots /plots-tmp
 ADD ./entrypoint.sh entrypoint.sh
 ADD container/ /
 

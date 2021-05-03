@@ -51,6 +51,8 @@ if [[ ${testnet} == "true" ]]; then
 fi
 
 chia configure --set-log-level=INFO
-while ! tail -f ~/.chia/mainnet/log/debug.log ; do sleep 1 ; done
+#while ! tail -f ~/.chia/mainnet/log/debug.log ; do sleep 1 ; done
+
+chia plots create -k 32 -n 10 -b 6144 -r 4 -t /plots-tmp/ -d /plots/
 
 while true; do sleep 30; done;
