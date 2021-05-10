@@ -27,12 +27,11 @@ docker run \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
-    --restart always \
-    --volume /etc/localtime:/etc/localtime:ro \
-    --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-conf:/etc/loki \
-    --volume $CONTAINER_NAME-data:/data/loki \
-    --publish 3100:3100 \
+    --restart unless-stopped \
+    --volume $CONTAINER_NAME-conf:/etc/influxdb \
+    --volume $CONTAINER_NAME-data:/var/lib/influxdb \
+    --env TZ=Europe/Moscow \
+    --publish 8086:8086 \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
