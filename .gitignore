@@ -5,3 +5,11 @@ gandalf/containers/active/healthchecks/tools/populator/
 gandalf/containers/active/homeassistant/homeassistant/container/config/secrets.yaml
 gandalf/containers/active/chia/chia/container/
 gandalf/containers/active/chia/chia/settings-secret.sh
+
+pippin/experemental/
+pippin/containers/active/plex/plex/settings-secret.sh
+pippin/containers/active/dkron/tools/populator/
+pippin/containers/active/healthchecks/tools/populator/
+pippin/containers/active/homeassistant/homeassistant/container/config/secrets.yaml
+pippin/containers/active/chia/chia/container/
+pippin/containers/active/chia/chia/settings-secret.sh

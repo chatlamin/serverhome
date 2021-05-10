@@ -4,7 +4,8 @@
 # Settings
 #---------------------------------------------------------------------
 
-source settings.sh
+source settings-personal.sh
+source ../../settings/settings-common.sh
 
 #--------------------------------------------------------------------
 # End settings
@@ -14,5 +15,12 @@ source settings.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-# https://grafana.com/docs/loki/latest/clients/docker-driver/#installing
-docker plugin install grafana/loki-docker-driver:latest --alias loki --grant-all-permissions
+# https://github.com/alexanderfefelov/docker-backpack/blob/main/utils/cleanup/prune-all.sh
+read -p "WARNING: The data will be deleted. Press Y to continue: " -n 1 -r
+echo
+if [ "$REPLY" != "Y" ]; then
+  exit
+fi
+
+docker volume rm $CONTAINER_NAME-conf
+docker volume rm $CONTAINER_NAME-data

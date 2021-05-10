@@ -4,7 +4,8 @@
 # Settings
 #---------------------------------------------------------------------
 
-source settings.sh
+source settings-personal.sh
+source ../../settings/settings-common.sh
 
 #--------------------------------------------------------------------
 # End settings
@@ -14,5 +15,6 @@ source settings.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-# https://grafana.com/docs/loki/latest/clients/docker-driver/#installing
-docker plugin install grafana/loki-docker-driver:latest --alias loki --grant-all-permissions
+docker build \
+    --build-arg IMAGE_SOURCE_NEW \
+    --tag $IMAGE_TARGET .

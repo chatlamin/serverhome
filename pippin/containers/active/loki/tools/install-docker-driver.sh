@@ -14,5 +14,5 @@ source settings.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-# https://grafana.com/docs/loki/latest/clients/docker-driver/#installing
-docker plugin install grafana/loki-docker-driver:latest --alias loki --grant-all-permissions
+# https://github.com/grafana/loki/issues/1973#issuecomment-645084374
+docker plugin install grafana/loki-docker-driver:arm-64 --alias loki --grant-all-permissions
