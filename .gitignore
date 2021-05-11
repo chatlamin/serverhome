@@ -13,3 +13,4 @@ pippin/containers/active/healthchecks/tools/populator/
 pippin/containers/active/homeassistant/homeassistant/container/config/secrets.yaml
 pippin/containers/active/chia/chia/container/
 pippin/containers/active/chia/chia/settings-secret.sh
+pippin/scripts/utilities/dkron/backup/settings-secret.sh
