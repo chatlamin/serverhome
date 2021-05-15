@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "key": "onboarding",
+    "data": {
+        "done": [
+            "core_config"
+        ]
+    }
+}

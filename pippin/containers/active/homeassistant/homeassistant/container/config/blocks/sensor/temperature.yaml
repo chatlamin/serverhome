@@ -1,0 +1,15 @@
+  - platform: template
+    sensors:
+      humidifier_1_temperature:
+        value_template: "{{ state_attr('fan.humidifier_1', 'temperature') }}"
+        unit_of_measurement: '°C'
+        device_class: temperature
+        friendly_name: 'Увлажнитель температура'
+
+  - platform: template
+    sensors:
+      homeassistant_1_temperature:
+        value_template: "{{ state_attr('weather.gismeteo', 'temperature') }}"
+        unit_of_measurement: '°C'
+        device_class: temperature
+        friendly_name: 'Погода температура'

@@ -1,0 +1,2 @@
+  db_url: mysql://homeassistant:chah6viCaapeeD@mysql.serverhome.home:3306/homeassistant?charset=utf8mb4
+  purge_keep_days: 15

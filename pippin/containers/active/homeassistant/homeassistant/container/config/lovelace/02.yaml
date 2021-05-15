@@ -1,0 +1,5 @@
+title: Погода
+icon: mdi:weather-partly-snowy-rainy
+cards:
+      - type: weather-forecast
+        entity: weather.gismeteo

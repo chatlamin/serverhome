@@ -1,0 +1,10 @@
+title: Оповещения
+icon: mdi:telegram
+cards:
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - entity: script.system_report
+          - entity: script.send_message_1
+            name: Скрипт send_message
+          - entity: sensor.unavailable_now_sensor

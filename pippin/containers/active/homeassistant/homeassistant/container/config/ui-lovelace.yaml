@@ -1,0 +1,8 @@
+title: homeassistant.serverhome.home
+views:
+  - !include lovelace/01.yaml
+  - !include lovelace/02.yaml
+  - !include lovelace/03.yaml
+  - !include lovelace/04.yaml
+  - !include lovelace/05.yaml
+  - !include lovelace/06.yaml

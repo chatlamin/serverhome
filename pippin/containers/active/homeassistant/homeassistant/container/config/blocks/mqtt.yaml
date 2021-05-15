@@ -1,0 +1,6 @@
+  broker: mosquitto.serverhome.home
+  port: 1883
+  username: admin
+  password: aireeV7ahk8rah
+  discovery: true
+  discovery_prefix: homeassistant
