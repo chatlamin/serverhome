@@ -19,20 +19,15 @@ docker run \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
-    --restart always \
-    --network host \
-    --volume $CONTAINER_NAME-conf:/etc/dnsmasq.d \
-    --volume $CONTAINER_NAME-data:/etc/pihole \
-    --env TZ=Europe/Moscow \
-    --env IPv6=false \
-    --env DNSMASQ_LISTENING=local \
-    --env PIHOLE_DNS_=$PIHOLE_DNS \
-    --env VIRTUAL_HOST="$CONTAINER_NAME.$DOCKER_HOST_DOMEN" \
-    --env WEBPASSWORD=$WEBPASSWORD \
-    --env QUERY_LOGGING=true \
-    --env SKIPGRAVITYONBOOT=1 \
-    --env WEB_PORT=65010 \
-    --publish 65010:65010 \
+    --restart unless-stopped \
+    --volume /etc/localtime:/etc/localtime:ro \
+    --volume /etc/timezone:/etc/timezone:ro \
+    --volume $CONTAINER_NAME-conf-1:/usr/share/logstash/config \
+    --volume $CONTAINER_NAME-conf-2:/usr/share/logstash/pipeline \
+    --publish 5514:5514 \
+    --publish 5514:5514/udp \
+    --publish 5044:5044 \
+    --publish 9600:9600 \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
