@@ -100,6 +100,9 @@ function remove_old_backups()
     fi
 }
 
+# Создаем каталог для локальный бэкапов на диске
+mkdir -p /backups
+
 # Создаем архив каталогов
 tar -czf $BACKUP_DIR/$FILENAME $DIRS
 
