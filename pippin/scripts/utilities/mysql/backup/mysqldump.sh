@@ -31,5 +31,3 @@ mysqldump \
     --single-transaction \
     --triggers \
     $DB_DATABASE
-
-#    --column-statistics=0 \

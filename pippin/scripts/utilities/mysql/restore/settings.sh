@@ -3,8 +3,6 @@
 #---------------------------------------------------------------------
 
 ##
-# Текущее время
-TIMESTAMP=$(date '+%d-%m-%Y_%H-%M-%S')
 # ip / dns базы данных
 DB_HOST=mysql.serverhome.home
 # Порт базы данных
@@ -14,11 +12,11 @@ DB_USERNAME=root
 # Пароль базы данных
 DB_PASSWORD=Dae2fiiChohng0
 # Имя базы данных
-DB_DATABASE=firefly-iii
+DB_DATABASE=firefly_iii
 # Домашний каталог текущего пользователя
 export HOME=$(bash <<< "echo ~$SUDO_USER")
-# Путь сохранения дампа
-BACKUP_DIR=$HOME/backups-mysql/$TIMESTAMP-$DB_DATABASE
+# Путь к сохраненному дампу
+BACKUP_PATH_FILE=$HOME/backups-mysql/16-05-2021_22-12-55-firefly_iii
 
 #--------------------------------------------------------------------
 # End settings
