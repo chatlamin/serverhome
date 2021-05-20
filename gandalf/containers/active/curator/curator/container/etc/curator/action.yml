@@ -1,0 +1,37 @@
+actions:
+  1:
+    action: close
+    description: >-
+      Close indices older than 3 days (based on index name).
+    options:
+      ignore_empty_list: True
+      delete_aliases: False
+      disable_action: False
+    filters:
+    - filtertype: pattern
+      kind: prefix
+      value: winsrv-
+    - filtertype: age
+      source: name
+      direction: older
+      timestring: '%Y.%m.%d'
+      unit: days
+      unit_count: 3
+
+  2:
+    action: delete_indices
+    description: >-
+      Delete indices older than 3 days (based on index name).
+    options:
+      ignore_empty_list: True
+      disable_action: False
+    filters:
+    - filtertype: pattern
+      kind: prefix
+      value: filebeat
+    - filtertype: age
+      source: name
+      direction: older
+      timestring: '%Y.%m.%d'
+      unit: days
+      unit_count: 3
