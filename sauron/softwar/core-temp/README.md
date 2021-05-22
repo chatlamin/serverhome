@@ -1,0 +1,1 @@
+https://www.alcpu.com/CoreTemp/

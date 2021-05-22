@@ -1,0 +1,2 @@
+cd c:\softwar\serverhome-main\sauron\softwar\telegraf\1.18.2\
+.\telegraf.exe --config c:\softwar\serverhome-main\sauron\softwar\telegraf\1.18.2\telegraf.conf --config-directory c:\softwar\serverhome-main\sauron\softwar\telegraf\1.18.2\telegraf.d\
