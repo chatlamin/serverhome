@@ -14,3 +14,5 @@ pippin/containers/active/homeassistant/homeassistant/container/config/secrets.ya
 pippin/containers/active/chia/chia/container/
 pippin/containers/active/chia/chia/settings-secret.sh
 pippin/scripts/utilities/dkron/backup/settings-secret.sh
+
+.vscode/
