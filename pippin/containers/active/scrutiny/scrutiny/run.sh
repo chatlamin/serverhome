@@ -21,7 +21,6 @@ docker run \
     --detach \
     --restart unless-stopped \
     --volume $CONTAINER_NAME-conf:/config \
-    --volume $CONTAINER_NAME-data:/data \
     --env TZ="Europe/Moscow" \
     --env MODE="web" \
     --publish 65012:8080 \
