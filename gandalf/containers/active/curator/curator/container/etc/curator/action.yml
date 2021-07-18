@@ -10,13 +10,13 @@ actions:
     filters:
     - filtertype: pattern
       kind: prefix
-      value: winsrv-
+      value: filebeat
     - filtertype: age
       source: name
       direction: older
       timestring: '%Y.%m.%d'
       unit: days
-      unit_count: 3
+      unit_count: 10
 
   2:
     action: delete_indices
@@ -34,4 +34,4 @@ actions:
       direction: older
       timestring: '%Y.%m.%d'
       unit: days
-      unit_count: 3
+      unit_count: 10
