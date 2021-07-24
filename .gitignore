@@ -1,18 +1,15 @@
-gandalf/experemental/
-gandalf/containers/active/plex/plex/settings-secret.sh
-gandalf/containers/active/dkron/tools/populator/
-gandalf/containers/active/healthchecks/tools/populator/
-gandalf/containers/active/homeassistant/homeassistant/container/config/secrets.yaml
-gandalf/containers/active/chia/chia/container/
-gandalf/containers/active/chia/chia/settings-secret.sh
+experemental/
 
-pippin/experemental/
-pippin/containers/active/plex/plex/settings-secret.sh
-pippin/containers/active/dkron/tools/populator/
-pippin/containers/active/healthchecks/tools/populator/
-pippin/containers/active/homeassistant/homeassistant/container/config/secrets.yaml
-pippin/containers/active/chia/chia/container/
-pippin/containers/active/chia/chia/settings-secret.sh
-pippin/scripts/utilities/dkron/backup/settings-secret.sh
+bare-metal/gandalf/containers/active/plex/plex/settings-secret.sh
+bare-metal/gandalf/containers/active/dkron/tools/populator/
+bare-metal/gandalf/containers/active/healthchecks/tools/populator/
+bare-metal/gandalf/containers/active/homeassistant/homeassistant/container/config/secrets.yaml
+bare-metal/gandalf/containers/active/chia/chia/container/
+bare-metal/gandalf/containers/active/chia/chia/settings-secret.sh
 
-.vscode/
+containers/arm64/plex/plex/settings-secret.sh
+containers/arm64/dkron/tools/populator/
+containers/arm64/healthchecks/tools/populator/
+containers/arm64/homeassistant/homeassistant/container/config/secrets.yaml
+
+scripts/utilities/dkron/backup/yandex/settings-secret.sh

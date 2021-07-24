@@ -12,11 +12,11 @@ DB_USERNAME=root
 # Пароль базы данных
 DB_PASSWORD=Dae2fiiChohng0
 # Имя базы данных
-DB_DATABASE=firefly_iii
+DB_DATABASE=bookstack
 # Домашний каталог текущего пользователя
 export HOME=$(bash <<< "echo ~$SUDO_USER")
 # Путь к сохраненному дампу
-BACKUP_PATH_FILE=$HOME/backups-mysql/24-07-2021_10-38-59-firefly_iii
+BACKUP_PATH_FILE=$HOME/gandalf-hdd-16-05/backup/mysql/bookstack/03-05-2021_00-00-01
 
 #--------------------------------------------------------------------
 # End settings
