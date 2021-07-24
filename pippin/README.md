@@ -184,24 +184,19 @@
         address xxx.xxx.xxx.xxx
         netmask 255.xxx.xxx.xxx
         gateway xxx.xxx.xxx.xxx
-        dns-nameservers xxx.xxx.xxx.xxx
+        dns-nameservers 172.17.0.1 8.8.8.8
 
 17. Отключаем кэширующий dns systemd-resolved
 
         sudo systemctl disable systemd-resolved.service
         sudo systemctl stop systemd-resolved
         sudo rm /etc/resolv.conf
-    
-18. Настройка dns для docker
 
-        sudo bash -c 'echo nameserver 172.17.0.1 > /etc/resolv.conf'
-        sudo bash -c 'echo nameserver xxx.xxx.xxx.xxx >> /etc/resolv.conf'
-
-19. Перезагрузка
+18. Перезагрузка
 
         sudo reboot
 
-20. Перенастраиваем swap
+19. Перенастраиваем swap
 
         swapon --show
         swapoff /var/swap
@@ -234,7 +229,7 @@
     Добавляем в конец
 
         vm.vfs_cache_pressure=50
-26. Фиксируем изменения swap
+20. Фиксируем изменения swap
 
         sudo cp -r /etc $HOME/github/pippin.system
         cd $HOME/github/pippin.system
