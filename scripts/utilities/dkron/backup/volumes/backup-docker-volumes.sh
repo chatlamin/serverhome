@@ -30,7 +30,7 @@ SIZE_MIN=100
 # healthchecks ping url
 PING_URL=http://healthchecks.serverhome.home:8000/ping/9fbded76-430b-4274-8e65-a2b212eb3db3
 # Путь для удаленной копии
-REMOTE_DIR=/data1/duplicati-backups/_data/docker-volumes
+REMOTE_DIR=/data1/remote/docker-volumes
 
 #--------------------------------------------------------------------
 #End settings

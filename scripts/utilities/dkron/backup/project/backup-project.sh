@@ -6,60 +6,35 @@
 ##
 # Текущее время
 TIMESTAMP=$(date '+%d-%m-%Y_%H-%M-%S')
-# ip / dns базы данных
-DB_HOST=mysql.serverhome.home
-# Порт базы данных
-DB_PORT=3306
-# Пользователь базы данных
-DB_USERNAME=root
-# Пароль базы данных
-DB_PASSWORD=Dae2fiiChohng0
-# Имя базы данных
-DB_DATABASE=grafana
-# Путь сохранения дампа
-BACKUP_DIR=/data1/backup/mysql/$DB_DATABASE
+# Путь сохранения данных
+BACKUP_DIR=/data1/backup/project
+# Что сохраняем
+TARGET=$HOME/github/serverhome
 # Удалить копии старше COUNT дней
 COUNT=7
 # Минимальный размер бэкапа в килобайтах
-SIZE_MIN=30
+SIZE_MIN=100
 # healthchecks ping url
-PING_URL=http://healthchecks.serverhome.home:8000/ping/501abdc3-25d6-4567-a8a7-1e7b50c6d467
+PING_URL=http://healthchecks.serverhome.home:8000/ping/9fbded76-430b-4274-8e65-a2b212eb3db3
 # Путь для удаленной копии
-REMOTE_DIR=/data1/remote/mysql/grafana
+REMOTE_DIR=/data1/remote/project
 
 #--------------------------------------------------------------------
 #End settings
 #--------------------------------------------------------------------
 
 # Создаем папку
-sudo mkdir -p $BACKUP_DIR/$TIMESTAMP/tar
-sudo mkdir -p $BACKUP_DIR/$TIMESTAMP/dump
+sudo mkdir -p $BACKUP_DIR/$TIMESTAMP
 
-# Делаем бэкап https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html
-sudo mysqldump \
-    --host=$DB_HOST \
-    --port=$DB_PORT \
-    --user=$DB_USERNAME \
-    --password=$DB_PASSWORD \
-    --allow-keywords \
-    --events \
-    --flush-logs \
-    --hex-blob \
-    --result-file=$BACKUP_DIR/$TIMESTAMP/dump/$DB_DATABASE.sql \
-    --routines \
-    --single-transaction \
-    --triggers \
-    $DB_DATABASE
-
-# Делаем архив
-sudo tar -cvzpf $BACKUP_DIR/$TIMESTAMP/tar/backup.tar.gz  --absolute-names \
-    $BACKUP_DIR/$TIMESTAMP/dump
+# Делаем бэкап в помощью утилиты tar
+sudo tar -czpf $BACKUP_DIR/$TIMESTAMP/backup.tar.gz \
+    --absolute-names $TARGET
 
 # Ротация бэкапов
 sudo find $BACKUP_DIR -mtime +$COUNT -delete
 
 # Проверяем размер бэкапа. Если меньше полученного в SIZE_MIN - ошибка
-CURRENT=$(du -s $BACKUP_DIR/$TIMESTAMP/tar | awk '{print $1}')
+CURRENT=$(du -s $BACKUP_DIR/$TIMESTAMP | awk '{print $1}')
 if
 [ $CURRENT -gt $SIZE_MIN ];
 then
