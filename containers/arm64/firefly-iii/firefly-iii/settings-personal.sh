@@ -10,7 +10,7 @@ EXPLORE=jc5x/firefly-iii
 # Тэг образа старый
 TAG_OLD=version-5.5.11
 # Тэг образа новый
-TAG_NEW=version-5.5.11
+TAG_NEW=version-5.5.12
 
 ##
 # Этот ключ используется для создания файлов cookie приложений и безопасных вложений

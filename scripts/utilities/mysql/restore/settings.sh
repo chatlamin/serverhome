@@ -16,7 +16,7 @@ DB_DATABASE=firefly_iii
 # Домашний каталог текущего пользователя
 export HOME=$(bash <<< "echo ~$SUDO_USER")
 # Путь к сохраненному дампу
-BACKUP_PATH_FILE=$HOME/backups-mysql/16-05-2021_22-12-55-firefly_iii
+BACKUP_PATH_FILE=$HOME/backups-mysql/24-07-2021_10-38-59-firefly_iii
 
 #--------------------------------------------------------------------
 # End settings
