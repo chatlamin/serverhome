@@ -15,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "id": 4,
-  "iteration": 1618996281508,
+  "id": 2,
+  "iteration": 1627111719322,
   "links": [],
   "panels": [
     {
@@ -4973,18 +4973,22 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
-          "text": "gandalf.serverhome.home",
-          "value": "gandalf.serverhome.home"
+          "selected": true,
+          "text": [
+            "pippin.serverhome.home"
+          ],
+          "value": [
+            "pippin.serverhome.home"
+          ]
         },
         "datasource": null,
         "definition": "SHOW TAG VALUES FROM system WITH KEY=\"host\"",
         "description": null,
         "error": null,
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "label": "hostname",
-        "multi": false,
+        "multi": true,
         "name": "hostname",
         "options": [],
         "query": "SHOW TAG VALUES FROM system WITH KEY=\"host\"",
@@ -5130,7 +5134,6 @@
         "allValue": null,
         "current": {
           "selected": true,
-          "tags": [],
           "text": [
             "All"
           ],
@@ -5169,5 +5172,5 @@
   "timezone": "",
   "title": "telegraf system",
   "uid": "8hNg0ElMk2",
-  "version": 2
+  "version": 1
 }

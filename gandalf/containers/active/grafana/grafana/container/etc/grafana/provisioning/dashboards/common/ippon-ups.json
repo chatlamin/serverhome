@@ -14,7 +14,7 @@
   },
   "editable": true,
   "gnetId": null,
-  "graphTooltip": 0,
+  "graphTooltip": 1,
   "id": 9,
   "links": [],
   "panels": [
@@ -789,5 +789,5 @@
   "timezone": "",
   "title": "Ippon UPS",
   "uid": "6Hyo823Gk",
-  "version": 1
+  "version": 2
 }
