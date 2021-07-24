@@ -200,3 +200,62 @@
 19. Перезагрузка
 
         sudo reboot
+
+20. Перенастраиваем swap
+
+        swapon --show
+        swapoff /var/swap
+        rm -f /var/swap
+        fallocate -l 2G /swapfile
+        chmod 600 /swapfile
+        mkswap /swapfile
+        swapon /swapfile
+
+    Редактируем /etc/fstab
+
+        sudo mcedit /etc/fstab
+
+    Добавляем в конец
+
+        /swapfile none swap sw 0 0
+
+    Настройка частоты выгрузки данных из ОЗУ в swap
+
+        sudo mcedit /etc/sysctl.conf
+
+    Добавляем в конец
+
+        vm.swappiness=10
+
+    Настройка нагрузки кэш inode и dentry
+
+        sudo mcedit /etc/sysctl.conf
+
+    Добавляем в конец
+
+        vm.vfs_cache_pressure=50
+26. Фиксируем изменения swap
+
+        sudo cp -r /etc $HOME/github/pippin.system
+        cd $HOME/github/pippin.system
+        sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
+        git add --all .
+        git commit -m "Настройка swap"
+        git push
+
+___
+
+Тест скорости:
+
+
+SSD Samsung 850 EVO MZ-M5E120 - 120 GB (USB)
+```
+time sh -c "dd if=/dev/zero of=/data1/ddfile.tmp bs=1M count=10000"
+10000+0 records in
+10000+0 records out
+10485760000 bytes (10 GB, 9.8 GiB) copied, 55.6507 s, 188 MB/s
+
+real    0m55.663s
+user    0m0.090s
+sys     0m40.042s
+```
