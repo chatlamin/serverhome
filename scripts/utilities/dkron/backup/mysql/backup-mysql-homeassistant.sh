@@ -17,15 +17,15 @@ DB_PASSWORD=Dae2fiiChohng0
 # Имя базы данных
 DB_DATABASE=homeassistant
 # Путь сохранения дампа
-BACKUP_DIR=/data1/backup/mysql/$DB_DATABASE
+BACKUP_DIR=/data1/backups/local/mysql/$DB_DATABASE
 # Удалить копии старше COUNT дней
 COUNT=7
 # Минимальный размер бэкапа в килобайтах
-SIZE_MIN=100
+SIZE_MIN=25
 # healthchecks ping url
 PING_URL=http://healthchecks.serverhome.home:8000/ping/9fc4f1e7-c0e8-425d-9994-3048e16d5c6d
 # Путь для удаленной копии
-REMOTE_DIR=/data1/remote/mysql/homeassistant
+REMOTE_DIR=/data1/backups/remote/mysql/$DB_DATABASE
 
 #--------------------------------------------------------------------
 #End settings

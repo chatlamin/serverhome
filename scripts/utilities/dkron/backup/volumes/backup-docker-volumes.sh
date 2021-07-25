@@ -7,7 +7,7 @@
 # Текущее время
 TIMESTAMP=$(date '+%d-%m-%Y_%H-%M-%S')
 # Путь сохранения данных
-BACKUP_DIR=/data1/backup/docker-volumes
+BACKUP_DIR=/data1/backups/local/docker-volumes
 # Что сохраняем
 TARGET=/var/lib/docker/volumes
 # Что исключаем
@@ -23,6 +23,9 @@ EXCLUDE_9="/var/lib/docker/volumes/mysql-data"
 EXCLUDE_10="/var/lib/docker/volumes/pi-hole-data"
 EXCLUDE_11="/var/lib/docker/volumes/prometheus-data"
 EXCLUDE_12="/var/lib/docker/volumes/qbittorrent-data"
+EXCLUDE_13="/var/lib/docker/volumes/firefly-iii-upload"
+EXCLUDE_14="/var/lib/docker/volumes/dkron-data"
+EXCLUDE_15="/var/lib/docker/volumes/dkron-log"
 # Удалить копии старше COUNT дней
 COUNT=7
 # Минимальный размер бэкапа в килобайтах
@@ -30,7 +33,7 @@ SIZE_MIN=100
 # healthchecks ping url
 PING_URL=http://healthchecks.serverhome.home:8000/ping/9fbded76-430b-4274-8e65-a2b212eb3db3
 # Путь для удаленной копии
-REMOTE_DIR=/data1/remote/docker-volumes
+REMOTE_DIR=/data1/backups/remote/docker-volumes
 
 #--------------------------------------------------------------------
 #End settings
@@ -53,6 +56,9 @@ sudo tar -czpf $BACKUP_DIR/$TIMESTAMP/backup.tar.gz \
     --exclude "$EXCLUDE_10" \
     --exclude "$EXCLUDE_11" \
     --exclude "$EXCLUDE_12" \
+    --exclude "$EXCLUDE_13" \
+    --exclude "$EXCLUDE_14" \
+    --exclude "$EXCLUDE_15" \
     --absolute-names $TARGET
 
 # Ротация бэкапов

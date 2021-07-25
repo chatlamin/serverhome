@@ -17,7 +17,7 @@ DB_PASSWORD=Dae2fiiChohng0
 # Имя базы данных
 DB_DATABASE=grafana
 # Путь сохранения дампа
-BACKUP_DIR=/data1/backup/mysql/$DB_DATABASE
+BACKUP_DIR=/data1/backups/local/mysql/$DB_DATABASE
 # Удалить копии старше COUNT дней
 COUNT=7
 # Минимальный размер бэкапа в килобайтах
@@ -25,7 +25,7 @@ SIZE_MIN=30
 # healthchecks ping url
 PING_URL=http://healthchecks.serverhome.home:8000/ping/501abdc3-25d6-4567-a8a7-1e7b50c6d467
 # Путь для удаленной копии
-REMOTE_DIR=/data1/remote/mysql/grafana
+REMOTE_DIR=/data1/backups/remote/mysql/$DB_DATABASE
 
 #--------------------------------------------------------------------
 #End settings

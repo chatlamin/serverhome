@@ -7,7 +7,7 @@
 # Текущее время
 TIMESTAMP=$(date '+%d-%m-%Y_%H-%M-%S')
 # Путь сохранения данных
-BACKUP_DIR=/data1/backup/project
+BACKUP_DIR=/data1/backups/local/project
 # Что сохраняем
 TARGET=$HOME/github/serverhome
 # Удалить копии старше COUNT дней
@@ -17,7 +17,7 @@ SIZE_MIN=100
 # healthchecks ping url
 PING_URL=http://healthchecks.serverhome.home:8000/ping/9fbded76-430b-4274-8e65-a2b212eb3db3
 # Путь для удаленной копии
-REMOTE_DIR=/data1/remote/project
+REMOTE_DIR=/data1/backups/remote/project
 
 #--------------------------------------------------------------------
 #End settings
