@@ -1,4 +1,5 @@
 experemental/
+.vscode/
 
 bare-metal/gandalf/containers/active/plex/plex/settings-secret.sh
 bare-metal/gandalf/containers/active/dkron/tools/populator/
