@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------
 
 CONTAINER_NAME=plex
-PLEX_CONF_PATH=/data1/plex-conf/_data
+PLEX_CONF_PATH=/var/lib/docker/volumes/plex-conf/_data
 
 #--------------------------------------------------------------------
 #End settings

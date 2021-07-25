@@ -10,7 +10,7 @@ EXPLORE=linuxserver/plex
 # Тэг образа старый
 TAG_OLD=version-1.22.3.4392-d7c624def
 # Тэг образа новый
-TAG_NEW=version-1.22.3.4392-d7c624def
+TAG_NEW=version-1.23.5.4862-0f739d462
 
 #--------------------------------------------------------------------
 # End settings
