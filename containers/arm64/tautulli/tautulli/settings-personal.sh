@@ -10,7 +10,7 @@ EXPLORE=tautulli/tautulli
 # Тэг образа старый
 TAG_OLD=v2.7.1
 # Тэг образа новый
-TAG_NEW=v2.7.1
+TAG_NEW=v2.7.5
 
 ##
 # Путь к логам plex
