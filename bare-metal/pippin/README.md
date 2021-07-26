@@ -238,6 +238,18 @@
         git commit -m "Настройка swap"
         git push
 
+21. Создать служебного пользователя для резервного копирования
+
+        sudo adduser backuper
+        sudo usermod -aG sudo backuper
+
+22. Настроить команды, которые пользователь backuper может делать без ввода пароля
+
+        sudo pkexec visudo
+
+        # Вписать в конец:
+        backuper ALL = NOPASSWD: /bin/mkdir, /bin/tar, /bin/gzip, /usr/bin/find, /bin/mv, /usr/bin/zip, /bin/rm, /usr/bin/mysqldump, /usr/bin/cp
+
 ___
 
 Тест скорости:
