@@ -4,18 +4,17 @@
 # Settings
 #---------------------------------------------------------------------
 
-source settings.sh
+# http://stackoverflow.com/a/246128
+HOME=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+
+source $HOME/settings.sh
 # Yandex.Disk токен (как получить - https://neblog.info/skript-bekapa-na-yandeks-disk)
 # TOKEN='your_token'
-source settings-secret.sh
+source $HOME/settings-secret.sh
 
 #--------------------------------------------------------------------
 # End settings
 #--------------------------------------------------------------------
-
-# https://github.com/alexanderfefelov/scripts/blob/master/install/ops/install-docker.sh
-# Elevate privileges
-[ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 # original https://neblog.info/skript-bekapa-na-yandeks-disk
 
@@ -64,9 +63,9 @@ function uploadFile
         json_error=$(checkError "$json_out")
     if [[ $json_error != '' ]];
     then
-        logger "$PROJECT - Yandex.Disk error: $json_error"
+        echo "$PROJECT - Yandex.Disk error: $json_error"
     else
-        logger "$PROJECT - Copying file to Yandex.Disk success"
+        echo "$PROJECT - Copying file to Yandex.Disk success"
     fi
     else
         echo 'Some errors occured. Check log file for detail'
@@ -91,7 +90,7 @@ function remove_old_backups()
     bkps=$(backups_count)
     old_bkps=$((bkps - MAX_BACKUPS))
     if [ "$old_bkps" -gt "0" ];then
-        logger "Удаляем старые бекапы с Яндекс.Диска"
+        echo "Удаляем старые бекапы с Яндекс.Диска"
         # Цикл удаления старых бекапов:
         # Выполняем удаление первого в списке файла 2*old_bkps раз
         for i in `eval echo {1..$((old_bkps * 2))}`; do
@@ -101,16 +100,20 @@ function remove_old_backups()
 }
 
 # Создаем каталог для локальный бэкапов на диске
-mkdir -p $BACKUP_DIR
+sudo mkdir -p $BACKUP_DIR
 
 # Создаем архив каталогов
-tar -czf $BACKUP_DIR/$FILENAME $DIRS
+sudo tar -czf $BACKUP_DIR/$FILENAME $DIRS
 
 # Выгружаем на Яндекс.Диск архив с файлами
 uploadFile $BACKUP_DIR/$FILENAME
 
 # Удаляем архивы с диска
-find $BACKUP_DIR -type f -name "*.gz" -exec rm '{}' \;
+sudo find $BACKUP_DIR -type f -name "*.gz" -exec rm '{}' \;
 
 # Удаляем старые бекапы с Яндекс.Диска (если MAX_BACKUPS > 0)
-if [ $MAX_BACKUPS -gt 0 ];then remove_old_backups; fi
+if
+[ $MAX_BACKUPS -gt 0 ];
+then
+remove_old_backups;
+fi
