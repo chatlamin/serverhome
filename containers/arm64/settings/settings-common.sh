@@ -9,7 +9,7 @@ export OS=linux
 # Основная архитектура
 export ARCHITECTURE=$(dpkg --print-architecture)
 # Образ итоговый
-IMAGE_TARGET=chatlamin/$ARCHITECTURE-$NAME:latest
+IMAGE_TARGET=chatlamin/$ARCHITECTURE-$NAME:$TAG_NEW
 # Образ источника старый
 IMAGE_SOURCE_OLD=$EXPLORE:$TAG_OLD
 # Образ источника новый
