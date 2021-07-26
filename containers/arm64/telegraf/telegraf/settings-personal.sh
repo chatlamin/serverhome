@@ -8,9 +8,9 @@ export NAME=telegraf
 # Репозиторий
 EXPLORE=telegraf
 # Тэг образа старый
-TAG_OLD=start
+TAG_OLD=1.18
 # Тэг образа новый
-TAG_NEW=1.18
+TAG_NEW=1.19.1
 
 #--------------------------------------------------------------------
 # End settings
