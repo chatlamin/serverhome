@@ -6,11 +6,11 @@
 # Название проекта
 export NAME=firefly-iii
 # Репозиторий
-EXPLORE=jc5x/firefly-iii
+EXPLORE=fireflyiii/core
 # Тэг образа старый
-TAG_OLD=version-5.5.11
+TAG_OLD=version-5.5.12
 # Тэг образа новый
-TAG_NEW=version-5.5.12
+TAG_NEW=version-5.5.13
 
 ##
 # Этот ключ используется для создания файлов cookie приложений и безопасных вложений
