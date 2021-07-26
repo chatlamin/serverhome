@@ -5,4 +5,4 @@ https://github.com/mysql/mysql-server
 
 https://github.com/docker-library/mysql
 
-https://hub.docker.com/_/mysql
+https://hub.docker.com/r/ubuntu/mysql
