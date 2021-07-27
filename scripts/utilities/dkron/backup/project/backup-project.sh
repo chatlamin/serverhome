@@ -15,7 +15,7 @@ COUNT=7
 # Минимальный размер бэкапа в килобайтах
 SIZE_MIN=100
 # healthchecks ping url
-PING_URL=http://healthchecks.serverhome.home:8000/ping/9fbded76-430b-4274-8e65-a2b212eb3db3
+PING_URL=http://healthchecks.serverhome.home:8000/ping/4be5f431-f38c-4e05-8a70-d92968916b13
 # Путь для удаленной копии
 REMOTE_DIR=/data1/backups/remote/project
 

@@ -23,7 +23,7 @@ COUNT=7
 # Минимальный размер бэкапа в килобайтах
 SIZE_MIN=25
 # healthchecks ping url
-PING_URL=http://healthchecks.serverhome.home:8000/ping/9fc4f1e7-c0e8-425d-9994-3048e16d5c6d
+PING_URL=http://healthchecks.serverhome.home:8000/ping/1d019626-8063-4cfc-83e5-fa8d5f451515
 # Путь для удаленной копии
 REMOTE_DIR=/data1/backups/remote/mysql/$DB_DATABASE
 
