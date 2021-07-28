@@ -66,7 +66,7 @@ function uploadFile
         echo "$PROJECT - Yandex.Disk error: $json_error"
     else
         echo "$PROJECT - Copying file to Yandex.Disk success"
-        http://healthchecks.serverhome.home:8000/ping/cbe5f636-e844-4286-bac1-6aaa7c9fb27e
+        curl -m 10 --retry 5 http://healthchecks.serverhome.home:8000/ping/cbe5f636-e844-4286-bac1-6aaa7c9fb27e
     fi
     else
         echo 'Some errors occured. Check log file for detail'
