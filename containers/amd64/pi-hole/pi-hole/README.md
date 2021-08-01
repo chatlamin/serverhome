@@ -7,5 +7,4 @@ https://github.com/pi-hole/docker-pi-hole
 
 https://hub.docker.com/r/pihole/pihole
 
-логин admin
-пароль eeleBarudah0an
+Логин admin пароль eeleBarudah0an

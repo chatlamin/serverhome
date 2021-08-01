@@ -4,13 +4,19 @@
 
 ##
 # Название проекта
-export NAME=influxdb
+export NAME=pi-hole
 # Репозиторий
-EXPLORE=influxdb
+EXPLORE=pihole/pihole
 # Тэг образа старый
-TAG_OLD=1.8.4
+TAG_OLD=v5.8
 # Тэг образа новый
-TAG_NEW=1.8.4
+TAG_NEW=v5.8.1
+
+##
+# DNS сервер для самого pi-hole
+PIHOLE_DNS="8.8.8.8;8.8.4.4"
+# Пароль от вэб-интерфейса
+WEBPASSWORD=eeleBarudah0an
 
 #--------------------------------------------------------------------
 # End settings

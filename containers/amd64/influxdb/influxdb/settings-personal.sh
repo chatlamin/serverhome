@@ -4,13 +4,13 @@
 
 ##
 # Название проекта
-export NAME=telegraf
+export NAME=influxdb
 # Репозиторий
-EXPLORE=telegraf
+EXPLORE=influxdb
 # Тэг образа старый
-TAG_OLD=1.8.1
+TAG_OLD=1.8.4
 # Тэг образа новый
-TAG_NEW=1.18.2
+TAG_NEW=1.8.6
 
 #--------------------------------------------------------------------
 # End settings

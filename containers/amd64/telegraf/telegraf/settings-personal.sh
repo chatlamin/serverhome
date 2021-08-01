@@ -4,19 +4,13 @@
 
 ##
 # Название проекта
-export NAME=pi-hole
+export NAME=telegraf
 # Репозиторий
-EXPLORE=pihole/pihole
+EXPLORE=telegraf
 # Тэг образа старый
-TAG_OLD=v5.7
+TAG_OLD=1.18
 # Тэг образа новый
-TAG_NEW=v5.8
-
-##
-# DNS сервер для самого pi-hole
-PIHOLE_DNS="8.8.8.8;8.8.4.4"
-# Пароль от вэб-интерфейса
-WEBPASSWORD=eeleBarudah0an
+TAG_NEW=1.19.1
 
 #--------------------------------------------------------------------
 # End settings
