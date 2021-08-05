@@ -28,3 +28,9 @@ scrape_configs:
     scheme: http
     static_configs:
     - targets: ['qbittorrent_exporter.serverhome.home:65101']
+
+  - job_name: 'mongodb_exporter'
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+    - targets: ['mongodb_exporter.serverhome.home:65102']
