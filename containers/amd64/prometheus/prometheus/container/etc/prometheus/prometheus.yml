@@ -34,3 +34,9 @@ scrape_configs:
     scheme: http
     static_configs:
     - targets: ['mongodb_exporter.serverhome.home:65102']
+
+  - job_name: 'rocketchat'
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+    - targets: ['rocketchat.serverhome.home:65103']
