@@ -1,0 +1,15 @@
+# https://grafana.com/docs/grafana/latest/datasources/influxdb/#influxdb-1x-example
+# https://grafana.com/docs/grafana/latest/administration/provisioning/
+apiVersion: 1
+
+datasources:
+  - name: influxdb.serverhome.home
+    type: influxdb
+    access: proxy
+    database: telegraf
+    user:
+    password:
+    isDefault: true
+    url: http://influxdb.serverhome.home:8086
+    jsonData:
+      httpMode: GET
