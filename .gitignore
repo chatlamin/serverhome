@@ -1,9 +1,6 @@
 experemental/
 .vscode/
 
-bare-metal/gandalf/containers/active/chia/chia/container/
-bare-metal/gandalf/containers/active/chia/chia/settings-secret.sh
-
 containers/arm64/plex/plex/settings-secret.sh
 containers/arm64/dkron/tools/populator/
 containers/arm64/healthchecks/tools/populator/
