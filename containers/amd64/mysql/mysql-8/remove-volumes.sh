@@ -15,7 +15,12 @@ source ../../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker build \
-    --build-arg IMAGE_BUILDER \
-    --build-arg CBACKUP_USER_PASSWORD \
-    --tag $IMAGE_TARGET .
+# https://github.com/alexanderfefelov/docker-backpack/blob/main/utils/cleanup/prune-all.sh
+read -p "WARNING: The data will be deleted. Press Y to continue: " -n 1 -r
+echo
+if [ "$REPLY" != "Y" ]; then
+  exit
+fi
+
+docker volume rm $CONTAINER_NAME-conf
+docker volume rm $CONTAINER_NAME-data

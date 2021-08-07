@@ -22,6 +22,7 @@ if [ "$REPLY" != "Y" ]; then
   exit
 fi
 
-docker volume rm $CONTAINER_NAME-apache2-conf
-docker volume rm $CONTAINER_NAME-apache2-log
 docker volume rm $CONTAINER_NAME-data
+docker volume rm $CONTAINER_NAME-sshd-log
+docker volume rm $CONTAINER_NAME-apache2-log
+docker volume rm $CONTAINER_NAME-cbackup-log

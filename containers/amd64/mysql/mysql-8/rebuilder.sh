@@ -15,7 +15,8 @@ source ../../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker build \
-    --build-arg IMAGE_BUILDER \
-    --build-arg CBACKUP_USER_PASSWORD \
-    --tag $IMAGE_TARGET .
+./remove-container.sh
+./remove-volumes.sh
+./remove-images.sh
+./build.sh
+./run.sh

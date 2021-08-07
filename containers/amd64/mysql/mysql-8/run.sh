@@ -15,7 +15,18 @@ source ../../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker build \
-    --build-arg IMAGE_BUILDER \
-    --build-arg CBACKUP_USER_PASSWORD \
-    --tag $IMAGE_TARGET .
+docker run \
+    --name $CONTAINER_NAME \
+    --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
+    --detach \
+    --restart always \
+    --cap-add sys_nice \
+    --volume /etc/localtime:/etc/localtime:ro \
+    --volume /etc/timezone:/etc/timezone:ro \
+    --volume $CONTAINER_NAME-conf:/etc/mysql \
+    --volume $CONTAINER_NAME-data:/var/lib/mysql \
+    --env MYSQL_ROOT_PASSWORD="$MYSQL_ROOT_PASSWORD" \
+    --publish 3306:3306 \
+    $IMAGE_TARGET
+
+docker logs --follow $CONTAINER_NAME

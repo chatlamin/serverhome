@@ -20,13 +20,13 @@ docker run \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
     --restart unless-stopped \
-    --cap-drop SYS_ADMIN \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-apache2-conf:/etc/apache2 \
-    --volume $CONTAINER_NAME-apache2-log:/var/log/apache2 \
     --volume $CONTAINER_NAME-data:/opt/cbackup \
-    --volume /sys/fs/cgroup:/sys/fs/cgroup:ro \
+    --volume $CONTAINER_NAME-sshd-log:/var/log/sshd \
+    --volume $CONTAINER_NAME-apache2-log:/var/log/apache2 \
+    --volume $CONTAINER_NAME-cbackup-log:/var/log/cbackup \
+    --publish 65200:9001 \
     --publish 80:80 \
     $IMAGE_TARGET
 

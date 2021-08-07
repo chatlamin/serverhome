@@ -16,6 +16,5 @@ source ../../settings/settings-common.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker build \
-    --build-arg IMAGE_BUILDER \
-    --build-arg CBACKUP_USER_PASSWORD \
+    --build-arg IMAGE_SOURCE_NEW \
     --tag $IMAGE_TARGET .
