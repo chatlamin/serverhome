@@ -1,10 +1,6 @@
 experemental/
 .vscode/
 
-bare-metal/gandalf/containers/active/plex/plex/settings-secret.sh
-bare-metal/gandalf/containers/active/dkron/tools/populator/
-bare-metal/gandalf/containers/active/healthchecks/tools/populator/
-bare-metal/gandalf/containers/active/homeassistant/homeassistant/container/config/secrets.yaml
 bare-metal/gandalf/containers/active/chia/chia/container/
 bare-metal/gandalf/containers/active/chia/chia/settings-secret.sh
 
