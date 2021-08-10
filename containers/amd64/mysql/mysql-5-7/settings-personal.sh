@@ -4,7 +4,7 @@
 
 ##
 # Название проекта
-export NAME=mysql
+export NAME=mysql-5-7
 # Репозиторий
 EXPLORE=mysql
 # Тэг образа старый

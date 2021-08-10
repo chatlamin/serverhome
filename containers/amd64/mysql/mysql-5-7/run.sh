@@ -26,7 +26,7 @@ docker run \
     --volume $CONTAINER_NAME-conf:/etc/mysql \
     --volume $CONTAINER_NAME-data:/var/lib/mysql \
     --env MYSQL_ROOT_PASSWORD="$MYSQL_ROOT_PASSWORD" \
-    --publish 3306:3306 \
+    --publish 65020:3306 \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME

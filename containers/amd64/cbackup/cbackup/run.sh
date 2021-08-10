@@ -27,7 +27,7 @@ docker run \
     --volume $CONTAINER_NAME-apache2-log:/var/log/apache2 \
     --volume $CONTAINER_NAME-cbackup-log:/var/log/cbackup \
     --publish 65200:9001 \
-    --publish 80:80 \
+    --publish 65015:80 \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
