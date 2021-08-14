@@ -4,7 +4,7 @@
 
 ##
 # Название проекта
-export NAME=homeassistant
+export NAME=home-assistant
 # Репозиторий
 EXPLORE=homeassistant/home-assistant
 # Тэг образа старый
@@ -18,9 +18,9 @@ DB_CONNECTION=mysql
 # ip / dns базы данных
 DB_HOST=mysql.serverhome.home
 # Имя базы данных
-DB_DATABASE=homeassistant
+DB_DATABASE=home_assistant
 # Пользователь базы данных
-DB_USERNAME=homeassistant
+DB_USERNAME=home_assistant
 # Пароль базы данных
 DB_PASSWORD=chah6viCaapeeD
 # Имя контейнера базы данных

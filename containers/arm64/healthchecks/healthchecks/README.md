@@ -1,14 +1,29 @@
-# Ссылки на проект
-https://healthchecks.io/
+# healthchecks
+Hostname: `healthchecks.serverhome.home`
 
-https://github.com/healthchecks/healthchecks
+## Keys
+Link: http://healthchecks.serverhome.home:8000/
 
-https://github.com/linuxserver/docker-healthchecks
+Login: `admin@serverhome.home`
 
-https://hub.docker.com/r/linuxserver/healthchecks
+Password: `chorooK0ue7uwe`
 
-1. Создай базу данных create-db.sh
+## Database
+Type: `mysql-8`
 
-2. Логин admin@serverhome.home пароль chorooK0ue7uwe
+Name: `healthchecks`
 
-3. Создать Project, далее в SETTINGS создать API key
+Username: `healthchecks`
+
+Password: `Ealu0rius1shah`
+
+## References to the original project
+Website: https://healthchecks.io/
+
+Documentation: https://healthchecks.io/docs/
+
+Repository github : https://github.com/healthchecks/healthchecks/
+
+Repository docker github: https://github.com/linuxserver/docker-healthchecks/
+
+Repository docker: https://hub.docker.com/r/linuxserver/healthchecks/

@@ -1,10 +1,29 @@
-# Ссылки на проект
-https://www.firefly-iii.org/
+# firefly-iii
+Hostname: `firefly-iii.serverhome.home`
 
-https://docs.firefly-iii.org
+## Keys
+Link: http://firefly-iii.serverhome.home:65003/
 
-https://github.com/firefly-iii/firefly-iii
+Login: `your need to go through the registration procedure`
 
-https://github.com/firefly-iii/docker
+Password: `your need to go through the registration procedure`
 
-https://hub.docker.com/r/fireflyiii/core
+## Database
+Type: `mysql-8`
+
+Name: `firefly_iii`
+
+Username: `firefly_iii`
+
+Password: `quohn3Ohr6vepi`
+
+## References to the original project
+Website: https://www.firefly-iii.org/
+
+Documentation: https://docs.firefly-iii.org/
+
+Repository github : https://github.com/firefly-iii/firefly-iii/
+
+Repository docker github: https://github.com/firefly-iii/docker/
+
+Repository docker: https://hub.docker.com/r/fireflyiii/core/
