@@ -4,4 +4,4 @@
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker exec -i mysql /usr/bin/mysql -u root --password=Dae2fiiChohng0 cbackup < init/test-data.sql
+docker exec -i mysql-5-7 /usr/bin/mysql -u root --password=Dae2fiiChohng0 cbackup < init/test-data.sql
