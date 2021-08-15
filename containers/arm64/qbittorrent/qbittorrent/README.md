@@ -1,10 +1,29 @@
-# Ссылки на проект
-https://www.qbittorrent.org/
+# qbittorrent
+Hostname: `qbittorrent.serverhome.home`
 
-https://github.com/qbittorrent/qBittorrent
+## Keys
+Link: http://qbittorrent.serverhome.home:65004/
 
-https://github.com/linuxserver/docker-qbittorrent
+Login: `admin`
 
-https://hub.docker.com/r/linuxserver/qbittorrent
+Password: `il8oquee9eHo6m`
 
-Логин admin пароль il8oquee9eHo6m
+## Database
+Type: `no external database support`
+
+Name: `no external database support`
+
+Username: `no external database support`
+
+Password: `no external database support`
+
+## References to the original project
+Website: https://www.qbittorrent.org/
+
+Documentation: https://github.com/qbittorrent/qBittorrent/wiki/
+
+Repository github: https://github.com/qbittorrent/qBittorrent/
+
+Repository docker github: https://github.com/linuxserver/docker-qbittorrent/
+
+Repository docker: https://hub.docker.com/r/linuxserver/qbittorrent/

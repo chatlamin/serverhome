@@ -1,12 +1,30 @@
-# Ссылки на проект
-https://www.plex.tv/ru/
+# plex
+Hostname: `plex.serverhome.home`
 
-https://github.com/plexinc
+## Keys
+Link: http://plex.serverhome.home:32400/web/
 
-https://github.com/plexinc/pms-docker
+Login: `your need to go through the registration procedure`
 
-https://github.com/linuxserver/docker-plex
+Password: `your need to go through the registration procedure`
 
-https://hub.docker.com/r/linuxserver/plex
+## Database
+Type: `no external database support`
 
-Не забудь зарегистрироваться https://www.plex.tv/ и получить PLEX_CLAIM на https://www.plex.tv/claim/ . Полученный PLEX_CLAIM используйте в ./run.sh
+Name: `no external database support`
+
+Username: `no external database support`
+
+Password: `no external database support`
+
+## References to the original project
+Website: https://www.plex.tv/ru/
+
+Documentation: https://support.plex.tv/articles/
+
+Repository github : https://github.com/plexinc/
+
+Repository docker github: https://github.com/plexinc/pms-docker/ and https://github.com/linuxserver/docker-plex/
+
+Repository docker: https://hub.docker.com/r/linuxserver/plex/
+

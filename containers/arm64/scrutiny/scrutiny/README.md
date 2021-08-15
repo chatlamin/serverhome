@@ -1,8 +1,29 @@
-# Ссылки на проект
-https://github.com/AnalogJ/scrutiny
+# scrutiny
+Hostname: `scrutiny.serverhome.home`
 
-https://hub.docker.com/r/analogj/scrutiny
+## Keys
+Link: http://scrutiny.serverhome.home:65012/
 
-https://hub.docker.com/r/hotio/scrutiny
+Login: `no authentication support`
 
-https://hub.docker.com/r/linuxserver/scrutiny
+Password: `no authentication support`
+
+## Database
+Type: `no external database support`
+
+Name: `no external database support`
+
+Username: `no external database support`
+
+Password: `no external database support`
+
+## References to the original project
+Website: https://github.com/AnalogJ/scrutiny/
+
+Documentation: https://github.com/AnalogJ/scrutiny/blob/master/README.md/
+
+Repository github: https://github.com/AnalogJ/scrutiny/
+
+Repository docker github: https://github.com/AnalogJ/scrutiny/blob/master/docker/Dockerfile/
+
+Repository docker: https://hub.docker.com/r/analogj/scrutiny/ and https://hub.docker.com/r/hotio/scrutiny/ and https://hub.docker.com/r/linuxserver/scrutiny/
