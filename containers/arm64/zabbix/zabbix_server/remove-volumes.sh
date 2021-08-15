@@ -24,3 +24,5 @@ fi
 
 docker volume rm $CONTAINER_NAME-conf
 docker volume rm $CONTAINER_NAME-data
+docker volume rm $CONTAINER_NAME-export
+docker volume rm $CONTAINER_NAME-snmptraps

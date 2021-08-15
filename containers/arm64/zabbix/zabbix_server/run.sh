@@ -24,6 +24,8 @@ docker run \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume $CONTAINER_NAME-conf:/etc/zabbix \
     --volume $CONTAINER_NAME-data:/var/lib/zabbix \
+    --volume $CONTAINER_NAME-export:/var/lib/zabbix/export \
+    --volume $CONTAINER_NAME-snmptraps:/var/lib/zabbix/snmptraps \
     --env DB_SERVER_HOST=$DB_HOST \
     --env DB_SERVER_PORT=$DB_PORT \
     --env MYSQL_USER=$DB_USERNAME \
