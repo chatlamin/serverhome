@@ -22,7 +22,7 @@ Website: https://www.plex.tv/ru/
 
 Documentation: https://support.plex.tv/articles/
 
-Repository github : https://github.com/plexinc/
+Repository github: https://github.com/plexinc/
 
 Repository docker github: https://github.com/plexinc/pms-docker/ and https://github.com/linuxserver/docker-plex/
 
