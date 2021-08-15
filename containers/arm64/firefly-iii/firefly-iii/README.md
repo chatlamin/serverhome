@@ -22,7 +22,7 @@ Website: https://www.firefly-iii.org/
 
 Documentation: https://docs.firefly-iii.org/
 
-Repository github : https://github.com/firefly-iii/firefly-iii/
+Repository github: https://github.com/firefly-iii/firefly-iii/
 
 Repository docker github: https://github.com/firefly-iii/docker/
 
