@@ -22,7 +22,7 @@ Website: https://dkron.io/
 
 Documentation: https://dkron.io/basics/
 
-Repository github : https://github.com/distribworks/dkron/
+Repository github: https://github.com/distribworks/dkron/
 
 Repository docker github: https://github.com/distribworks/dkron/blob/master/Dockerfile/
 
