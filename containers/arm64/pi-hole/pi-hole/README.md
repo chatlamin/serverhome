@@ -22,7 +22,7 @@ Website: https://pi-hole.net/
 
 Documentation: https://docs.pi-hole.net/
 
-Repository github : https://github.com/pi-hole/pi-hole/
+Repository github: https://github.com/pi-hole/pi-hole/
 
 Repository docker github: https://github.com/pi-hole/docker-pi-hole/
 
