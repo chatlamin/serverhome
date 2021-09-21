@@ -1,3 +1,5 @@
 # https://github.com/deviantony/docker-elk/tree/master/logstash
-http.host: "0.0.0.0"
-path.config: /usr/share/logstash/pipeline
+http.host: 0.0.0.0
+node.name: serverhome
+pipeline.ordered: auto
+http.port: 9600
