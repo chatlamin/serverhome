@@ -1,8 +1,0 @@
-# https://www.home-assistant.io/integrations/homekit/
-  - alias: 'Start HomeKit'
-    trigger:
-      - platform: homeassistant
-        event: start
-    action:
-      - delay: 00:01  # Waits 1 minutes
-      - service: homekit.start
