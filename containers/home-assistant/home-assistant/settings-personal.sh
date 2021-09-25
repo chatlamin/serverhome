@@ -24,7 +24,7 @@ DB_USERNAME=home_assistant
 # Пароль базы данных
 DB_PASSWORD=chah6viCaapeeD
 # Имя контейнера базы данных
-DB_CONTAINER_NAME=mysql
+DB_CONTAINER_NAME=mysql-8
 # Пароль от root
 MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
 

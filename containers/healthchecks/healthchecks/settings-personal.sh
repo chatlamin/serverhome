@@ -30,7 +30,7 @@ DB_USERNAME=healthchecks
 # Пароль базы данных
 DB_PASSWORD=Ealu0rius1shah
 # Имя контейнера базы данных
-DB_CONTAINER_NAME=mysql
+DB_CONTAINER_NAME=mysql-8
 # Пароль от root
 MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
 

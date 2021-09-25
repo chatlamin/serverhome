@@ -26,7 +26,7 @@ DB_PASSWORD=di1ieweesaekoF
 # Имя базы данных
 DB_DATABASE=bookstack
 # Имя контейнера базы данных
-DB_CONTAINER_NAME=mysql
+DB_CONTAINER_NAME=mysql-8
 # Пароль от root
 MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
 

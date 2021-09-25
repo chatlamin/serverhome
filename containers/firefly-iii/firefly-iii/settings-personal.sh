@@ -29,7 +29,7 @@ DB_USERNAME=firefly_iii
 # Пароль базы данных
 DB_PASSWORD=quohn3Ohr6vepi
 # Имя контейнера базы данных
-DB_CONTAINER_NAME=mysql
+DB_CONTAINER_NAME=mysql-8
 # Пароль от root
 MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
 

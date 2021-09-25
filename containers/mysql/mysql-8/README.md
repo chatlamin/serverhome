@@ -1,8 +1,15 @@
-# mysql
-Hostname: `mysql.serverhome.home`
+# mysql-8
+Hostname: `mysql-8.serverhome.home`
+
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | ?       |
+| arm64         | +       |
+| armhf         | ?       |
 
 ## Keys
-Link: `mysql.serverhome.home:3306`
+Link: `mysql-8.serverhome.home:3306`
 
 Login: `root`
 
@@ -24,6 +31,6 @@ Documentation: https://dev.mysql.com/doc/
 
 Repository github : https://github.com/mysql/mysql-server/
 
-Repository docker github: https://github.com/docker-library/mysql/
+Repository docker github: https://github.com/mysql/mysql-docker/
 
-Repository docker: https://hub.docker.com/r/ubuntu/mysql
+Repository docker: https://hub.docker.com/r/mysql/mysql-server/

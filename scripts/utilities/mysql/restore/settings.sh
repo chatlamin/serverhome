@@ -16,7 +16,7 @@ DB_DATABASE=bookstack
 # Домашний каталог текущего пользователя
 export HOME=$(bash <<< "echo ~$SUDO_USER")
 # Путь к сохраненному дампу
-BACKUP_PATH_FILE=$HOME/gandalf-hdd-16-05/backup/mysql/bookstack/03-05-2021_00-00-01
+BACKUP_PATH_FILE=$HOME/backups-mysql/25-09-2021_13-10-16
 
 #--------------------------------------------------------------------
 # End settings

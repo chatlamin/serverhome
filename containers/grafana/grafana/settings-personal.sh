@@ -24,7 +24,7 @@ DB_USERNAME=grafana
 # Пароль базы данных
 DB_PASSWORD=shohg5Sei3igh3
 # Имя контейнера базы данных
-DB_CONTAINER_NAME=mysql
+DB_CONTAINER_NAME=mysql-8
 # Пароль от root
 MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
 # Логин дэфолтного администратора
