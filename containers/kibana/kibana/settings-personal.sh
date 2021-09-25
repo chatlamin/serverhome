@@ -6,11 +6,11 @@
 # Название проекта
 export NAME=kibana
 # Репозиторий
-EXPLORE=docker.elastic.co/kibana/kibana-oss
+EXPLORE=docker.elastic.co/kibana/kibana
 # Тэг образа старый
 TAG_OLD=7.10.2
 # Тэг образа новый
-TAG_NEW=7.10.2
+TAG_NEW=7.15.0
 
 #--------------------------------------------------------------------
 # End settings

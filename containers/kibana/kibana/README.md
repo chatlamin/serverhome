@@ -33,4 +33,4 @@ Repository github: https://github.com/elastic/kibana/
 
 Repository docker github: https://github.com/elastic/dockerfiles/
 
-Repository docker: https://hub.docker.com/_/kibana/ https://www.docker.elastic.co/r/kibana/
+Repository docker: https://hub.docker.com/_/kibana/ https://www.docker.elastic.co/r/kibana/ https://www.docker.elastic.co/r/kibana/kibana-oss/

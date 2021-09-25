@@ -4,8 +4,8 @@ Hostname: `elasticsearch.serverhome.home`
 ## Supported architectures
 | Architectures | Support |
 | :------------ | :------ |
-| amd64         | +       |
-| arm64         | ?       |
+| amd64         | ?       |
+| arm64         | +       |
 | armhf         | ?       |
 
 ## Keys
@@ -33,4 +33,4 @@ Repository github: https://github.com/elastic/elasticsearch/
 
 Repository docker github: https://github.com/elastic/elasticsearch/tree/master/distribution/docker/
 
-Repository docker: https://hub.docker.com/_/elasticsearch/ https://www.docker.elastic.co/r/elasticsearch/
+Repository docker: https://hub.docker.com/_/elasticsearch/ https://www.docker.elastic.co/r/elasticsearch/ https://www.docker.elastic.co/r/elasticsearch/elasticsearch-oss/
