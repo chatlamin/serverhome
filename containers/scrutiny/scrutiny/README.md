@@ -1,6 +1,13 @@
 # scrutiny
 Hostname: `scrutiny.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | ?       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://scrutiny.serverhome.home:65012/
 
@@ -26,4 +33,4 @@ Repository github: https://github.com/AnalogJ/scrutiny/
 
 Repository docker github: https://github.com/AnalogJ/scrutiny/blob/master/docker/Dockerfile/
 
-Repository docker: https://hub.docker.com/r/analogj/scrutiny/ and https://hub.docker.com/r/hotio/scrutiny/ and https://hub.docker.com/r/linuxserver/scrutiny/
+Repository docker: https://hub.docker.com/r/analogj/scrutiny/ https://hub.docker.com/r/hotio/scrutiny/ https://hub.docker.com/r/linuxserver/scrutiny/

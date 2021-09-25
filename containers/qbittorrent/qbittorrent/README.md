@@ -1,6 +1,13 @@
 # qbittorrent
 Hostname: `qbittorrent.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://qbittorrent.serverhome.home:65004/
 

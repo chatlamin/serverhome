@@ -1,6 +1,13 @@
 # telegraf
 Hostname: `telegraf.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | +       |
+
 ## Keys
 Link: http://telegraf.serverhome.home:65016/
 

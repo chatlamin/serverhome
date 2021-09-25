@@ -1,6 +1,13 @@
 # hass-configurator
 Hostname: `hass-configurator.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://hass-configurator.serverhome.home:65007/
 
@@ -22,7 +29,7 @@ Website: https://github.com/danielperna84/hass-configurator/
 
 Documentation: https://github.com/danielperna84/hass-configurator/wiki/
 
-Repository github : https://github.com/danielperna84/hass-configurator/
+Repository github: https://github.com/danielperna84/hass-configurator/
 
 Repository docker github: https://github.com/CausticLab/hass-configurator-docker/
 

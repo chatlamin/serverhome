@@ -1,6 +1,13 @@
 # pi-hole
 Hostname: `pi-hole.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://pi-hole.serverhome.home:65010/
 

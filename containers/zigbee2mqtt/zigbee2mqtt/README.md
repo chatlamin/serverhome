@@ -1,6 +1,13 @@
 # zigbee2mqtt
 Hostname: `zigbee2mqtt.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://zigbee2mqtt.serverhome.home:65009/
 

@@ -1,6 +1,13 @@
 # grafana
 Hostname: `grafana.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://grafana.serverhome.home:3000/
 
@@ -22,7 +29,7 @@ Website: https://grafana.com/
 
 Documentation: https://grafana.com/docs/grafana/latest/
 
-Repository github : https://github.com/grafana/grafana/
+Repository github: https://github.com/grafana/grafana/
 
 Repository docker github: https://github.com/grafana/grafana/blob/main/Dockerfile/
 

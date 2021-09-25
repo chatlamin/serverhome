@@ -1,6 +1,13 @@
 # zabbix_agent
 Hostname: `zabbix_agent.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | ?       |
+| armhf         | ?       |
+
 ## Keys
 Link: `zabbix_agent.serverhome.home:65017`
 

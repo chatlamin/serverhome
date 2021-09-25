@@ -1,6 +1,13 @@
 # firefly-iii
 Hostname: `firefly-iii.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://firefly-iii.serverhome.home:65003/
 

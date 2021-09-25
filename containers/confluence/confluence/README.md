@@ -5,8 +5,8 @@ Hostname: `confluence.serverhome.home`
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
-| arm64         | -       |
-| armhf         | -       |
+| arm64         | ?       |
+| armhf         | ?       |
 
 ## Keys
 Link: http://confluence.serverhome.home:65018/

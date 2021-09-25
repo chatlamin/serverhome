@@ -1,6 +1,13 @@
 # homer
 Hostname: `homer.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | ?       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://homer.serverhome.home:65011/
 
@@ -22,7 +29,7 @@ Website: https://github.com/bastienwirtz/homer/
 
 Documentation: https://github.com/bastienwirtz/homer/blob/main/README.md/
 
-Repository github : https://github.com/bastienwirtz/homer/
+Repository github: https://github.com/bastienwirtz/homer/
 
 Repository docker github: https://github.com/bastienwirtz/homer/blob/main/Dockerfile/
 

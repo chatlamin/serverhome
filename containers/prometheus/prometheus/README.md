@@ -1,6 +1,13 @@
 # prometheus
 Hostname: `prometheus.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://prometheus.serverhome.home:9090/
 
@@ -22,7 +29,7 @@ Website: https://prometheus.io/
 
 Documentation: https://prometheus.io/docs/introduction/overview/
 
-Repository github : https://github.com/prometheus/prometheus/
+Repository github: https://github.com/prometheus/prometheus/
 
 Repository docker github: https://github.com/prometheus/prometheus/blob/main/Dockerfile/
 

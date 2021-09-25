@@ -1,9 +1,36 @@
-# Ссылки на проект
+# logstash
+Hostname: `logstash.serverhome.home`
 
-https://www.elastic.co/logstash
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | ?       |
+| armhf         | ?       |
 
-https://github.com/elastic/logstash
+## Keys
+Link: `logstash.serverhome.home:9600`
 
-https://hub.docker.com/_/logstash
+Login: `no authentication support`
 
-https://www.docker.elastic.co/r/logstash
+Password: `no authentication support`
+
+## Database
+Type: `no external database support`
+
+Name: `no external database support`
+
+Username: `no external database support`
+
+Password: `no external database support`
+
+## References to the original project
+Website: https://www.elastic.co/logstash
+
+Documentation: https://www.elastic.co/guide/en/logstash/current/index.html
+
+Repository github: https://github.com/elastic/logstash
+
+Repository docker github: https://github.com/elastic/dockerfiles/
+
+Repository docker: https://hub.docker.com/_/logstash/ https://www.docker.elastic.co/r/logstash/

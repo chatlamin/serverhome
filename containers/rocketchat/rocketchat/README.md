@@ -1,16 +1,36 @@
-# Ссылки на проект
-https://rocket.chat/
+# rocketchat
+Hostname: `rocketchat.serverhome.home`
 
-https://github.com/RocketChat/Rocket.Chat
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | ?       |
+| armhf         | ?       |
 
-https://github.com/RocketChat/Docker.Official.Image
+## Keys
+Link: http://rocketchat.serverhome.home:65055/
 
-https://hub.docker.com/_/rocket-chat
+Login: `admin_Phoh8mosh1quoo`
 
-https://rocket.chat/docs/installation/docker-containers/
+Password: `eeye9La4Utaifa`
 
-Для работы push уведомлений необходимо следовать этой инструкции https://docs.rocket.chat/guides/rocket.chat-administrator-guides/administration/connectivity-services
+## Database
+Type: `mongodb`
 
-Не забудь перезапустить сервер rocketchat (иначе после выполнений всех действий в инструкции ничего не заработает)
+Name: `rocketchat`
 
-Еще полезная инструкция (в случае если используется push-сервер cloud.rocket.chat - она не нужна, но почитать стоит) https://docs.rocket.chat/guides/rocket.chat-administrator-guides/settings/push-notifications-admin-guide
+Username: `root`
+
+Password: `wah7nie6naZ0ka`
+
+## References to the original project
+Website: https://rocket.chat/
+
+Documentation: https://docs.rocket.chat/
+
+Repository github: https://github.com/RocketChat/Rocket.Chat/
+
+Repository docker github: https://github.com/RocketChat/Docker.Official.Image/
+
+Repository docker: https://hub.docker.com/_/rocket-chat/

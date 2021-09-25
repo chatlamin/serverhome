@@ -1,6 +1,13 @@
 # duplicati
 Hostname: `duplicati.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | ?       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://duplicati.serverhome.home:65006/
 
@@ -22,7 +29,7 @@ Website: https://www.duplicati.com/
 
 Documentation: https://duplicati.readthedocs.io/en/latest/
 
-Repository github : https://github.com/duplicati/duplicati/
+Repository github: https://github.com/duplicati/duplicati/
 
 Repository docker github: https://github.com/duplicati/duplicati/tree/master/Installer/Docker/
 

@@ -1,6 +1,13 @@
 # loki
 Hostname: `loki.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://loki.serverhome.home:3100/loki/api/v1/push
 
@@ -22,7 +29,7 @@ Website: https://grafana.com/oss/loki/
 
 Documentation: https://grafana.com/docs/loki/latest/
 
-Repository github : https://github.com/grafana/loki
+Repository github: https://github.com/grafana/loki
 
 Repository docker github: https://github.com/grafana/loki/blob/main/loki-build-image/Dockerfile/
 

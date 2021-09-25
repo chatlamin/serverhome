@@ -1,6 +1,13 @@
 # healthchecks
 Hostname: `healthchecks.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://healthchecks.serverhome.home:8000/
 
@@ -22,7 +29,7 @@ Website: https://healthchecks.io/
 
 Documentation: https://healthchecks.io/docs/
 
-Repository github : https://github.com/healthchecks/healthchecks/
+Repository github: https://github.com/healthchecks/healthchecks/
 
 Repository docker github: https://github.com/linuxserver/docker-healthchecks/
 

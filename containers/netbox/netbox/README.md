@@ -1,6 +1,13 @@
 # netbox
 Hostname: `netbox.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | ?       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://netbox.serverhome.home:65021/
 

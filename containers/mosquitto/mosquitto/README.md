@@ -1,6 +1,13 @@
 # mosquitto
 Hostname: `mosquitto.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: `mqtt://mosquitto.serverhome.home:1883`
 
@@ -22,7 +29,7 @@ Website: https://mosquitto.org/
 
 Documentation: https://mosquitto.org/documentation/
 
-Repository github : https://github.com/eclipse/mosquitto/
+Repository github: https://github.com/eclipse/mosquitto/
 
 Repository docker github: https://github.com/eclipse/mosquitto/tree/master/docker/
 

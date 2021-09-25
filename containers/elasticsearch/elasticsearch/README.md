@@ -1,9 +1,36 @@
-# Ссылки на проект
+# elasticsearch
+Hostname: `elasticsearch.serverhome.home`
 
-https://www.elastic.co/elasticsearch/
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | ?       |
+| armhf         | ?       |
 
-https://github.com/elastic/elasticsearch
+## Keys
+Link: http://elasticsearch.serverhome.home:9200/
 
-https://hub.docker.com/_/elasticsearch
+Login: `your need to go through the registration procedure`
 
-https://www.docker.elastic.co/r/elasticsearch
+Password: `your need to go through the registration procedure`
+
+## Database
+Type: `no external database support`
+
+Name: `no external database support`
+
+Username: `no external database support`
+
+Password: `no external database support`
+
+## References to the original project
+Website: https://www.elastic.co/elasticsearch/
+
+Documentation: https://www.elastic.co/guide/index.html
+
+Repository github: https://github.com/elastic/elasticsearch/
+
+Repository docker github: https://github.com/elastic/elasticsearch/tree/master/distribution/docker/
+
+Repository docker: https://hub.docker.com/_/elasticsearch/ https://www.docker.elastic.co/r/elasticsearch/

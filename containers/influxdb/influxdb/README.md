@@ -1,6 +1,13 @@
 # influxdb
 Hostname: `influxdb.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: `influxdb.serverhome.home:8086`
 
@@ -22,7 +29,7 @@ Website: https://www.influxdata.com/products/influxdb/
 
 Documentation: https://docs.influxdata.com/influxdb/v1.8/
 
-Repository github : https://github.com/influxdata/influxdb/
+Repository github: https://github.com/influxdata/influxdb/
 
 Repository docker github: https://github.com/influxdata/influxdata-docker/tree/master/influxdb/
 

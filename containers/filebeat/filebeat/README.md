@@ -1,6 +1,13 @@
 # filebeat
 Hostname: `filebeat.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | ?       |
+| armhf         | ?       |
+
 ## Keys
 Link: `filebeat.serverhome.home`
 

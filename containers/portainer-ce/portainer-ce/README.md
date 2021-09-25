@@ -1,6 +1,13 @@
 # portainer-ce
 Hostname: `portainer-ce.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://portainer-ce.serverhome.home:9000/
 
@@ -22,7 +29,7 @@ Website: https://www.portainer.io/products/community-edition/
 
 Documentation: https://documentation.portainer.io/
 
-Repository github : https://github.com/portainer/portainer/
+Repository github: https://github.com/portainer/portainer/
 
 Repository docker github: https://github.com/portainer/portainer/blob/develop/build/linux/Dockerfile/
 

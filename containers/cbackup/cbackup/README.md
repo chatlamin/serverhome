@@ -1,23 +1,38 @@
-# Ссылки на проект
-https://cbackup.me/ru/
-
-https://github.com/cBackup/main
-
-https://github.com/chatlamin/cBackup-docker
+# cbackup
+Hostname: `cbackup.serverhome.home`
 
 ## Supported architectures
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
-| arm64         | -       |
-| armhf         | -       |
+| arm64         | ?       |
+| armhf         | ?       |
+
+## Keys
+Link: http://cbackup.serverhome.home:65015/
+
+Login: `your need to go through the registration procedure`
+
+Password: `your need to go through the registration procedure`
+
+## Database
+Type: `mysql-5-7`
+
+Name: `cbackup`
+
+Username: `cbackup`
+
+Password: `Aebaxeivoo6eiv`
+
+## References to the original project
+Website: https://cbackup.me/ru/
+
+Documentation: https://cbackup.readthedocs.io/en/latest/
+
+Repository github: https://github.com/cBackup/main/
+
+Repository docker github:
+
+Repository docker:
 
 
-Используй mysql версии 5.7, так как у установщика cbackup проблемы с инициализации базы в mysql 8.X.XX. Ошибка `Undefined index: constraint_name` (в помощь https://github.com/yiisoft/yii2/issues/18171).
-
-После запуска контейнера, supervisor будет пытаться запустить сервис cbackup до тех пор, пока вы не закончите первичную настройку по адресу http://IP-ADDRESS/cbackup/index.php
-
-Не решенная проблема: в вэб интерфейсе будет отображатся, что `Java service is not running`, ошибка `Failed to connect to bus: No such file or directory`.
-Причина - в данном проекте используется supervisor для запуска сервисов, требуемых cbackup, и cbackup не поддерживает такой тип запуска. Смотри /opt/cbackup/config/settings.ini
-Подробнее https://cbackup.readthedocs.io/en/latest/getting-started/servers/general/ https://github.com/cBackup/main/blob/master/cookbook/ru/TROUBLESHOOTING.md
-Данная проблема на работу приложения не влияет, она, видимо отвечает только за мониторинг сервиса cbackup

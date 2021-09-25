@@ -1,6 +1,13 @@
 # postgresql
 Hostname: `postgresql.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | ?       |
+| armhf         | ?       |
+
 ## Keys
 Link: `postgresql.serverhome.home:65019`
 

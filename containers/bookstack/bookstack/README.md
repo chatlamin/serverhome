@@ -29,7 +29,7 @@ Website: https://www.bookstackapp.com/
 
 Documentation: https://www.bookstackapp.com/docs/
 
-Repository github : https://github.com/BookStackApp/BookStack/
+Repository github: https://github.com/BookStackApp/BookStack/
 
 Repository docker github: https://github.com/linuxserver/docker-bookstack/
 

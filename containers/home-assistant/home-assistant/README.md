@@ -1,6 +1,13 @@
 # home-assistant
 Hostname: `home-assistant.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://home-assistant.serverhome.home:8123/
 
@@ -22,7 +29,7 @@ Website: https://www.home-assistant.io/
 
 Documentation: https://www.home-assistant.io/docs/
 
-Repository github : https://github.com/home-assistant/core/
+Repository github: https://github.com/home-assistant/core/
 
 Repository docker github: https://github.com/home-assistant/docker/
 

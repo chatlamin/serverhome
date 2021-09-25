@@ -1,6 +1,13 @@
 # plex
 Hostname: `plex.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | +       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://plex.serverhome.home:32400/web/
 
@@ -24,7 +31,7 @@ Documentation: https://support.plex.tv/articles/
 
 Repository github: https://github.com/plexinc/
 
-Repository docker github: https://github.com/plexinc/pms-docker/ and https://github.com/linuxserver/docker-plex/
+Repository docker github: https://github.com/plexinc/pms-docker/ https://github.com/linuxserver/docker-plex/
 
 Repository docker: https://hub.docker.com/r/linuxserver/plex/
 

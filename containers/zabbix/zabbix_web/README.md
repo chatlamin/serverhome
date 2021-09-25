@@ -1,6 +1,13 @@
 # zabbix_web
 Hostname: `zabbix_web.serverhome.home`
 
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | ?       |
+| armhf         | ?       |
+
 ## Keys
 Link: http://zabbix_web.serverhome.home:65014/
 
