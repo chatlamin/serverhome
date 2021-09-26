@@ -4,7 +4,7 @@ Hostname: `prometheus.serverhome.home`
 ## Supported architectures
 | Architectures | Support |
 | :------------ | :------ |
-| amd64         | +       |
+| amd64         | ?       |
 | arm64         | +       |
 | armhf         | ?       |
 
