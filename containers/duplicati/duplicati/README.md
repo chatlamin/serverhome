@@ -4,8 +4,8 @@ Hostname: `duplicati.serverhome.home`
 ## Supported architectures
 | Architectures | Support |
 | :------------ | :------ |
-| amd64         | +       |
-| arm64         | ?       |
+| amd64         | ?       |
+| arm64         | +       |
 | armhf         | ?       |
 
 ## Keys

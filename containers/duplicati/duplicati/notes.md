@@ -1,1 +1,2 @@
+# notes
 Нет поддержки полноценной БД для нужд самого приложения https://github.com/duplicati/duplicati/issues/3013
