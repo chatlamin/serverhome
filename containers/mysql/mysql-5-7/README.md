@@ -5,8 +5,8 @@ Hostname: `mysql-5-7.serverhome.home`
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
-| arm64         | ?       |
-| armhf         | ?       |
+| arm64         | -       |
+| armhf         | -       |
 
 ## Keys
 Link: `mysql-5-7.serverhome.home:65020`
