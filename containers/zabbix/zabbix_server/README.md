@@ -16,7 +16,7 @@ Login: `no authentication support`
 Password: `no authentication support`
 
 ## Database
-Type: `mysql`
+Type: `mysql-8`
 
 Name: `zabbix`
 

@@ -1,5 +1,4 @@
 # notes
-
 ___
 Проблема:
 Не доступен дэфолтный хост "Zabbix server" в вэб-интерфейсе http://zabbix_web.serverhome.home:65014/hosts.php
