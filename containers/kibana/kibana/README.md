@@ -9,7 +9,7 @@ Hostname: `kibana.serverhome.home`
 | armhf         | ?       |
 
 ## Keys
-Link: `http://kibana.serverhome.home:5601/`
+Link: http://kibana.serverhome.home:5601/
 
 Login: `no authentication support`
 
