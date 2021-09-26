@@ -10,13 +10,13 @@ EXPLORE=homeassistant/home-assistant
 # Тэг образа старый
 TAG_OLD=2021.4.6
 # Тэг образа новый
-TAG_NEW=2021.4.6
+TAG_NEW=2021.9.7
 
 ##
 # Тип базы данных
 DB_CONNECTION=mysql
 # ip / dns базы данных
-DB_HOST=mysql.serverhome.home
+DB_HOST=mysql-8.serverhome.home
 # Имя базы данных
 DB_DATABASE=home_assistant
 # Пользователь базы данных
