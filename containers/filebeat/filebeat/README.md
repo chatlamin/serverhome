@@ -5,7 +5,7 @@ Hostname: `filebeat.serverhome.home`
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
-| arm64         | ?       |
+| arm64         | +       |
 | armhf         | ?       |
 
 ## Keys
@@ -18,19 +18,19 @@ Password: `no authentication support`
 ## Database
 Type: `elastic`
 
-Name: `beats`
+Name:
 
 Username:
 
 Password:
 
 ## References to the original project
-Website: https://www.elastic.co/beats/filebeat
+Website: https://www.elastic.co/beats/filebeat/
 
 Documentation: https://www.elastic.co/guide/en/beats/filebeat/current/index.html
 
-Repository github: https://github.com/elastic/beats/tree/master/filebeat
+Repository github: https://github.com/elastic/beats/tree/master/filebeat/
 
-Repository docker github: https://github.com/elastic/beats/tree/master/filebeat
+Repository docker github: https://github.com/elastic/beats/tree/master/filebeat/
 
-Repository docker: https://www.docker.elastic.co/r/beats/filebeat-oss
+Repository docker: https://www.docker.elastic.co/r/beats/filebeat-oss/ https://www.docker.elastic.co/r/beats/filebeat/

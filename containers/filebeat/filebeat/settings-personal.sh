@@ -6,11 +6,11 @@
 # Название проекта
 export NAME=filebeat
 # Репозиторий
-EXPLORE=docker.elastic.co/beats/filebeat-oss
+EXPLORE=docker.elastic.co/beats/filebeat
 # Тэг образа старый
-TAG_OLD=start
+TAG_OLD=7.14.1
 # Тэг образа новый
-TAG_NEW=7.14.1
+TAG_NEW=7.15.0
 
 #--------------------------------------------------------------------
 # End settings
