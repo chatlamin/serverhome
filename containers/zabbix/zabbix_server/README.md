@@ -5,7 +5,7 @@ Hostname: `zabbix_server.serverhome.home`
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
-| arm64         | ?       |
+| arm64         | +       |
 | armhf         | ?       |
 
 ## Keys
