@@ -5,7 +5,7 @@ Hostname: `zabbix_web.serverhome.home`
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
-| arm64         | ?       |
+| arm64         | +       |
 | armhf         | ?       |
 
 ## Keys
@@ -16,7 +16,7 @@ Login: `Admin`
 Password: `zabbix`
 
 ## Database
-Type: `mysql`
+Type: `mysql-8`
 
 Name: `zabbix`
 
