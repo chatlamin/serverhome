@@ -1,5 +1,12 @@
-# bookstack
+# dkron
 Hostname: `dkron.serverhome.home`
+
+## Supported architectures
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | ?       |
+| arm64         | +       |
+| armhf         | ?       |
 
 ## Keys
 Link: http://dkron.serverhome.home:65005/ui/#/
