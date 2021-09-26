@@ -5,11 +5,11 @@ Hostname: `cbackup.serverhome.home`
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
-| arm64         | ?       |
+| arm64         | +       |
 | armhf         | ?       |
 
 ## Keys
-Link: http://cbackup.serverhome.home:65015/
+Link: http://cbackup.serverhome.home:65015/cbackup/index.php
 
 Login: `your need to go through the registration procedure`
 
@@ -31,8 +31,8 @@ Documentation: https://cbackup.readthedocs.io/en/latest/
 
 Repository github: https://github.com/cBackup/main/
 
-Repository docker github:
+Repository docker github: -
 
-Repository docker:
+Repository docker: -
 
 
