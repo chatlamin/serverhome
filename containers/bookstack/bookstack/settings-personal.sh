@@ -8,15 +8,15 @@ export NAME=bookstack
 # Репозиторий
 EXPLORE=linuxserver/bookstack
 # Тэг образа старый
-TAG_OLD=version-v21.04.2
+TAG_OLD=version-v21.04.3
 # Тэг образа новый
-TAG_NEW=version-v21.04.3
+TAG_NEW=version-v21.08.3
 
 ##
 # URL приложения
 APP_URL=http://bookstack.serverhome.home:65001
 # ip / dns базы данных
-DB_HOST=mysql.serverhome.home
+DB_HOST=mysql-8.serverhome.home
 # Порт базы данных
 DB_PORT=3306
 # Пользователь базы данных

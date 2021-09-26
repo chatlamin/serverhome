@@ -16,5 +16,6 @@ source ../../settings/settings-common.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker rmi $IMAGE_TARGET
+docker rmi $IMAGE_TARGET_OLD
 docker rmi $IMAGE_SOURCE_NEW
 docker rmi $IMAGE_SOURCE_OLD
