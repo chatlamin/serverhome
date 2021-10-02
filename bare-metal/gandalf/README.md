@@ -99,12 +99,12 @@
 
 9. Синхронизируем каталог /etc с репозиторием
 
-        sudo cp -r /etc $HOME/github/gandalf.system
-        cd $HOME/github/gandalf.system
-        sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
-        git add --all .
-        git commit -m "start"
-        git push
+       sudo cp -r /etc $HOME/github/gandalf.system
+       cd $HOME/github/gandalf.system
+       sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
+       git add --all .
+       git commit -m "start"
+       git push
 
 10. Меняем hostname
 
