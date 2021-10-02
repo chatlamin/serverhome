@@ -11,3 +11,7 @@
 vm.max_map_count=262144
 ```
 перезагрузить систему
+
+
+# https://www.elastic.co/guide/en/elasticsearch/reference/7.15/security-minimal-setup.html
+Для создания пользователей используй скрипт `/containers/elasticsearch/tools/create-user.exp`

@@ -3,3 +3,7 @@ http.host: 0.0.0.0
 node.name: serverhome
 pipeline.ordered: auto
 http.port: 9600
+xpack.monitoring.elasticsearch.hosts: [ "http://elasticsearch.serverhome.home:9200" ]
+xpack.monitoring.enabled: true
+xpack.monitoring.elasticsearch.username: elastic
+xpack.monitoring.elasticsearch.password: cieF8cieB8ou3y

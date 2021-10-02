@@ -11,9 +11,9 @@ Hostname: `elasticsearch.serverhome.home`
 ## Keys
 Link: http://elasticsearch.serverhome.home:9200
 
-Login: `your need to go through the registration procedure`
+Login: `elastic`
 
-Password: `your need to go through the registration procedure`
+Password: `cieF8cieB8ou3y`
 
 ## Database
 Type: `no external database support`

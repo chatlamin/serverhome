@@ -11,9 +11,9 @@ Hostname: `kibana.serverhome.home`
 ## Keys
 Link: http://kibana.serverhome.home:5601
 
-Login: `no authentication support`
+Login: `elastic`
 
-Password: `no authentication support`
+Password: `cieF8cieB8ou3y`
 
 ## Database
 Type: `no external database support`

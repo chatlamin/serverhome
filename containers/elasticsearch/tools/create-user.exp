@@ -1,0 +1,20 @@
+#!/usr/bin/expect -f
+# https://github.com/deviantony/docker-elk/blob/main/.github/workflows/scripts/elasticsearch-setup-passwords.exp
+
+set user "(elastic|apm_system|kibana_system|logstash_system|beats_system|remote_monitoring_user)"
+set password "cieF8cieB8ou3y"
+
+set cmd "docker exec -ti elasticsearch bin/elasticsearch-setup-passwords interactive -s -b -u http://localhost:9200"
+
+spawn {*}$cmd
+
+expect {
+    -re "(E|Ree)nter password for \\\[$user\\\]: " {
+	send "$password\r"
+	exp_continue
+    }
+    eof
+}
+
+lassign [wait] pid spawnid os_error_flag value
+exit $value
