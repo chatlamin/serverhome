@@ -8,9 +8,9 @@ export NAME=pi-hole
 # Репозиторий
 EXPLORE=pihole/pihole
 # Тэг образа старый
-TAG_OLD=v5.8.1
+TAG_OLD=2021.09
 # Тэг образа новый
-TAG_NEW=2021.09
+TAG_NEW=2021.10
 
 ##
 # DNS сервер для самого pi-hole

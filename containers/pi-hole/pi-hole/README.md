@@ -9,7 +9,7 @@ Hostname: `pi-hole.serverhome.home`
 | armhf         | ?       |
 
 ## Keys
-Link: http://pi-hole.serverhome.home:65010/
+Link: http://pi-hole.serverhome.home:65010/admin/index.php?login
 
 Login: `admin`
 
@@ -25,12 +25,12 @@ Username: `no external database support`
 Password: `no external database support`
 
 ## References to the original project
-Website: https://pi-hole.net/
+Website: https://pi-hole.net
 
-Documentation: https://docs.pi-hole.net/
+Documentation: https://docs.pi-hole.net
 
-Repository github: https://github.com/pi-hole/pi-hole/
+Repository github: https://github.com/pi-hole/pi-hole
 
-Repository docker github: https://github.com/pi-hole/docker-pi-hole/
+Repository docker github: https://github.com/pi-hole/docker-pi-hole
 
-Repository docker: https://hub.docker.com/r/pihole/pihole/
+Repository docker: https://hub.docker.com/r/pihole/pihole
