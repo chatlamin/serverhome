@@ -8,6 +8,12 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
@@ -15,7 +21,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 10,
   "links": [],
   "panels": [
     {
@@ -24,10 +29,6 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": null,
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -58,7 +59,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.5",
+      "pluginVersion": "8.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -68,7 +69,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "D",
+          "alias": "A",
           "groupBy": [
             {
               "params": [
@@ -83,7 +84,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "temp_disk_D",
+          "measurement": "temp_disk_A",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -105,7 +106,7 @@
           "tags": []
         },
         {
-          "alias": "E",
+          "alias": "B",
           "groupBy": [
             {
               "params": [
@@ -121,7 +122,7 @@
             }
           ],
           "hide": false,
-          "measurement": "temp_disk_E",
+          "measurement": "temp_disk_B",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
@@ -143,7 +144,7 @@
           "tags": []
         },
         {
-          "alias": "F",
+          "alias": "N",
           "groupBy": [
             {
               "params": [
@@ -159,10 +160,86 @@
             }
           ],
           "hide": false,
-          "measurement": "temp_disk_F",
+          "measurement": "temp_disk_N",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "temp"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "O",
+          "groupBy": [
+            {
+              "params": [
+                "10s"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "temp_disk_O",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "temp"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "U",
+          "groupBy": [
+            {
+              "params": [
+                "10s"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "temp_disk_U",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "E",
           "resultFormat": "time_series",
           "select": [
             [
@@ -200,7 +277,7 @@
           "measurement": "temp_disk_G",
           "orderByTime": "ASC",
           "policy": "default",
-          "refId": "D",
+          "refId": "F",
           "resultFormat": "time_series",
           "select": [
             [
@@ -219,7 +296,7 @@
           "tags": []
         },
         {
-          "alias": "H",
+          "alias": "F",
           "groupBy": [
             {
               "params": [
@@ -235,10 +312,48 @@
             }
           ],
           "hide": false,
-          "measurement": "temp_disk_H",
+          "measurement": "temp_disk_F",
           "orderByTime": "ASC",
           "policy": "default",
-          "refId": "E",
+          "refId": "G",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "temp"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "E",
+          "groupBy": [
+            {
+              "params": [
+                "10s"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "temp_disk_E",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "H",
           "resultFormat": "time_series",
           "select": [
             [
@@ -276,7 +391,7 @@
           "measurement": "temp_disk_I",
           "orderByTime": "ASC",
           "policy": "default",
-          "refId": "F",
+          "refId": "I",
           "resultFormat": "time_series",
           "select": [
             [
@@ -314,83 +429,7 @@
           "measurement": "temp_disk_J",
           "orderByTime": "ASC",
           "policy": "default",
-          "refId": "G",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "temp"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": []
-        },
-        {
-          "alias": "L",
-          "groupBy": [
-            {
-              "params": [
-                "10s"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "hide": false,
-          "measurement": "temp_disk_L",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "H",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "temp"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": []
-        },
-        {
-          "alias": "K",
-          "groupBy": [
-            {
-              "params": [
-                "10s"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "hide": false,
-          "measurement": "temp_disk_K",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "I",
+          "refId": "J",
           "resultFormat": "time_series",
           "select": [
             [
@@ -426,44 +465,6 @@
           ],
           "hide": false,
           "measurement": "temp_disk_M",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "J",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "temp"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": []
-        },
-        {
-          "alias": "T",
-          "groupBy": [
-            {
-              "params": [
-                "10s"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "hide": false,
-          "measurement": "temp_disk_T",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "K",
@@ -505,6 +506,44 @@
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "L",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "temp"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "P",
+          "groupBy": [
+            {
+              "params": [
+                "10s"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "temp_disk_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "M",
           "resultFormat": "time_series",
           "select": [
             [
@@ -568,19 +607,20 @@
       }
     }
   ],
-  "schemaVersion": 27,
+  "refresh": "",
+  "schemaVersion": 30,
   "style": "dark",
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-24h",
+    "from": "now-12h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "CrystalDiskInfo",
   "uid": "hPs1CGk7z",
-  "version": 5
+  "version": 1
 }
