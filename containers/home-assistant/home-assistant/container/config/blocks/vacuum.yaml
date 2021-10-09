@@ -1,4 +1,0 @@
-  - platform: xiaomi_miio
-    name: Xiaomi Vacuum cleaner 1s
-    host: !secret host_xiaomi_vacuum_cleaner_1s
-    token: !secret token_xiaomi_vacuum_cleaner_1s

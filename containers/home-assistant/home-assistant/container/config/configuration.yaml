@@ -1,5 +1,5 @@
 homeassistant:
-  name: homeassistant
+  name: homea-ssistant
   latitude: !secret latitude
   longitude: !secret longitude
   elevation: !secret elevation
@@ -41,8 +41,6 @@ lovelace:
      type: module
    - url: /local/simple-weather-card-bundle.js # https://github.com/kalkih/simple-weather-card/releases/tag/v0.8.1
      type: module
-   - url: /local/mini-humidifier-bundle.js # https://github.com/artem-sedykh/mini-humidifier/releases/tag/v2.3.2
-     type: module
 
 # Text to speech
 tts:
@@ -50,11 +48,7 @@ tts:
 
 # Читай эти блоки из других файлов
 recorder: !include blocks/recorder.yaml # База данных
-vacuum: !include blocks/vacuum.yaml # Пылесосы
-fan: !include blocks/fan.yaml # Увлажнители
 api: !include blocks/api.yaml # https://www.home-assistant.io/integrations/api/
-mikrotik: !include blocks/mikrotik.yaml # https://www.home-assistant.io/integrations/mikrotik/
-homekit: !include blocks/homekit.yaml # https://www.home-assistant.io/integrations/homekit/
 input_select: !include blocks/input_select.yaml # https://www.home-assistant.io/integrations/input_select/
 device_tracker: !include blocks/device_tracker.yaml # https://www.home-assistant.io/integrations/device_tracker/
 notify: !include blocks/notify.yaml # https://www.home-assistant.io/integrations/notify/
@@ -68,6 +62,4 @@ telegram_bot: !include blocks/telegram_bot.yaml # https://www.home-assistant.io/
 weather: !include blocks/weather.yaml # https://www.home-assistant.io/integrations/weather/
 
 # Читай эти блоки из других файлов (весь каталог)
-automation: !include_dir_merge_list blocks/automation
 sensor: !include_dir_merge_list blocks/sensor # https://www.home-assistant.io/integrations/sensor/
-switch: !include_dir_merge_list blocks/switch # https://www.home-assistant.io/integrations/switch/

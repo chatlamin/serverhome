@@ -8,7 +8,7 @@ cards:
               - type: entities
                 show_header_toggle: false
                 entities:
-                  - entity: binary_sensor.aqara_water_leak_sensor_1_water_leak
+                  - entity: binary_sensor.sensor_leak_vanna_water_leak
                     name: Протечка
 
       - type: vertical-stack
@@ -18,6 +18,6 @@ cards:
               - type: entities
                 show_header_toggle: false
                 entities:
-                  - entity: sensor.humidifier_1_humidity
-                  - entity: sensor.aqara_water_leak_sensor_1_battery_2
-                  - entity: sensor.humidifier_1_temperature
+                  - entity: sensor.smartmi_evaporative_humidifier_humidity
+                  - entity: binary_sensor.sensor_leak_vanna_battery_low
+                  - entity: sensor.smartmi_evaporative_humidifier_temperature

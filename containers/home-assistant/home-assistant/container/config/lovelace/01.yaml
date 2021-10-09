@@ -36,7 +36,7 @@ cards:
           - type: gauge
             name: Загрузка CPU
             unit: '%'
-            entity: sensor.processor_use_percent
+            entity: sensor.processor_use
             severity:
               green: 0
               yellow: 60

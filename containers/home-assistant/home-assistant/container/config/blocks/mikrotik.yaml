@@ -1,8 +1,0 @@
-  - name: gatewayhome
-    host: !secret host_gatewayhome
-    username: !secret username_gatewayhome
-    password: !secret password_gatewayhome
-    port: 8728
-    arp_ping: true
-    force_dhcp: true
-    detection_time: 30

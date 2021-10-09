@@ -1,7 +1,0 @@
-  - platform: template
-    sensors:
-      aqara_water_leak_sensor_1_battery:
-        value_template: "{{ state_attr('sensor.aqara_water_leak_sensor_1_battery', 'battery') }}"
-        unit_of_measurement: '%'
-        device_class: battery
-        friendly_name: 'Датчик протечки батарейка'
