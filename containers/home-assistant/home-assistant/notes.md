@@ -15,3 +15,7 @@
 
 Ошибка WARNING (MainThread) [homeassistant.components.ssdp] Failed to setup listener for 0.0.0.0: [Errno 98] Address in use
 Проверьте, не занят ли порт 1900. Возможно, это plex
+
+Компонент для https (нужен белый ip) 
+https://github.com/AlexxIT/Dataplicity
+Регистрация https://www.dataplicity.com/

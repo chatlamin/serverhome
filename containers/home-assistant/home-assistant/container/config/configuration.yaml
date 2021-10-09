@@ -33,6 +33,8 @@ stream:
 history:
 # Включение журнала
 logbook:
+# https://github.com/dmitry-k/yandex_smart_home
+yandex_smart_home:
 
 lovelace:
   mode: yaml
