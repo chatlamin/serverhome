@@ -10,7 +10,7 @@ EXPLORE=koenkk/zigbee2mqtt
 # Тэг образа старый
 TAG_OLD=1.18.2
 # Тэг образа новый
-TAG_NEW=1.18.2
+TAG_NEW=1.21.2
 
 ##
 # Имя zigbee устройства

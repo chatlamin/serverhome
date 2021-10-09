@@ -22,6 +22,7 @@ docker run \
     --restart unless-stopped \
     --device $ZIGBEE_DONGLE:/dev/ttyACM0 \
     --volume $CONTAINER_NAME-data:/app/data \
+    --volume /run/udev:/run/udev:ro \
     --env TZ=Europe/Moscow \
     --publish 65009:8080 \
     $IMAGE_TARGET
