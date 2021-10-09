@@ -1,5 +1,5 @@
 title: Оповещения
-icon: mdi:telegram
+icon: mdi:message
 cards:
       - type: entities
         show_header_toggle: false

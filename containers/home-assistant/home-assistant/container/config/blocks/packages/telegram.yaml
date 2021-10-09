@@ -4,8 +4,6 @@ telegram:
       sensors:
         unavailable_now_sensor:
           friendly_name: "Всего недоступно сенсеров - "
-          entity_id:
-            - sersor.time
           value_template: "{{states.sensor | selectattr ('state', 'equalto', 'unavailable') | list | length}}"
           icon_template: mdi:counter
 
@@ -38,8 +36,8 @@ telegram:
         - service: notify.privat
           data:
             message: |
-                 Сервер gandalf.serverhome.home
-                 Зафиксирован запуск службы homeassistant в {{ states('sensor.date_time') }}
+                 Сервер pippin.serverhome.home
+                 Зафиксирован запуск службы home-assistant в {{ states('sensor.date_time') }}
                  Отчет о состоянии будет через 1 минуту
         - delay: 00:01:00
         - service: script.turn_on
@@ -67,34 +65,19 @@ telegram:
             message: |
                  Доброе утро, сейчас {{ states('sensor.date_time') }}
                  За окном {{ states('weather.gismeteo') }}
-                 Температура {{ states('sensor.homeassistant_1_temperature') }} °C
-                 Влажность {{ states('sensor.homeassistant_1_humidity') }} %
-                 Скорость ветра {{ states('sensor.homeassistant_1_wind_speed') }} м/с
+                 Температура {{ states('sensor.gismeteo_temperature') }} °C
+                 Влажность {{ states('sensor.gismeteo_humidity') }} %
+                 Скорость ветра {{ states('sensor.gismeteo_wind_speed') }} м/с
 
     - id: Уведомление о протечке
       alias: notify_send_like_on
       initial_state: true
       trigger:
         - platform: state
-          entity_id: sensor.aqara_water_leak_sensor_1_water_leak
+          entity_id: binary_sensor.sensor_leak_vanna_water_leak
           to: 'True'
       action:
         - service: notify.group
           data:
             message: |
                 {{"\U0001F4A6"}} ВНИМАНИЕ ПРОТЕЧКА НА КУХНЕ
-
-    - id: Уведомление о нехватке воды в увлажнителе
-      alias: notify_send_like_on
-      initial_state: true
-      trigger:
-        - platform: numeric_state
-          entity_id: sensor.humidifier_1_depth
-          above: 0
-          below: 20
-      action:
-        - service: notify.group
-          data:
-            message: |
-                {{"\U0001F630"}} Залей в увлажнитель водичку пжлст
-        - delay: 00:30:00
