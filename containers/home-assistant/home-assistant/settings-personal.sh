@@ -8,9 +8,9 @@ export NAME=home-assistant
 # Репозиторий
 EXPLORE=homeassistant/home-assistant
 # Тэг образа старый
-TAG_OLD=2021.4.6
+TAG_OLD=2021.9.7
 # Тэг образа новый
-TAG_NEW=2021.9.7
+TAG_NEW=2021.10.2
 
 ##
 # Тип базы данных
