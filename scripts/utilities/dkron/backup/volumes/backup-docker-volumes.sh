@@ -19,13 +19,14 @@ EXCLUDE_5="/var/lib/docker/volumes/duplicati-backups"
 EXCLUDE_6="/var/lib/docker/volumes/influxdb-data"
 EXCLUDE_7="/var/lib/docker/volumes/loki-data"
 EXCLUDE_8="/var/lib/docker/volumes/mosquitto-data"
-EXCLUDE_9="/var/lib/docker/volumes/mysql-data"
+EXCLUDE_9="/var/lib/docker/volumes/mysql-8-data"
 EXCLUDE_10="/var/lib/docker/volumes/pi-hole-data"
 EXCLUDE_11="/var/lib/docker/volumes/prometheus-data"
 EXCLUDE_12="/var/lib/docker/volumes/qbittorrent-data"
 EXCLUDE_13="/var/lib/docker/volumes/firefly-iii-upload"
 EXCLUDE_14="/var/lib/docker/volumes/dkron-data"
 EXCLUDE_15="/var/lib/docker/volumes/dkron-log"
+EXCLUDE_16="/var/lib/docker/volumes/elasticsearch-data"
 # Удалить копии старше COUNT дней
 COUNT=7
 # Минимальный размер бэкапа в килобайтах
@@ -59,6 +60,7 @@ sudo tar -czpf $BACKUP_DIR/$TIMESTAMP/backup.tar.gz \
     --exclude "$EXCLUDE_13" \
     --exclude "$EXCLUDE_14" \
     --exclude "$EXCLUDE_15" \
+    --exclude "$EXCLUDE_16" \
     --absolute-names $TARGET
 
 # Ротация бэкапов
