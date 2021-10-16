@@ -1,9 +1,9 @@
 experemental/
 .vscode/
 
-containers/plex/plex/settings-secret.sh
+containers/plex/settings-secret.sh
 containers/dkron/tools/populator/
 containers/healthchecks/tools/populator/
-containers/home-assistant/home-assistant/container/config/secrets.yaml
+containers/home-assistant/container/config/secrets.yaml
 
 scripts/utilities/dkron/backup/yandex/settings-secret.sh
