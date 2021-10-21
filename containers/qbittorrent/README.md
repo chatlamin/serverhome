@@ -25,12 +25,12 @@ Username: `no external database support`
 Password: `no external database support`
 
 ## References to the original project
-Website: https://www.qbittorrent.org/
+Website: https://www.qbittorrent.org
 
-Documentation: https://github.com/qbittorrent/qBittorrent/wiki/
+Documentation: https://github.com/qbittorrent/qBittorrent/wiki
 
-Repository github: https://github.com/qbittorrent/qBittorrent/
+Repository github: https://github.com/qbittorrent/qBittorrent
 
-Repository docker github: https://github.com/linuxserver/docker-qbittorrent/
+Repository docker github: https://github.com/linuxserver/docker-qbittorrent
 
-Repository docker: https://hub.docker.com/r/linuxserver/qbittorrent/
+Repository docker: https://hub.docker.com/r/linuxserver/qbittorrent
