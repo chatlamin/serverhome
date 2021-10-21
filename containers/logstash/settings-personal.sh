@@ -8,9 +8,9 @@ export NAME=logstash
 # Репозиторий
 EXPLORE=docker.elastic.co/logstash/logstash
 # Тэг образа старый
-TAG_OLD=7.12.1
+TAG_OLD=7.15.0
 # Тэг образа новый
-TAG_NEW=7.15.0
+TAG_NEW=7.15.1
 
 #--------------------------------------------------------------------
 # End settings
