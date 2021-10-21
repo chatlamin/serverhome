@@ -25,13 +25,13 @@ Username: `no external database support`
 Password: `no external database support`
 
 ## References to the original project
-Website: https://www.plex.tv/ru/
+Website: https://www.plex.tv/ru
 
-Documentation: https://support.plex.tv/articles/
+Documentation: https://support.plex.tv/articles
 
-Repository github: https://github.com/plexinc/
+Repository github: https://github.com/plexinc
 
-Repository docker github: https://github.com/plexinc/pms-docker/ https://github.com/linuxserver/docker-plex/
+Repository docker github: https://github.com/plexinc/pms-docker https://github.com/linuxserver/docker-plex
 
-Repository docker: https://hub.docker.com/r/linuxserver/plex/
+Repository docker: https://hub.docker.com/r/linuxserver/plex
 
