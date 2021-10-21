@@ -8,9 +8,9 @@ export NAME=grafana
 # Репозиторий
 EXPLORE=grafana/grafana
 # Тэг образа старый
-TAG_OLD=8.1.5
+TAG_OLD=8.2.0
 # Тэг образа новый
-TAG_NEW=8.2.0
+TAG_NEW=8.2.2
 
 ##
 # Тип базы данных

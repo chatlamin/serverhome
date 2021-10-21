@@ -25,12 +25,12 @@ Username: `grafana`
 Password: `shohg5Sei3igh3`
 
 ## References to the original project
-Website: https://grafana.com/
+Website: https://grafana.com
 
-Documentation: https://grafana.com/docs/grafana/latest/
+Documentation: https://grafana.com/docs/grafana/latest
 
-Repository github: https://github.com/grafana/grafana/
+Repository github: https://github.com/grafana/grafana
 
-Repository docker github: https://github.com/grafana/grafana/blob/main/Dockerfile/
+Repository docker github: https://github.com/grafana/grafana/blob/main/Dockerfile
 
-Repository docker: https://hub.docker.com/r/grafana/grafana/
+Repository docker: https://hub.docker.com/r/grafana/grafana
