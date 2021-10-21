@@ -25,12 +25,12 @@ Username: `healthchecks`
 Password: `Ealu0rius1shah`
 
 ## References to the original project
-Website: https://healthchecks.io/
+Website: https://healthchecks.io
 
-Documentation: https://healthchecks.io/docs/
+Documentation: https://healthchecks.io/docs
 
-Repository github: https://github.com/healthchecks/healthchecks/
+Repository github: https://github.com/healthchecks/healthchecks
 
-Repository docker github: https://github.com/linuxserver/docker-healthchecks/
+Repository docker github: https://github.com/linuxserver/docker-healthchecks
 
-Repository docker: https://hub.docker.com/r/linuxserver/healthchecks/
+Repository docker: https://hub.docker.com/r/linuxserver/healthchecks

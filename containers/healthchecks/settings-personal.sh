@@ -8,9 +8,9 @@ export NAME=healthchecks
 # Репозиторий
 EXPLORE=linuxserver/healthchecks
 # Тэг образа старый
-TAG_OLD=version-v1.21.0
+TAG_OLD=version-v1.22.0
 # Тэг образа новый
-TAG_NEW=version-v1.22.0
+TAG_NEW=version-v1.23.1
 
 ##
 # Логин от вэб-интерфейса
