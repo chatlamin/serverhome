@@ -25,12 +25,12 @@ Username: `admin`
 Password: `aireeV7ahk8rah`
 
 ## References to the original project
-Website: https://www.zigbee2mqtt.io/
+Website: https://www.zigbee2mqtt.io
 
-Documentation: https://www.zigbee2mqtt.io/
+Documentation: https://www.zigbee2mqtt.io
 
-Repository github: https://github.com/Koenkk/zigbee2mqtt/
+Repository github: https://github.com/Koenkk/zigbee2mqtt
 
-Repository docker github: https://github.com/Koenkk/zigbee2mqtt/blob/master/docker/Dockerfile/
+Repository docker github: https://github.com/Koenkk/zigbee2mqtt/blob/master/docker/Dockerfile
 
-Repository docker: https://hub.docker.com/r/koenkk/zigbee2mqtt/
+Repository docker: https://hub.docker.com/r/koenkk/zigbee2mqtt
