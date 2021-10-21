@@ -8,9 +8,9 @@ export NAME=kibana
 # Репозиторий
 EXPLORE=docker.elastic.co/kibana/kibana
 # Тэг образа старый
-TAG_OLD=7.10.2
+TAG_OLD=7.15.0
 # Тэг образа новый
-TAG_NEW=7.15.0
+TAG_NEW=7.15.1
 
 #--------------------------------------------------------------------
 # End settings
