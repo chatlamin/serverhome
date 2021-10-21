@@ -25,12 +25,12 @@ Username: `no external database support`
 Password: `no external database support`
 
 ## References to the original project
-Website: https://www.mysql.com/
+Website: https://www.mysql.com
 
-Documentation: https://dev.mysql.com/doc/
+Documentation: https://dev.mysql.com/doc
 
-Repository github : https://github.com/mysql/mysql-server/
+Repository github : https://github.com/mysql/mysql-server
 
-Repository docker github: https://github.com/mysql/mysql-docker/
+Repository docker github: https://github.com/mysql/mysql-docker
 
-Repository docker: https://hub.docker.com/r/mysql/mysql-server/
+Repository docker: https://hub.docker.com/r/mysql/mysql-server

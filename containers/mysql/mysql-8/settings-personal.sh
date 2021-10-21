@@ -8,9 +8,9 @@ export NAME=mysql-8
 # Репозиторий
 EXPLORE=mysql/mysql-server
 # Тэг образа старый
-TAG_OLD=start
+TAG_OLD=8.0.26
 # Тэг образа новый
-TAG_NEW=8.0.26
+TAG_NEW=8.0.27
 
 ##
 # Пароль от root
