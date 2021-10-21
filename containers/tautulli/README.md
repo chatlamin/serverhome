@@ -25,12 +25,12 @@ Username: `no external database support`
 Password: `no external database support`
 
 ## References to the original project
-Website: https://tautulli.com/
+Website: https://tautulli.com
 
-Documentation: https://github.com/Tautulli/Tautulli/wiki/
+Documentation: https://github.com/Tautulli/Tautulli/wiki
 
-Repository github: https://github.com/Tautulli/Tautulli/
+Repository github: https://github.com/Tautulli/Tautulli
 
-Repository docker github: https://github.com/Tautulli/Tautulli/blob/master/Dockerfile/
+Repository docker github: https://github.com/Tautulli/Tautulli/blob/master/Dockerfile
 
-Repository docker: https://hub.docker.com/r/tautulli/tautulli/
+Repository docker: https://hub.docker.com/r/tautulli/tautulli
