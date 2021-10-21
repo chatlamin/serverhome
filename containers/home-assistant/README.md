@@ -25,12 +25,12 @@ Username: `home_assistant`
 Password: `chah6viCaapeeD`
 
 ## References to the original project
-Website: https://www.home-assistant.io/
+Website: https://www.home-assistant.io
 
-Documentation: https://www.home-assistant.io/docs/
+Documentation: https://www.home-assistant.io/docs
 
-Repository github: https://github.com/home-assistant/core/
+Repository github: https://github.com/home-assistant/core
 
-Repository docker github: https://github.com/home-assistant/docker/
+Repository docker github: https://github.com/home-assistant/docker
 
-Repository docker: https://hub.docker.com/r/homeassistant/home-assistant/
+Repository docker: https://hub.docker.com/r/homeassistant/home-assistant
