@@ -1,5 +1,6 @@
 server.host: 0.0.0.0
 server.name: serverhome
+server.publicBaseUrl: "http://kibana.serverhome.home:5601"
 elasticsearch.hosts: [ "http://elasticsearch.serverhome.home:9200" ]
 elasticsearch.username: "kibana_system"
 elasticsearch.password: "cieF8cieB8ou3y"
