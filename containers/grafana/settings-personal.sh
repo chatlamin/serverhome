@@ -33,6 +33,8 @@ ADMIN_USER=admin
 ADMIN_PASS=Thee2veih0hoo4
 # Путь к дэфолтному дэшборду
 DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/etc/grafana/provisioning/dashboards/common/telegraf-system.json
+# Локальный порт
+LOCAL_PORT=3000
 
 #--------------------------------------------------------------------
 # End settings

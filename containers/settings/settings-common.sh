@@ -27,6 +27,16 @@ CONTAINERS_VOLUMES=/var/lib/docker/volumes
 # Путь к Loki для отправки логов
 LOKI_URL=http://loki.$DOCKER_HOST_DOMEN:3100/loki/api/v1/push
 
+## traefik
+TRAEFIK_ENTRYPOINTS=web
+TRAEFIK_RULE="Host(\`${CONTAINER_NAME}.${DOCKER_HOST_DOMEN}\`)"
+TRAEFIK_SETTINGS="
+    --label traefik.enable=true \
+    --label traefik.http.routers.$CONTAINER_NAME.entrypoints=$TRAEFIK_ENTRYPOINTS \
+    --label traefik.http.routers.$CONTAINER_NAME.rule=$TRAEFIK_RULE \
+    --label traefik.http.services.$CONTAINER_NAME.loadbalancer.server.port=$LOCAL_PORT \
+"
+
 #--------------------------------------------------------------------
 # End settings
 #--------------------------------------------------------------------

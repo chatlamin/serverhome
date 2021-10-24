@@ -73,7 +73,8 @@ entryPoints:
 #
 # Optional
 #
-#accessLog:
+accessLog:
+  # https://doc.traefik.io/traefik/observability/access-logs/
   # Sets the file path for the access log. If not specified, stdout will be used.
   # Intermediate directories are created if necessary.
   #
@@ -81,7 +82,7 @@ entryPoints:
   # Default: os.Stdout
   #
 #  filePath: /path/to/log/log.txt
-
+  filePath: /var/log/traefik/access.log
   # Format is either "json" or "common".
   #
   # Optional
@@ -131,14 +132,16 @@ api:
 
 providers:
   # Enable Docker configuration backend
-#  docker:
+  docker:
     # Docker server endpoint. Can be a tcp or a unix socket endpoint.
     #
     # Required
     # Default: "unix:///var/run/docker.sock"
     #
 #    endpoint: tcp://10.10.10.10:2375
-
+    endpoint: "unix://var/run/docker.sock"
+    exposedByDefault: false
+    network: bridge
     # Default host rule.
     #
     # Optional
