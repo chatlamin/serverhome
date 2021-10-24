@@ -1,0 +1,14 @@
+http:
+  routers:
+    dashboard:
+      rule: Host(`traefik.serverhome.home`) && (PathPrefix(`/api`) || PathPrefix(`/dashboard`))
+      service: api@internal
+      entryPoints:
+      - dashboard
+      middlewares:
+      - auth-dashboard
+  middlewares:
+    auth-dashboard:
+      basicAuth:
+        users:
+        - admin:$apr1$qZ4KaIbW$Hf.kGIAf7TXJkU0NorLLF1
