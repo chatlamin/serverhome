@@ -1,9 +1,11 @@
 experemental/
+project-thanos/
 .vscode/
 
 containers/plex/settings-secret.sh
+containers/home-assistant/container/config/secrets.yaml
+
 containers/dkron/tools/populator/
 containers/healthchecks/tools/populator/
-containers/home-assistant/container/config/secrets.yaml
 
 scripts/utilities/dkron/backup/yandex/settings-secret.sh
