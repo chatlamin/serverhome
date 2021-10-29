@@ -1,4 +1,4 @@
-https://www.elastic.co/downloads/beats/filebeat
+Скачать filebeat для windows https://www.elastic.co/downloads/beats/filebeat
 
 В файле filebeat.yml в строке
 

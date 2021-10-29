@@ -1,1 +1,1 @@
-https://github.com/grayfallstown/Chia-Plot-Status
+Скачать Chia Plot Status для windows https://github.com/grayfallstown/Chia-Plot-Status

@@ -1,1 +1,1 @@
-https://www.alcpu.com/CoreTemp/
+Скачать CoreTemp для windows https://www.alcpu.com/CoreTemp/

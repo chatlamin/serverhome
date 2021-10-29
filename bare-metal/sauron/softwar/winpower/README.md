@@ -1,3 +1,3 @@
-https://ippon.ru/support/documentation/
+Скачать winpower https://ippon.ru/support/documentation/
 
 Пароль администратора по умолчанию: Administrator
