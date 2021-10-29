@@ -1,6 +1,20 @@
-Скачать filebeat для windows https://www.elastic.co/downloads/beats/filebeat
+# Установка и запуск filebeat
 
-В файле filebeat.yml в строке
+Скачать filebeat для windows https://www.elastic.co/downloads/beats/filebeat (пример: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.15.1-windows-x86_64.zip)
+
+Создать каталог C:\softwar\filebeat\7.15.1\
+
+Распаковать все содержимое архива в каталог C:\softwar\filebeat\7.15.1\
+
+Положить каталог config в каталог C:\softwar\filebeat\7.15.1\
+
+Для запуска filebeat выполни
+
+    .\run-filebeat.bat
+
+## Настройка на привере сбора логов программы chia
+
+В файле config\filebeat.yml в строке
 
 ```
 ...
@@ -10,9 +24,3 @@
 ```
 
 замени USERNAME на свой
-
-для запуска выполни
-
-    .\filebeat.exe -c filebeat.yml
-
-или запусти файл `run-filebeat.bat`
