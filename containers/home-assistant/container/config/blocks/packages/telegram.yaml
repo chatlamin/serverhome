@@ -3,7 +3,7 @@ telegram:
     - platform: template
       sensors:
         unavailable_now_sensor:
-          friendly_name: "Всего недоступно сенсеров - "
+          friendly_name: "Всего недоступно сенсеров"
           value_template: "{{states.sensor | selectattr ('state', 'equalto', 'unavailable') | list | length}}"
           icon_template: mdi:counter
 
@@ -75,9 +75,9 @@ telegram:
       trigger:
         - platform: state
           entity_id: binary_sensor.sensor_leak_vanna_water_leak
-          to: 'True'
+          to: 'on'
       action:
-        - service: notify.group
+        - service: notify.privat
           data:
             message: |
                 {{"\U0001F4A6"}} ВНИМАНИЕ ПРОТЕЧКА НА КУХНЕ

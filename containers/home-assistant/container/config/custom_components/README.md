@@ -2,7 +2,7 @@
 References to the original project: https://github.com/dmitry-k/yandex_smart_home
 Version: v0.2.1
 
-# dataplicity
+# dataplicity (deleted)
 References to the original project: https://github.com/AlexxIT/Dataplicity
 Version: v1.0.5
 
