@@ -1,6 +1,5 @@
-experemental/
-project-thanos/
 .vscode/
+experemental/
 
 containers/plex/settings-secret.sh
 containers/home-assistant/container/config/secrets.yaml
