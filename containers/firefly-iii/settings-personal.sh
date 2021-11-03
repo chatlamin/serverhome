@@ -19,7 +19,7 @@ APP_KEY=B6jBO5ejsj3gFE2Cc6zmMZC90NUMcUpn
 # Тип базы данных
 DB_CONNECTION=mysql
 # ip / dns базы данных
-DB_HOST=mysql.serverhome.home
+DB_HOST=mysql-8.serverhome.home
 # Порт базы данных
 DB_PORT=3306
 # Имя базы данных
