@@ -1,0 +1,15 @@
+. {
+    cache 180
+    log {
+        class denial error
+    }
+    errors
+    reload
+    prometheus 0.0.0.0:9153
+
+    hosts /etc/coredns/hosts home. {
+        fallthrough
+    }
+
+    forward . 8.8.8.8
+}
