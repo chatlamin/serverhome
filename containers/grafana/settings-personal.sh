@@ -16,7 +16,7 @@ TAG_NEW=8.2.2
 # Тип базы данных
 DB_CONNECTION=mysql
 # ip / dns базы данных
-DB_HOST=mysql.serverhome.home
+DB_HOST=mysql-8.serverhome.home
 # Имя базы данных
 DB_DATABASE=grafana
 # Пользователь базы данных
