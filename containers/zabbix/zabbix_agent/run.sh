@@ -26,7 +26,7 @@ docker run \
     --volume $CONTAINER_NAME-conf:/etc/zabbix \
     --env ZBX_HOSTNAME=zabbix_agent.serverhome.home \
     --env ZBX_SERVER_HOST=zabbix_server.serverhome.home \
-    --env ZBX_SERVER_PORT=65013 \
+    --env ZBX_SERVER_PORT=10051 \
     --publish 65017:10050 \
     $IMAGE_TARGET
 
