@@ -4,9 +4,9 @@
 
 ##
 # Название проекта
-export NAME=zabbix_web
+export NAME=zabbix_proxy
 # Репозиторий
-EXPLORE=zabbix/zabbix-web-nginx-mysql
+EXPLORE=zabbix/zabbix-proxy-mysql
 # Тэг образа старый
 TAG_OLD=start
 # Тэг образа новый
@@ -20,7 +20,7 @@ DB_HOST=mysql-8.serverhome.home
 # Порт базы данных
 DB_PORT=3306
 # Имя базы данных
-DB_DATABASE=zabbix
+DB_DATABASE=zabbix_proxy
 # Пользователь базы данных
 DB_USERNAME=zabbix
 # Пароль базы данных

@@ -22,9 +22,6 @@ docker run \
     --restart unless-stopped \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-conf:/etc/zabbix \
-    --volume $CONTAINER_NAME-data:/var/lib/zabbix \
-    --volume $CONTAINER_NAME-export:/var/lib/zabbix/export \
     --volume $CONTAINER_NAME-snmptraps:/var/lib/zabbix/snmptraps \
     --env DB_SERVER_HOST=$DB_HOST \
     --env DB_SERVER_PORT=$DB_PORT \
@@ -32,9 +29,10 @@ docker run \
     --env MYSQL_PASSWORD=$DB_PASSWORD \
     --env MYSQL_DATABASE=$DB_DATABASE \
     --env MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD \
-    --env ZBX_CACHESIZE=2048M \
-    --env ZBX_IPMIPOLLERS=3 \
-    --publish 10051:10051 \
+    --env ZBX_HOSTNAME=$CONTAINER_NAME.$DOCKER_HOST_DOMEN \
+    --env ZBX_SERVER_HOST=$ZBX_SERVER_HOST \
+    --env ZBX_SERVER_PORT=$ZBX_SERVER_PORT \
+    --publish 10060:10051 \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
