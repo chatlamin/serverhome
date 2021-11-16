@@ -9,7 +9,7 @@ Hostname: `zabbix_proxy.serverhome.home`
 | armhf         | ?       |
 
 ## Keys
-Link: `zabbix_proxy.serverhome.home`
+Link: `zabbix_proxy.serverhome.home:10060`
 
 Login: `no authentication support`
 
