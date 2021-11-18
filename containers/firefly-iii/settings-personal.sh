@@ -8,9 +8,9 @@ export NAME=firefly-iii
 # Репозиторий
 EXPLORE=fireflyiii/core
 # Тэг образа старый
-TAG_OLD=version-5.6.1
+TAG_OLD=version-5.6.2
 # Тэг образа новый
-TAG_NEW=version-5.6.2
+TAG_NEW=version-5.6.4
 
 ##
 # Этот ключ используется для создания файлов cookie приложений и безопасных вложений
