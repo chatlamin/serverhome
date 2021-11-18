@@ -26,4 +26,5 @@ docker run \
     --publish 65011:8080 \
     $IMAGE_TARGET
 
+docker run --rm --link $CONTAINER_NAME:$CONTAINER_NAME martin/wait -p 8080 -t 600
 docker logs --follow $CONTAINER_NAME
