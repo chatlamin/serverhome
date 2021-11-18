@@ -1,0 +1,3 @@
+[mysqld]
+log-bin=log-bin
+binlog-format=ROW
