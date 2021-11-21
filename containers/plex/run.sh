@@ -30,7 +30,6 @@ docker run \
     --env PLEX_CLAIM=$PLEX_CLAIM \
     --env TZ=Europe/Moscow \
     --publish 32400:32400 \
-    --publish 5353:5353/udp \
     --publish 8324:8324 \
     --publish 32410:32410/udp \
     --publish 32412:32412/udp \

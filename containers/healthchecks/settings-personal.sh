@@ -22,7 +22,7 @@ SECRET_KEY=ohdohj3Sheigievi
 # Тип базы данных
 DB_CONNECTION=mysql
 # ip / dns базы данных
-DB_HOST=mysql.serverhome.home
+DB_HOST=mysql-8.serverhome.home
 # Имя базы данных
 DB_DATABASE=healthchecks
 # Пользователь базы данных

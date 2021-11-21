@@ -7,7 +7,7 @@
 # Текущее время
 TIMESTAMP=$(date '+%d-%m-%Y_%H-%M-%S')
 # ip / dns базы данных
-DB_HOST=mysql.serverhome.home
+DB_HOST=mysql-8.serverhome.home
 # Порт базы данных
 DB_PORT=3306
 # Пользователь базы данных
@@ -15,7 +15,7 @@ DB_USERNAME=root
 # Пароль базы данных
 DB_PASSWORD=Dae2fiiChohng0
 # Имя базы данных
-DB_DATABASE=homeassistant
+DB_DATABASE=home_assistant
 # Путь сохранения дампа
 BACKUP_DIR=/data1/backups/local/mysql/$DB_DATABASE
 # Удалить копии старше COUNT дней
