@@ -27,7 +27,16 @@ CONTAINERS_VOLUMES=/var/lib/docker/volumes
 # Путь к Loki для отправки логов
 LOKI_URL=http://loki.$DOCKER_HOST_DOMEN:3100/loki/api/v1/push
 
-## traefik
+## Настройки проверки здоровья контейнера
+HEALTHCHECK_SETTINGS="
+    --health-timeout 30s \
+    --health-retries 5 \
+    --health-interval 1m \
+    --health-start-period 1m \
+    --health-cmd /healthcheck-container.sh \
+"
+
+## Настройки для подключения к traefik
 TRAEFIK_ENTRYPOINTS=web
 TRAEFIK_RULE="Host(\`${CONTAINER_NAME}.${DOCKER_HOST_DOMEN}\`)"
 TRAEFIK_SETTINGS="

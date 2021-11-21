@@ -27,6 +27,7 @@ docker run \
     --publish 65004:65004 \
     --publish 6881:6881 \
     --publish 6881:6881/udp \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
