@@ -1,6 +1,0 @@
-  host: !secret webostv_host
-  name: !secret webostv_name
-  customize:
-    sources:
-      - youtube
-      - plex

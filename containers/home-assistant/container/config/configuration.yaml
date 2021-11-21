@@ -1,8 +1,8 @@
 homeassistant:
   name: homea-ssistant
-  latitude: !secret latitude
-  longitude: !secret longitude
-  elevation: !secret elevation
+  latitude: "55.750095"
+  longitude: "37.615611"
+  elevation: "156"
   unit_system: metric
   time_zone: Europe/Moscow
   customize: !include_dir_merge_named blocks/customize
@@ -10,7 +10,7 @@ homeassistant:
   auth_providers:
    - type: homeassistant
    - type: legacy_api_password
-     api_password: !secret http_password
+     api_password: "ahcajah2Kab3ei"
 
 # Ручная конфигурация
 # Отображение панели настроек в интерфейсе
@@ -33,16 +33,9 @@ stream:
 history:
 # Включение журнала
 logbook:
-# https://github.com/dmitry-k/yandex_smart_home
-yandex_smart_home:
 
 lovelace:
   mode: yaml
-  resources:
-   - url: /local/vacuum-card.js # https://github.com/denysdovhan/vacuum-card/releases/tag/v1.17.0
-     type: module
-   - url: /local/simple-weather-card-bundle.js # https://github.com/kalkih/simple-weather-card/releases/tag/v0.8.1
-     type: module
 
 # Text to speech
 tts:
@@ -59,8 +52,6 @@ prometheus: !include blocks/prometheus.yaml # https://www.home-assistant.io/inte
 group: !include blocks/group.yaml # https://www.home-assistant.io/integrations/group/
 script: !include blocks/script.yaml # https://www.home-assistant.io/integrations/script/
 scene: !include blocks/scene.yaml # https://www.home-assistant.io/integrations/scene/
-webostv: !include blocks/webostv.yaml # https://www.home-assistant.io/integrations/webostv/
-telegram_bot: !include blocks/telegram_bot.yaml # https://www.home-assistant.io/integrations/telegram_bot/
 weather: !include blocks/weather.yaml # https://www.home-assistant.io/integrations/weather/
 
 # Читай эти блоки из других файлов (весь каталог)

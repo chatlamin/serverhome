@@ -2,7 +2,6 @@
 experemental/
 
 containers/plex/settings-secret.sh
-containers/home-assistant/container/config/secrets.yaml
 
 containers/dkron/tools/populator/
 containers/healthchecks/tools/populator/
