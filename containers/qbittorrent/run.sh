@@ -19,7 +19,7 @@ docker run \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
-    --restart on-failure:10 \
+    --restart unless-stopped \
     --volume $CONTAINER_NAME-conf:/config \
     --volume $CONTAINER_NAME-data:/downloads \
     --env TZ=Europe/Moscow \
