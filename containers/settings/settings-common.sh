@@ -34,6 +34,7 @@ HEALTHCHECK_SETTINGS="
     --health-interval 1m \
     --health-start-period 1m \
     --health-cmd /healthcheck-container.sh \
+    --label autoheal=true \
 "
 
 ## Настройки для подключения к traefik
