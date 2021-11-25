@@ -29,7 +29,9 @@ docker run \
     --env ZBX_HOSTNAME=$HOST_NAME_HOST \
     --env ZBX_SERVER_HOST=zabbix_server.serverhome.home \
     --env ZBX_SERVER_PORT=10051 \
+    --env ZBX_ENABLESTATUSPORT=true \
     --publish 65031:10050 \
+    --publish 65032:31999 \
     $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 

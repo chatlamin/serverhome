@@ -7,4 +7,4 @@
 # End settings
 #--------------------------------------------------------------------
 
-nc -z localhost 10050
+curl --head --fail --silent --max-time 2 http://localhost:31999/status > /dev/null
