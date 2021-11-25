@@ -30,6 +30,7 @@ docker run \
     --env ZBX_SERVER_HOST=zabbix_server.serverhome.home \
     --env ZBX_SERVER_PORT=10051 \
     --publish 65031:10050 \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
