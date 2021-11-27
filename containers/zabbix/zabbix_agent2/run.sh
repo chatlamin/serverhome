@@ -17,7 +17,7 @@ source ../../settings/settings-common.sh
 
 docker run \
     --name $CONTAINER_NAME \
-    --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
+    --hostname $HOST_NAME_HOST \
     --detach \
     --restart unless-stopped \
     --privileged \
@@ -26,10 +26,6 @@ docker run \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume /var/run/docker.sock:/var/run/docker.sock \
     --volume $CONTAINER_NAME-conf:/etc/zabbix \
-    --env ZBX_HOSTNAME=$HOST_NAME_HOST \
-    --env ZBX_SERVER_HOST=zabbix_server.serverhome.home \
-    --env ZBX_SERVER_PORT=10051 \
-    --env ZBX_ENABLESTATUSPORT=true \
     --publish 65031:10050 \
     --publish 65032:31999 \
     $HEALTHCHECK_SETTINGS \
