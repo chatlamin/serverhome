@@ -14,9 +14,9 @@ NUMBER_BUILD=2112011536
 # Тэг образа
 TAG_NEW=$NUMBER_VERSION-$NUMBER_BUILD
 # Название файла с архивом bginetaccess
-export BGBILLING_DOWNLOAD_FILE_ACCESS=BGInetAccess_$NUMBER_VERSION-$NUMBER_BUILD.zip
+export BGBILLING_DOWNLOAD_FILE=BGInetAccess_$NUMBER_VERSION-$NUMBER_BUILD.zip
 # Путь для скачивания файла bginetaccess
-export BGBILLING_DOWNLOAD_URL_ACCESS=https://bgbilling.ru/download/$NUMBER_VERSION/data/$BGBILLING_DOWNLOAD_FILE_ACCESS
+export BGBILLING_DOWNLOAD_URL=https://bgbilling.ru/download/$NUMBER_VERSION/data/$BGBILLING_DOWNLOAD_FILE
 
 #--------------------------------------------------------------------
 # End settings

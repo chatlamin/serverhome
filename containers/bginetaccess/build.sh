@@ -17,6 +17,6 @@ source ../settings/settings-common.sh
 
 docker build \
     --build-arg IMAGE_BUILDER \
-    --build-arg BGBILLING_DOWNLOAD_URL_ACCESS \
-    --build-arg BGBILLING_DOWNLOAD_FILE_ACCESS \
+    --build-arg BGBILLING_DOWNLOAD_URL \
+    --build-arg BGBILLING_DOWNLOAD_FILE \
     --tag $IMAGE_TARGET .
