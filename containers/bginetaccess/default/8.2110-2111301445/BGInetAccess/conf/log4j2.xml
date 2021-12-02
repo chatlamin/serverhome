@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" monitorInterval="15">
+
+	<Appenders>
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%X{nestedContext} %d{MM-dd/HH:mm:ss.SSS} %5p [%t] %c{1} - %m%n"/>
+		</Console>
+		
+		<Routing name="RoutingAppender">
+	        <Routes pattern="${ctx:nestedContext}">
+	            <Route>
+	                <RollingFile name="${sys:log.prefix}.${ctx:nestedContext}.log"
+	                             fileName="log/${sys:log.prefix}.${ctx:nestedContext}"
+	                             filePattern="log/${sys:log.prefix}.${ctx:nestedContext}.%i.log.gz">
+	                    <PatternLayout pattern="%d{ABSOLUTE} %level{length=5} [%thread] %logger{1} - %msg%n"/>
+	                    <SizeBasedTriggeringPolicy size="10M" />
+	                </RollingFile>
+	            </Route>
+	
+	            <!-- By having this set to ${ctx:logFileName} it will match when filename
+	                 is not set in the context -->
+	            <Route ref="Console" key="${ctx:nestedContext}"/>
+	        </Routes>
+    	</Routing>		
+		
+	    <RollingFile name="ALARM" fileName="log/alarm.log" createOnDemand="true" append="false"
+                 filePattern="${log.dir.path}/$${date:yyyy-MM}/alarm-%d{MM-dd-yyyy}-%i.log">
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="7" />
+				<SizeBasedTriggeringPolicy size="100 MB"/>
+			</Policies>
+		</RollingFile>
+		
+	    <RollingFile name="APPLICATION" fileName="log/server.log" createOnDemand="true" append="false"
+                 filePattern="${log.dir.path}/$${date:yyyy-MM}/server-%d{MM-dd-yyyy}-%i.log">
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="7" />
+				<SizeBasedTriggeringPolicy size="100 MB"/>
+			</Policies>
+		</RollingFile>
+		
+
+	</Appenders>
+
+	<Loggers>
+		<Root level="INFO">
+			<AppenderRef ref="RoutingAppender"/>
+		</Root>	
+	</Loggers>
+
+</Configuration>
