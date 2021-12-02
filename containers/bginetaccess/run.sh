@@ -28,7 +28,7 @@ docker run \
     --publish 1952:1952 \
     --publish 1951:1951 \
     --publish 67:67/udp \
-    --publish 68:68/ubp \
+    --publish 68:68/udp \
     --publish 65200:9001 \
     $IMAGE_TARGET
 
