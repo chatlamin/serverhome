@@ -10,7 +10,7 @@ export IMAGE_BUILDER=openjdk:15-jdk-buster
 # Номер версии
 NUMBER_VERSION=8.2110
 # Номер сборки
-NUMBER_BUILD=2111301445
+NUMBER_BUILD=2112011536
 # Тэг образа
 TAG_NEW=$NUMBER_VERSION-$NUMBER_BUILD
 # Название файла с архивом bginetaccess

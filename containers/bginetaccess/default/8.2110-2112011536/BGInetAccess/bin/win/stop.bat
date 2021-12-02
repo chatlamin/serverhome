@@ -1,0 +1,1 @@
+call application.bat stop

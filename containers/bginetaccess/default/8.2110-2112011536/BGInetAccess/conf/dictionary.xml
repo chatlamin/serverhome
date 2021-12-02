@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<dictionary>
+	<attributes>
+		<attribute name="User-Name" type="string" code="1"/>
+		<attribute name="User-Password" type="string" code="2"/>
+		<attribute name="CHAP-Password" type="octets" code="3"/>
+		<attribute name="NAS-IP-Address" type="ipaddr" code="4"/>
+		<attribute name="NAS-Port" type="integer" code="5"/>
+		<attribute name="Service-Type" type="integer" code="6"/>
+		<attribute name="Framed-Protocol" type="integer" code="7"/>
+		<attribute name="Framed-IP-Address" type="ipaddr" code="8"/>
+		<attribute name="Framed-IP-Netmask" type="ipaddr" code="9"/>
+		<attribute name="Framed-Routing" type="integer" code="10"/>
+		<attribute name="Filter-Id" type="string" code="11"/>
+		<attribute name="Framed-MTU" type="integer" code="12"/>
+		<attribute name="Framed-Compression" type="integer" code="13"/>
+		<attribute name="Login-IP-Host" type="ipaddr" code="14"/>
+		<attribute name="Login-Service" type="integer" code="15"/>
+		<attribute name="Login-TCP-Port" type="integer" code="16"/>
+		<attribute name="Old-Password" type="string" code="17"/>
+		<attribute name="Reply-Message" type="string" code="18"/>
+		<attribute name="Callback-Number" type="string" code="19"/>
+		<attribute name="Callback-Id" type="string" code="20"/>
+		<attribute name="Expiration" type="string" code="21"/>
+		<attribute name="Framed-Route" type="string" code="22"/>
+		<attribute name="Framed-IPX-Network" type="integer" code="23"/>
+		<attribute name="State" type="octets" code="24"/>
+		<attribute name="Class" type="string" code="25"/>
+		<attribute name="Vendor-Specific" type="string" code="26"/>
+		<attribute name="Session-Timeout" type="integer" code="27"/>
+		<attribute name="Idle-Timeout" type="integer" code="28"/>
+		<attribute name="Termination-Action" type="integer" code="29"/>
+		<attribute name="Called-Station-Id" type="string" code="30"/>
+		<attribute name="Calling-Station-Id" type="string" code="31"/>
+		<attribute name="NAS-Identifier" type="string" code="32"/>
+		<attribute name="Proxy-State" type="string" code="33"/>
+		<attribute name="Login-LAT-Service" type="string" code="34"/>
+		<attribute name="Login-LAT-Node" type="string" code="35"/>
+		<attribute name="Login-LAT-Group" type="string" code="36"/>
+		<attribute name="Framed-AppleTalk-Link" type="integer" code="37"/>
+		<attribute name="Framed-AppleTalk-Network" type="integer" code="38"/>
+		<attribute name="Framed-AppleTalk-Zone" type="string" code="39"/>
+		<attribute name="Acct-Status-Type" type="integer" code="40"/>
+		<attribute name="Acct-Delay-Time" type="integer" code="41"/>
+		<attribute name="Acct-Input-Octets" type="integer" code="42"/>
+		<attribute name="Acct-Output-Octets" type="integer" code="43"/>
+		<attribute name="Acct-Session-Id" type="string" code="44"/>
+		<attribute name="Acct-Authentic" type="integer" code="45"/>
+		<attribute name="Acct-Session-Time" type="integer" code="46"/>
+		<attribute name="Acct-Input-Packets" type="integer" code="47"/>
+		<attribute name="Acct-Output-Packets" type="integer" code="48"/>
+		<attribute name="Acct-Terminate-Cause" type="integer" code="49"/>
+		<attribute name="Acct-Multi-Session-Id" type="string" code="50"/>
+		<attribute name="Acct-Link-Count" type="integer" code="51"/>
+		<attribute name="Acct-Input-Gigawords" type="integer" code="52"/>
+		<attribute name="Acct-Output-Gigawords" type="integer" code="53"/>
+		<attribute name="Event-Timestamp" type="integer" code="55"/>
+		<attribute name="CHAP-Challenge" type="string" code="60"/>
+		<attribute name="NAS-Port-Type" type="integer" code="61"/>
+		<attribute name="Port-Limit" type="integer" code="62"/>
+		<attribute name="Login-LAT-Port" type="string" code="63"/>
+		<attribute name="Tunnel-Type" type="integer" tag="1" code="64"/>
+		<attribute name="Tunnel-Medium-Type" type="integer" tag="1" code="65"/>
+		<attribute name="Tunnel-Client-Endpoint" type="string" tag="2" code="66"/>
+		<attribute name="Tunnel-Server-Endpoint" type="string" tag="2" code="67"/>
+		<attribute name="Acct-Tunnel-Connection" type="string" code="68"/>
+		<attribute name="Tunnel-Password" type="string" tag="1" code="69"/>
+		<attribute name="ARAP-Password" type="string" code="70"/>
+		<attribute name="ARAP-Features" type="string" code="71"/>
+		<attribute name="ARAP-Zone-Access" type="integer" code="72"/>
+		<attribute name="ARAP-Security" type="integer" code="73"/>
+		<attribute name="ARAP-Security-Data" type="string" code="74"/>
+		<attribute name="Password-Retry" type="integer" code="75"/>
+		<attribute name="Prompt" type="integer" code="76"/>
+		<attribute name="Connect-Info" type="string" code="77"/>
+		<attribute name="Configuration-Token" type="string" code="78"/>
+		<attribute name="EAP-Message" type="octets" code="79"/>
+		<attribute name="Message-Authenticator" type="octets" code="80"/>
+		<attribute name="Tunnel-Private-Group-ID" type="string" tag="2" code="81"/>
+		<attribute name="Tunnel-Assignment-ID" type="string" tag="2" code="82"/>
+		<attribute name="Tunnel-Preference" type="integer" tag="1" code="83"/>
+		<attribute name="ARAP-Challenge-Response" type="string" code="84"/>
+		<attribute name="Acct-Interim-Interval" type="integer" code="85"/>
+		<attribute name="Acct-Tunnel-Packets-Lost" type="integer" code="86"/>
+		<attribute name="NAS-Port-Id" type="string" code="87"/>
+		<attribute name="Framed-Pool" type="string" code="88"/>
+		<attribute name="Tunnel-Client-Auth-ID" type="string" tag="2" code="90"/>
+		<attribute name="Tunnel-Server-Auth-ID" type="string" tag="2" code="91"/>
+		<attribute name="NAS-IPv6-Address" type="ipv6addr" code="95"/>
+		<attribute name="Framed-Interface-Id" type="octets" code="96"/>
+		<attribute name="Framed-IPv6-Prefix" type="ipv6prefix" code="97"/>
+		<attribute name="Framed-IPv6-Route" type="string" code="99"/>
+		<attribute name="Delegated-IPv6-Prefix" type="ipv6prefix" code="123"/>
+		<attribute name="Error-Cause" type="integer" code="101"/>
+		<attribute name="EAP-Key-Name" type="string" code="102"/>
+		<attribute name="Digest-Response" type="string" code="103"/>
+		<attribute name="Digest-Realm" type="string" code="104"/>
+		<attribute name="Digest-Nonce" type="string" code="105"/>
+		<attribute name="Digest-Response-Auth" type="string" code="106"/>
+		<attribute name="Digest-Nextnonce" type="string" code="107"/>
+		<attribute name="Digest-Method" type="string" code="108"/>
+		<attribute name="Digest-URI" type="string" code="109"/>
+		<attribute name="Digest-Qop" type="string" code="110"/>
+		<attribute name="Digest-Algorithm" type="string" code="111"/>
+		<attribute name="Digest-Entity-Body-Hash" type="string" code="112"/>
+		<attribute name="Digest-CNonce" type="string" code="113"/>
+		<attribute name="Digest-Nonce-Count" type="string" code="114"/>
+		<attribute name="Digest-Username" type="string" code="115"/>
+		<attribute name="Digest-Opaque" type="string" code="116"/>
+		<attribute name="Digest-Auth-Param" type="string" code="117"/>
+		<attribute name="Digest-AKA-Auts" type="string" code="118"/>
+		<attribute name="Digest-Domain" type="string" code="119"/>
+		<attribute name="Digest-Stale" type="string" code="120"/>
+		<attribute name="Digest-HA1" type="string" code="121"/>
+		<attribute name="SIP-AOR" type="string" code="122"/>		
+		<attribute name="Digest-Response" type="string" code="206"/>
+		<attribute name="Digest-Attributes" type="string" code="207"/>
+	</attributes>
+	<vendors>
+		<vendor code="9" name="Cisco">
+			<attribute name="cisco-avpair" type="string" code="1"/>
+			<attribute name="cisco-NAS-Port" type="string" add="yes" code="2"/>
+			<attribute name="cisco-Fax-Account-ID-Origin" type="string" add="yes" code="3"/>
+			<attribute name="cisco-Fax-Message-ID" type="string" add="yes" code="4"/>
+			<attribute name="cisco-Fax-Pages" type="string" add="yes" code="5"/>
+			<attribute name="cisco-Fax-Cover-Page-Flag" type="string" add="yes" code="6"/>
+			<attribute name="cisco-Fax-Modem-Time" type="string" add="yes" code="7"/>
+			<attribute name="cisco-Fax-Connect-Speed" type="string" add="yes" code="8"/>
+			<attribute name="cisco-Fax-Recipient-Count" type="string" add="yes" code="9"/>
+			<attribute name="cisco-Fax-Process-Abort-Flag" type="string" add="yes" code="10"/>
+			<attribute name="cisco-Fax-DSN-Address" type="string" add="yes" code="11"/>
+			<attribute name="cisco-Fax-DSN-Flag" type="string" add="yes" code="12"/>
+			<attribute name="cisco-Fax-MDN-Address" type="string" add="yes" code="13"/>
+			<attribute name="cisco-Fax-MDN-Flag" type="string" add="yes" code="14"/>
+			<attribute name="cisco-Fax-Auth-Status" type="string" add="yes" code="15"/>
+			<attribute name="cisco-Email-Server-Address" type="string" add="yes" code="16"/>
+			<attribute name="cisco-Email-Server-ACK-Flag" type="string" add="yes" code="17"/>
+			<attribute name="cisco-Gateway-ID" type="string" add="yes" code="18"/>
+			<attribute name="cisco-Call-Type" type="string" add="yes" code="19"/>
+			<attribute name="cisco-Port-Used" type="string" add="yes" code="20"/>
+			<attribute name="cisco-Abort-Cause" type="string" add="yes" code="21"/>
+			<attribute name="cisco-CRS-Info" type="string" add="yes" code="22"/>
+			<attribute name="h323-remote-address" type="string" add="yes" code="23"/>
+			<attribute name="h323-conf-id" type="string" add="yes" code="24"/>
+			<attribute name="h323-setup-time" type="string" add="yes" code="25"/>
+			<attribute name="h323-call-origin" type="string" add="yes" code="26"/>
+			<attribute name="h323-call-type" type="string" add="yes" code="27"/>
+			<attribute name="h323-connect-time" type="string" add="yes" code="28"/>
+			<attribute name="h323-disconnect-time" type="string" add="yes" code="29"/>
+			<attribute name="h323-disconnect-cause" type="string" add="yes" code="30"/>
+			<attribute name="h323-voice-quality" type="string" add="yes" code="31"/>
+			<attribute name="h323-ivr-out" type="string" add="yes" code="32"/>
+			<attribute name="h323-gw-id" type="string" add="yes" code="33"/>
+			<attribute name="h323-call-treatment" type="string" add="yes" code="34"/>
+			<attribute name="h323-incoming-connection-ID" type="string" add="yes" code="35"/>
+			<attribute name="h323-ivr-in" type="string" add="yes" code="100"/>
+			<attribute name="h323-credit-amount" type="string" add="yes" code="101"/>
+			<attribute name="h323-credit-time" type="string" add="yes" code="102"/>
+			<attribute name="h323-return-code" type="string" add="yes" code="103"/>
+			<attribute name="h323-prompt-id" type="string" add="yes" code="104"/>
+			<attribute name="h323-time-and-day" type="string" add="yes" code="105"/>
+			<attribute name="h323-redirect-number" type="string" add="yes" code="106"/>
+			<attribute name="h323-preferred-lang" type="string" add="yes" code="107"/>
+			<attribute name="h323-redirect-ip-addr" type="string" add="yes" code="108"/>
+			<attribute name="h323-billing-model" type="string" add="yes" code="109"/>
+			<attribute name="h323-currency-type" type="string" add="yes" code="110"/>
+			<attribute name="cisco-UCP-IP-Pool-ID" type="string" add="yes" code="128"/>
+			<attribute name="cisco-UCP-User-Max-Sessions" type="string" add="yes" code="129"/>
+			<attribute name="cisco-UCP-User-Session-Count" type="string" add="yes" code="130"/>
+			<attribute name="cisco-UCP-Next-Session-ID" type="string" add="yes" code="131"/>
+			<attribute name="cisco-UCP-VPDN-Max-Sessions" type="string" add="yes" code="132"/>
+			<attribute name="cisco-UCP-VPDN-Session-Count" type="string" add="yes" code="133"/>
+			<attribute name="cisco-UCP-B-Channel-Max-Sessions" type="string" add="yes" code="134"/>
+			<attribute name="cisco-UCP-B-Channel-Session-Count" type="string" add="yes" code="135"/>
+			<attribute name="cisco-UCP-Status" type="string" add="yes" code="136"/>
+			<attribute name="cisco-UCP-BLOB-Attribute-Length" type="string" add="yes" code="137"/>
+			<attribute name="cisco-UCP-Disable-Status" type="string" add="yes" code="138"/>
+			<attribute name="cisco-UCP-Block-Access-Range" type="string" add="yes" code="139"/>
+			<attribute name="cisco-UCP-Home-POP-ID" type="string" add="yes" code="140"/>
+			<attribute name="cisco-UCP-IP-Addresses" type="string" add="yes" code="175"/>
+			<attribute name="cisco-UCP-Session-Info" type="string" add="yes" code="176"/>
+			<attribute name="cisco-Ascend-AV-pairs" type="string" add="yes" code="211"/>
+			<attribute name="cisco-SSG-Account-Info" aliases="cisco-Account-Info" type="string" code="250"/>
+			<attribute name="cisco-SSG-Service-Info" aliases="cisco-Service-Info" type="string" code="251"/>
+			<attribute name="cisco-SSG-Command-Code" aliases="cisco-Command-Code" type="abinary" code="252"/>
+			<attribute name="cisco-SSG-Control-Info" aliases="cisco-Control-Info" type="string" code="253"/>
+		</vendor>
+		<vendor name="ChilliSpot" code="14559">
+		    <attribute name="ChilliSpot-Max-Input-Octets" code="1" type="integer" />
+		    <attribute name="ChilliSpot-Max-Output-Octets" code="2" type="integer" />
+		    <attribute name="ChilliSpot-Max-Total-Octets" code="3" type="integer" />
+		    <attribute name="ChilliSpot-Bandwidth-Max-Up" code="4" type="integer" />
+		    <attribute name="ChilliSpot-Bandwidth-Max-Down" code="5" type="integer" />
+		    <attribute name="ChilliSpot-Config" code="6" type="string" />
+		    <attribute name="ChilliSpot-Lang" code="7" type="string" />
+		    <attribute name="ChilliSpot-Version" code="8" type="string" />
+		    <attribute name="ChilliSpot-OriginalURL" code="9" type="string" />
+		    <attribute name="ChilliSpot-Acct-View-Point" code="10" type="integer" />
+		    <attribute name="ChilliSpot-Require-UAM" code="11" type="string" />
+		    <attribute name="ChilliSpot-Require-Splash" code="12" type="string" />
+		    <attribute name="ChilliSpot-Route-To-Interface" code="13" type="string" />
+		    <attribute name="ChilliSpot-Max-Input-Gigawords" code="21" type="integer" />
+		    <attribute name="ChilliSpot-Max-Output-Gigawords" code="22" type="integer" />
+		    <attribute name="ChilliSpot-Max-Total-Gigawords" code="23" type="integer" />
+		    <attribute name="ChilliSpot-VLAN-Id" code="24" type="integer" />
+		    <attribute name="ChilliSpot-Sys-Uptime" code="40" type="integer" />
+		    <attribute name="ChilliSpot-Sys-LoadAvg" code="41" type="string" />
+		    <attribute name="ChilliSpot-Sys-Memory" code="42" type="string" />
+		    <attribute name="ChilliSpot-DHCP-Vendor-Class-Id" code="50" type="octets" />
+		    <attribute name="ChilliSpot-DHCP-Client-Id" code="51" type="octets" />
+		    <attribute name="ChilliSpot-DHCP-Options" code="52" type="octets" />
+		    <attribute name="ChilliSpot-DHCP-Filename" code="53" type="string" />
+		    <attribute name="ChilliSpot-DHCP-Hostname" code="54" type="string" />
+		    <attribute name="ChilliSpot-DHCP-Server-Name" code="55" type="string" />
+		    <attribute name="ChilliSpot-DHCP-Client-FQDN" code="56" type="string" />
+		    <attribute name="ChilliSpot-DHCP-Parameter-Request-List" code="57" type="octets" />
+		    <attribute name="ChilliSpot-UAM-Allowed" code="100" type="string" />
+		    <attribute name="ChilliSpot-MAC-Allowed" code="101" type="string" />
+		    <attribute name="ChilliSpot-Interval" code="102" type="integer" />
+		</vendor>
+		<vendor name="WISPr" code="14122">
+		    <attribute name="WISPr-Location-ID" code="1" type="string" />
+		    <attribute name="WISPr-Location-Name" code="2" type="string" />
+		    <attribute name="WISPr-Logoff-URL" code="3" type="string" />
+		    <attribute name="WISPr-Redirection-URL" code="4" type="string" />
+		    <attribute name="WISPr-Bandwidth-Min-Up" code="5" type="integer" />
+		    <attribute name="WISPr-Bandwidth-Min-Down" code="6" type="integer" />
+		    <attribute name="WISPr-Bandwidth-Max-Up" code="7" type="integer" />
+		    <attribute name="WISPr-Bandwidth-Max-Down" code="8" type="integer" />
+		    <attribute name="WISPr-Session-Terminate-Time" code="9" type="string" />
+		    <attribute name="WISPr-Session-Terminate-End-Of-Day" code="10" type="string" />
+		    <attribute name="WISPr-Billing-Class-Of-Service" code="11" type="string" />
+		</vendor>		
+		<vendor code="6618" name="Quintum">
+			<attribute name="quintum-avpair" type="string" code="1"/>
+			<attribute name="Quintum-cisco-NAS-Port" type="string" code="2"/>
+			<attribute name="Quintum-h323-remote-address" type="string" code="23"/>
+			<attribute name="Quintum-h323-conf-id" type="string" code="24"/>
+			<attribute name="Quintum-h323-setup-time" type="string" code="25"/>
+			<attribute name="Quintum-h323-call-origin" type="string" code="26"/>
+			<attribute name="Quintum-h323-call-type" type="string" code="27"/>
+			<attribute name="Quintum-h323-connect-time" type="string" code="28"/>
+			<attribute name="Quintum-h323-disconnect-time" type="string" code="29"/>
+			<attribute name="Quintum-h323-disconnect-cause" type="string" code="30"/>
+			<attribute name="Quintum-h323-voice-quality" type="string" code="31"/>
+			<attribute name="Quintum-h323-ivr-out" type="string" code="32"/>
+			<attribute name="Quintum-h323-gw-id" type="string" code="33"/>
+			<attribute name="Quintum-h323-call-treatment" type="string" code="34"/>
+			<attribute name="Quintum-h323-incoming-connection-ID" type="string" code="35"/>
+			<attribute name="Quintum-h323-ivr-in" type="string" code="100"/>
+			<attribute name="Quintum-h323-credit-amount" type="string" code="101"/>
+			<attribute name="Quintum-h323-credit-time" type="string" code="102"/>
+			<attribute name="Quintum-h323-return-code" type="string" code="103"/>
+			<attribute name="Quintum-h323-prompt-id" type="string" code="104"/>
+			<attribute name="Quintum-h323-time-and-day" type="string" code="105"/>
+			<attribute name="Quintum-h323-redirect-number" type="string" code="106"/>
+			<attribute name="Quintum-h323-preferred-lang" type="string" code="107"/>
+			<attribute name="Quintum-h323-redirect-ip-addr" type="string" code="108"/>
+			<attribute name="Quintum-h323-billing-model" type="string" code="109"/>
+			<attribute name="Quintum-h323-currency-type" type="string" code="110"/>
+		</vendor>
+		<vendor code="529" name="Ascend">
+			<attribute name="Ascend-CBCP-Enable" type="integer" code="112"/>
+			<attribute name="Ascend-CBCP-Mode" type="integer" code="113"/>
+			<attribute name="Ascend-CBCP-Delay" type="integer" code="114"/>
+			<attribute name="Ascend-CBCP-Trunk-Group" type="integer" code="115"/>
+			<attribute name="Ascend-FCP-Parameter" type="string" code="119"/>
+			<attribute name="Ascend-Modem-PortNo" type="integer" code="120"/>
+			<attribute name="Ascend-Modem-SlotNo" type="integer" code="121"/>
+			<attribute name="Ascend-Modem-ShelfNo" type="integer" code="122"/>
+			<attribute name="Ascend-Call-Attempt-Limit" type="integer" code="123"/>
+			<attribute name="Ascend-Call-Block-Duration" type="integer" code="124"/>
+			<attribute name="Ascend-Maximum-Call-Duration" type="integer" code="125"/>
+			<attribute name="Ascend-Temporary-Rtes" type="integer" code="126"/>
+			<attribute name="Tunneling-Protocol" type="integer" code="127"/>
+			<attribute name="Ascend-Shared-Profile-Enable" type="integer" code="128"/>
+			<attribute name="Ascend-Primary-Home-Agent" type="string" code="129"/>
+			<attribute name="Ascend-Secondary-Home-Agent" type="string" code="130"/>
+			<attribute name="Ascend-Dialout-Allowed" type="integer" code="131"/>
+			<attribute name="Ascend-Client-Gateway" type="integer" code="132"/>
+			<attribute name="Ascend-BACP-Enable" type="integer" code="133"/>
+			<attribute name="Ascend-DHCP-Maximum-Leases" type="integer" code="134"/>
+			<attribute name="Ascend-Client-Primary-DNS" type="ipaddr" code="135"/>
+			<attribute name="Ascend-Client-Secondary-DNS" type="ipaddr" code="136"/>
+			<attribute name="Ascend-Client-Assign-DNS" type="integer" code="137"/>
+			<attribute name="Ascend-User-Acct-Type" type="integer" code="138"/>
+			<attribute name="Ascend-User-Acct-Host" type="ipaddr" code="139"/>
+			<attribute name="Ascend-User-Acct-Port" type="integer" code="140"/>
+			<attribute name="Ascend-User-Acct-Key" type="string" code="141"/>
+			<attribute name="Ascend-User-Acct-Base" type="integer" code="142"/>
+			<attribute name="Ascend-User-Acct-Time" type="integer" code="143"/>
+			<attribute name="Ascend-Assign-IP-Client" type="ipaddr" code="144"/>
+			<attribute name="Ascend-Assign-IP-Server" type="ipaddr" code="145"/>
+			<attribute name="Ascend-Assign-IP-Global-Pool" type="string" code="146"/>
+			<attribute name="Ascend-DHCP-Reply" type="integer" code="147"/>
+			<attribute name="Ascend-DHCP-Pool-Number" type="integer" code="148"/>
+			<attribute name="Ascend-Expect-Callback" type="integer" code="149"/>
+			<attribute name="Ascend-Event-Type" type="integer" code="150"/>
+			<attribute name="Ascend-Session-Svr-Key" type="string" code="151"/>
+			<attribute name="Ascend-Multicast-Rate-Limit" type="integer" code="152"/>
+			<attribute name="Ascend-IF-Netmask" type="ipaddr" code="153"/>
+			<attribute name="Ascend-Remote-Addr" type="ipaddr" code="154"/>
+			<attribute name="Ascend-Multicast-Client" type="integer" code="155"/>
+			<attribute name="Ascend-FR-Circuit-Name" type="string" code="156"/>
+			<attribute name="Ascend-FR-LinkUp" type="integer" code="157"/>
+			<attribute name="Ascend-FR-Nailed-Grp" type="integer" code="158"/>
+			<attribute name="Ascend-FR-Type" type="integer" code="159"/>
+			<attribute name="Ascend-FR-Link-Mgt" type="integer" code="160"/>
+			<attribute name="Ascend-FR-N391" type="integer" code="161"/>
+			<attribute name="Ascend-FR-DCE-N392" type="integer" code="162"/>
+			<attribute name="Ascend-FR-DTE-N392" type="integer" code="163"/>
+			<attribute name="Ascend-FR-DCE-N393" type="integer" code="164"/>
+			<attribute name="Ascend-FR-DTE-N393" type="integer" code="165"/>
+			<attribute name="Ascend-FR-T391" type="integer" code="166"/>
+			<attribute name="Ascend-FR-T392" type="integer" code="167"/>
+			<attribute name="Ascend-Bridge-Address" type="string" code="168"/>
+			<attribute name="Ascend-TS-Idle-Limit" type="integer" code="169"/>
+			<attribute name="Ascend-TS-Idle-Mode" type="integer" code="170"/>
+			<attribute name="Ascend-DBA-Monitor" type="integer" code="171"/>
+			<attribute name="Ascend-Base-Channel-Count" type="integer" code="172"/>
+			<attribute name="Ascend-Minimum-Channels" type="integer" code="173"/>
+			<attribute name="Ascend-IPX-Route" type="string" code="174"/>
+			<attribute name="Ascend-FT1-Caller" type="integer" code="175"/>
+			<attribute name="Ascend-Backup" type="string" code="176"/>
+			<attribute name="Ascend-Call-Type" type="integer" code="177"/>
+			<attribute name="Ascend-Group" type="string" code="178"/>
+			<attribute name="Ascend-FR-DLCI" type="integer" code="179"/>
+			<attribute name="Ascend-FR-Profile-Name" type="string" code="180"/>
+			<attribute name="Ascend-Ara-PW" type="string" code="181"/>
+			<attribute name="Ascend-IPX-Node-Addr" type="string" code="182"/>
+			<attribute name="Ascend-Home-Agent-IP-Addr" type="ipaddr" code="183"/>
+			<attribute name="Ascend-Home-Agent-Password" type="string" code="184"/>
+			<attribute name="Ascend-Home-Network-Name" type="string" code="185"/>
+			<attribute name="Ascend-Home-Agent-UDP-Port" type="integer" code="186"/>
+			<attribute name="Ascend-Multilink-ID" type="integer" code="187"/>
+			<attribute name="Ascend-Num-In-Multilink" type="integer" code="188"/>
+			<attribute name="Ascend-First-Dest" type="ipaddr" code="189"/>
+			<attribute name="Ascend-Pre-Input-Octets" type="integer" code="190"/>
+			<attribute name="Ascend-Pre-Output-Octets" type="integer" code="191"/>
+			<attribute name="Ascend-Pre-Input-Packets" type="integer" code="192"/>
+			<attribute name="Ascend-Pre-Output-Packets" type="integer" code="193"/>
+			<attribute name="Ascend-Maximum-Time" type="integer" code="194"/>
+			<attribute name="Ascend-Disconnect-Cause" type="integer" code="195"/>
+			<attribute name="Ascend-Connect-Progress" type="integer" code="196"/>
+			<attribute name="Ascend-Data-Rate" type="integer" code="197"/>
+			<attribute name="Ascend-PreSession-Time" type="integer" code="198"/>
+			<attribute name="Ascend-Token-Idle" type="integer" code="199"/>
+			<attribute name="Ascend-Token-Immediate" type="integer" code="200"/>
+			<attribute name="Ascend-Require-Auth" type="integer" code="201"/>
+			<attribute name="Ascend-Number-Sessions" type="string" code="202"/>
+			<attribute name="Ascend-Authen-Alias" type="string" code="203"/>
+			<attribute name="Ascend-Token-Expiry" type="integer" code="204"/>
+			<attribute name="Ascend-Menu-Selector" type="string" code="205"/>
+			<attribute name="Ascend-Menu-Item" type="string" code="206"/>
+			<attribute name="Ascend-PW-Warntime" type="integer" code="207"/>
+			<attribute name="Ascend-PW-Lifetime" type="integer" code="208"/>
+			<attribute name="Ascend-IP-Direct" type="ipaddr" code="209"/>
+			<attribute name="Ascend-PPP-VJ-Slot-Comp" type="integer" code="210"/>
+			<attribute name="Ascend-PPP-VJ-1172" type="integer" code="211"/>
+			<attribute name="Ascend-PPP-Async-Map" type="integer" code="212"/>
+			<attribute name="Ascend-Third-Prompt" type="string" code="213"/>
+			<attribute name="Ascend-Send-Secret" type="string" code="214"/>
+			<attribute name="Ascend-Receive-Secret" type="string" code="215"/>
+			<attribute name="Ascend-IPX-Peer-Mode" type="integer" code="216"/>
+			<attribute name="Ascend-IP-Pool-Definition" type="string" code="217"/>
+			<attribute name="Ascend-Assign-IP-Pool" type="integer" code="218"/>
+			<attribute name="Ascend-FR-Direct" type="integer" code="219"/>
+			<attribute name="Ascend-FR-Direct-Profile" type="string" code="220"/>
+			<attribute name="Ascend-FR-Direct-DLCI" type="integer" code="221"/>
+			<attribute name="Ascend-Handle-IPX" type="integer" code="222"/>
+			<attribute name="Ascend-Netware-timeout" type="integer" code="223"/>
+			<attribute name="Ascend-IPX-Alias" type="integer" code="224"/>
+			<attribute name="Ascend-Metric" type="integer" code="225"/>
+			<attribute name="Ascend-PRI-Number-Type" type="integer" code="226"/>
+			<attribute name="Ascend-Dial-Number" type="string" code="227"/>
+			<attribute name="Ascend-Route-IP" type="integer" code="228"/>
+			<attribute name="Ascend-Route-IPX" type="integer" code="229"/>
+			<attribute name="Ascend-Bridge" type="integer" code="230"/>
+			<attribute name="Ascend-Send-Auth" type="integer" code="231"/>
+			<attribute name="Ascend-Send-Passwd" type="string" code="232"/>
+			<attribute name="Ascend-Link-Compression" type="integer" code="233"/>
+			<attribute name="Ascend-Target-Util" type="integer" code="234"/>
+			<attribute name="Ascend-Maximum-Channels" type="integer" code="235"/>
+			<attribute name="Ascend-Inc-Channel-Count" type="integer" code="236"/>
+			<attribute name="Ascend-Dec-Channel-Count" type="integer" code="237"/>
+			<attribute name="Ascend-Seconds-Of-History" type="integer" code="238"/>
+			<attribute name="Ascend-History-Weigh-Type" type="integer" code="239"/>
+			<attribute name="Ascend-Add-Seconds" type="integer" code="240"/>
+			<attribute name="Ascend-Remove-Seconds" type="integer" code="241"/>
+			<attribute name="Ascend-Data-Filter" type="string" code="242"/>
+			<attribute name="Ascend-Call-Filter" type="string" code="243"/>
+			<attribute name="Ascend-Idle-Limit" type="integer" code="244"/>
+			<attribute name="Ascend-Preempt-Limit" type="integer" code="245"/>
+			<attribute name="Ascend-Callback" type="integer" code="246"/>
+			<attribute name="Ascend-Data-Svc" type="integer" code="247"/>
+			<attribute name="Ascend-Force-56" type="integer" code="248"/>
+			<attribute name="Ascend-Billing-Number" type="string" code="249"/>
+			<attribute name="Ascend-Call-By-Call" type="integer" code="250"/>
+			<attribute name="Ascend-Transit-Number" type="string" code="251"/>
+			<attribute name="Ascend-Host-Info" type="string" code="252"/>
+			<attribute name="Ascend-PPP-Address" type="ipaddr" code="253"/>
+			<attribute name="Ascend-MPP-Idle-Percent" type="integer" code="254"/>
+			<attribute name="Ascend-Xmit-Rate" type="integer" code="255"/>
+		</vendor>		
+		<vendor code="311" name="Microsoft">		
+			<attribute name="MS-CHAP-Response" type="octets" code="1"/>
+			<attribute name="MS-CHAP-Error" type="string" code="2"/>
+			<attribute name="MS-CHAP-LM-Enc-PW" type="octets" code="5"/>
+			<attribute name="MS-CHAP-NT-Enc-PW" type="octets" code="6"/>
+			<attribute name="MS-MPPE-Encryption-Policy" type="octets" code="7"/>
+			<attribute name="MS-MPPE-Encryption-Types" type="octets" code="8"/>
+			<attribute name="MS-RAS-Vendor" type="integer" code="9"/>
+			<attribute name="MS-CHAP-Domain" type="string" code="10"/>
+			<attribute name="MS-CHAP-Challenge" type="octets" code="11"/>
+			<attribute name="MS-CHAP-MPPE-Keys" type="octets" code="12"/>
+			<attribute name="MS-BAP-Usage" type="integer" code="13"/>
+			<attribute name="MS-Link-Utilization-Threshold" type="integer" code="14"/>
+			<attribute name="MS-Link-Drop-Time-Limit" type="integer" code="15"/>
+			<attribute name="MS-MPPE-Send-Key" type="octets" code="16"/>
+			<attribute name="MS-MPPE-Recv-Key" type="octets" code="17"/>
+			<attribute name="MS-Old-ARAP-Password" type="octets" code="18"/>
+			<attribute name="MS-RAS-Version" type="octets" code="19"/>
+			<attribute name="MS-New-ARAP-Password" type="octets" code="20"/>
+			<attribute name="MS-ARAP-Password-Change-Reason" type="integer" code="21"/>
+			<attribute name="MS-Filter" type="octets" code="22"/>
+			<attribute name="MS-Acct-Auth-Type" type="integer" code="23"/>
+			<attribute name="MS-Acct-EAP-Type" type="integer" code="24"/>
+			<attribute name="MS-CHAP2-Response" type="octets" code="25"/>
+			<attribute name="MS-CHAP2-Success" type="octets" code="26"/>
+			<attribute name="MS-CHAP2-CPW" type="octets" code="27"/>
+			<attribute name="MS-Primary-DNS-Server" type="ipaddr" code="28"/>
+			<attribute name="MS-Secondary-DNS-Server" type="ipaddr" code="29"/>
+			<attribute name="MS-Primary-NBNS-Server" type="ipaddr" code="30"/>
+			<attribute name="MS-Secondary-NBNS-Server" type="ipaddr" code="31"/>
+			<attribute name="MS-ARAP-Challenge" type="string" code="33"/>
+			<attribute name="MS-Framed-Encryption-Type" type="integer" code="200"/>
+		</vendor>
+		<vendor code="12341" name="MPD">
+			<attribute name="mpd-rule" type="string" code="1"/>
+			<attribute name="mpd-pipe" type="string" code="2"/>
+			<attribute name="mpd-queue" type="string" code="3"/>
+			<attribute name="mpd-table" type="string" code="4"/>
+			<attribute name="mpd-table-static" type="string" code="5"/>
+			<attribute name="mpd-filter" type="string" code="6"/>
+			<attribute name="mpd-limit" type="string" code="7"/>
+			<attribute name="mpd-input-octets" type="string" code="8"/>
+			<attribute name="mpd-input-packets" type="string" code="9"/>
+			<attribute name="mpd-output-octets" type="string" code="10"/>
+			<attribute name="mpd-output-packets" type="string" code="11"/>
+			<attribute name="mpd-link" type="string" code="12"/>
+			<attribute name="mpd-bundle" type="string" code="13"/>
+			<attribute name="mpd-iface" type="string" code="14"/>
+			<attribute name="mpd-iface-index" type="integer" code="15"/>
+			<attribute name="mpd-input-acct" type="string" code="16"/>
+			<attribute name="mpd-output-acct" type="string" code="17"/>
+			<attribute name="mpd-drop-user" type="integer" code="154"/>
+		</vendor>
+		<vendor code="14988" name="Mikrotik">
+		    <attribute name="Mikrotik-Recv-Limit" type="integer" code="1" />
+		    <attribute name="Mikrotik-Xmit-Limit" type="integer" code="2" />
+		    <attribute name="Mikrotik-Group" type="string" code="3" />
+		    <attribute name="Mikrotik-Wireless-Forward" type="integer" code="4" />
+		    <attribute name="Mikrotik-Wireless-Skip-Dot1x" type="integer" code="5" />
+		    <attribute name="Mikrotik-Wireless-Enc-Algo" type="integer" code="6" />
+		    <attribute name="Mikrotik-Wireless-Enc-Key" type="string" code="7" />
+		    <attribute name="Mikrotik-Rate-Limit" type="string" code="8" />
+		    <attribute name="Mikrotik-Realm" type="string" code="9" />
+		    <attribute name="Mikrotik-Host-IP" type="ipaddr" code="10" />
+		    <attribute name="Mikrotik-Mark-Id" type="string" code="11" />
+		    <attribute name="Mikrotik-Advertise-URL" type="string" code="12" />
+		    <attribute name="Mikrotik-Advertise-Interval" type="integer" code="13" />
+		    <attribute name="Mikrotik-Recv-Limit-Gigawords" type="integer" code="14" />
+		    <attribute name="Mikrotik-Xmit-Limit-Gigawords" type="integer" code="15" />
+		    <attribute name="Mikrotik-Address-List" type="string" code="19" />
+		</vendor>
+		<vendor code="2636" name="Juniper">
+			<attribute name="Juniper-Local-User-Name" type="string" code="1"/>
+			<attribute name="Juniper-Allow-Commands" type="string" code="2"/>
+			<attribute name="Juniper-Deny-Commands" type="string" code="3"/>
+			<attribute name="Juniper-Allow-Configuration" type="string" code="4"/>
+			<attribute name="Juniper-Deny-Configuration" type="string" code="5"/>
+			<attribute name="Juniper-Interactive-Command" type="string" code="8"/>
+			<attribute name="Juniper-Configuration-Change" type="string" code="9"/>
+			<attribute name="Juniper-User-Permissions" type="string" code="10" />
+			<attribute name="ERX-Activate-Service" type="string" tag="1" code="65"/>
+			<attribute name="ERX-Deactivate-Service" type="string" tag="1" code="66"/>
+			<attribute name="ERX-Service-Stats" type="integer" tag="1" code="69"/>
+			<attribute name="ERX-Service-Timeout" type="integer" tag="1" code="68"/>
+		</vendor>
+		<vendor code="2352" name="Redback">
+			<attribute name="Client-DNS-Pri" type="ipaddr" code="1"/>
+			<attribute name="Client-DNS-Sec" type="ipaddr" code="2"/>
+			<attribute name="DHCP-Max-Leases" type="integer" code="3"/>
+			<attribute name="Context-Name" type="string" code="4"/>
+			<attribute name="Bridge-Group" type="string" code="5"/>
+			<attribute name="BG-Aging-Time" type="string" code="6"/>
+			<attribute name="BG-Path-Cost" type="string" code="7"/>
+			<attribute name="BG-Span-Dis" type="string" code="8"/>
+			<attribute name="BG-Trans-BPDU" type="string" code="9"/>
+			<attribute name="Rate-Limit-Rate" type="integer" code="10"/>
+			<attribute name="Rate-Limit-Burst" type="integer" code="11"/>
+			<attribute name="Police-Rate" type="integer" code="12"/>
+			<attribute name="Police-Burst" type="integer" code="13"/>
+			<attribute name="Source-Validation" type="integer" code="14"/>
+			<attribute name="Tunnel-Domain" type="integer" code="15"/>
+			<attribute name="Tunnel-Local-Name" type="string" code="16"/>
+			<attribute name="Tunnel-Remote-Name" type="string" code="17"/>
+			<attribute name="Tunnel-Function" type="integer" code="18"/>
+			<attribute name="Tunnel-Max-Sessions" type="integer" code="21"/>
+			<attribute name="Tunnel-Max-Tunnels" type="integer" code="22"/>
+			<attribute name="Tunnel-Session-Auth" type="integer" code="23"/>
+			<attribute name="Tunnel-Window" type="integer" code="24"/>
+			<attribute name="Tunnel-Retransmit" type="integer" code="25"/>
+			<attribute name="Tunnel-Cmd-Timeout" type="integer" code="26"/>
+			<attribute name="PPPOE-URL" type="string" code="27"/>
+			<attribute name="PPPOE-MOTM" type="string" code="28"/>
+			<attribute name="Tunnel-Group" type="integer" code="29"/>
+			<attribute name="Tunnel-Context" type="string" code="30"/>
+			<attribute name="Tunnel-Algorithm" type="integer" code="31"/>
+			<attribute name="Tunnel-Deadtime" type="integer" code="32"/>
+			<attribute name="Mcast-Send" type="integer" code="33"/>
+			<attribute name="Mcast-Receive" type="integer" code="34"/>
+			<attribute name="Mcast-MaxGroups" type="integer" code="35"/>
+			<attribute name="Ip-Address-Pool-Name" type="string" code="36"/>
+			<attribute name="Tunnel-DNIS" type="integer" code="37"/>
+			<attribute name="Medium-Type" type="integer" code="38"/>
+			<attribute name="PVC-Encapsulation-Type" type="integer" code="39"/>
+			<attribute name="PVC-Profile-Name" type="string" code="40"/>
+			<attribute name="PVC-Circuit-Padding" type="integer" code="41"/>
+			<attribute name="Bind-Type" type="integer" code="42"/>
+			<attribute name="Bind-Auth-Protocol" type="integer" code="43"/>
+			<attribute name="Bind-Auth-Max-Sessions" type="integer" code="44"/>
+			<attribute name="Bind-Bypass-Bypass" type="string" code="45"/>
+			<attribute name="Bind-Auth-Context" type="string" code="46"/>
+			<attribute name="Bind-Auth-Service-Grp" type="string" code="47"/>
+			<attribute name="Bind-Bypass-Context" type="string" code="48"/>
+			<attribute name="Bind-Int-Context" type="string" code="49"/>
+			<attribute name="Bind-Tun-Context" type="string" code="50"/>
+			<attribute name="Bind-Ses-Context" type="string" code="51"/>
+			<attribute name="Bind-Dot1q-Slot" type="integer" code="52"/>
+			<attribute name="Bind-Dot1q-Port" type="integer" code="53"/>
+			<attribute name="Bind-Dot1q-Vlan-Tag-Id" type="integer" code="54"/>
+			<attribute name="Bind-Int-Interface-Name" type="string" code="55"/>
+			<attribute name="Bind-L2TP-Tunnel-Name" type="string" code="56"/>
+			<attribute name="Bind-L2TP-Flow-Control" type="integer" code="57"/>
+			<attribute name="Bind-Sub-User-At-Context" type="string" code="58"/>
+			<attribute name="Bind-Sub-Password" type="string" code="59"/>
+			<attribute name="Ip-Host-Addr" type="string" code="60"/>
+			<attribute name="IP-TOS-Field" type="integer" code="61"/>
+			<attribute name="NAS-Real-Port" type="integer" code="62"/>
+			<attribute name="Tunnel-Session-Auth-Ctx" type="string" code="63"/>
+			<attribute name="Tunnel-Session-Auth-Service-Grp" type="string" code="64"/>
+			<attribute name="Tunnel-Rate-Limit-Rate" type="integer" code="65"/>
+			<attribute name="Tunnel-Rate-Limit-Burst" type="integer" code="66"/>
+			<attribute name="Tunnel-Police-Rate" type="integer" code="67"/>
+			<attribute name="Tunnel-Police-Burst" type="integer" code="68"/>
+			<attribute name="Tunnel-L2F-Second-Password" type="string" code="69"/>
+			<attribute name="ACL-Definition" type="string" code="70"/>
+			<attribute name="PPPoE-IP-Route-Add" type="string" code="71"/>
+			<attribute name="TTY-Level-Max" type="integer" code="72"/>
+			<attribute name="TTY-Level-Start" type="integer" code="73"/>
+			<attribute name="Tunnel-Checksum" type="integer" code="74"/>
+			<attribute name="Tunnel-Profile" type="string" code="75"/>
+			<attribute name="Tunnel-Client-VPN" type="string" code="78"/>
+			<attribute name="Tunnel-Server-VPN" type="string" code="79"/>
+			<attribute name="Tunnel-Client-Rhost" type="string" code="80"/>
+			<attribute name="Tunnel-Server-Rhost" type="string" code="81"/>
+			<attribute name="Tunnel-Client-Int-Addr" type="ipaddr" code="82"/>
+			<attribute name="Tunnel-Server-Int-Addr" type="ipaddr" code="83"/>
+			<attribute name="Qos-Policing-Profile-Name" type="string" code="87"/>
+            <attribute name="Qos-Metering-Profile-Name" type="string" code="88"/>
+            <attribute name="Qos-Queuing-Profile-Name" type="string" code="89"/>            
+            <attribute name="Igmp-Service-Profile" type="string" code="90"/>
+            <attribute name="Sub-Profile-Name" type="string" code="91"/>
+			<attribute name="Forward-Policy" type="string" code="92"/>
+			<attribute name="Reauth-String" type="string" code="94"/>
+			<attribute name="Reauth-More" type="integer" code="95"/>            
+			<attribute name="Agent-Remote-Id" type="octets" code="96"/>
+			<attribute name="Agent-Circuit-Id" type="octets" code="97"/>
+			<attribute name="Platform-Type" type="integer" code="98"/>
+			<attribute name="Client-NBNS-Pri" type="ipaddr" code="99"/>
+			<attribute name="Client-NBNS-Sec" type="ipaddr" code="100"/>
+			<attribute name="BG-Cct-Addr-Max" type="integer" code="103"/>
+			<attribute name="IP-Interface-Name" type="string" code="104"/>
+			<attribute name="NAT-Policy-Name" type="string" code="105"/>
+			<attribute name="HTTP-Redirect-Profile-Name" type="string" code="107"/>
+			<attribute name="OS-Version" type="string" code="112"/>
+			<attribute name="Session-Traffic-Limit" type="string" code="113"/>
+			<attribute name="Rate-Limit-Excess-Burst" type="octets" code="121"/>
+			<attribute name="Police-Excess-Burst" type="octets" code="122"/>
+			<attribute name="Tunnel-Rate-Limit-Excess-Burst" type="octets" code="123"/>
+			<attribute name="Tunnel-Police-Excess-Burst" type="octets" code="124"/>
+			<attribute name="DHCP-Vendor-Encap-Options" aliases="DHCP-Vendor-Encap-Option" type="string" code="127"/>
+			<attribute name="Acct-Input-Octets-64" type="octets" code="128"/>
+			<attribute name="Acct-Output-Octets-64" type="octets" code="129"/>
+			<attribute name="Acct-Input-Packets-64" type="octets" code="130"/>
+			<attribute name="Acct-Output-Packets-64" type="octets" code="131"/>
+			<attribute name="Assigned-IP-Address" type="ipaddr" code="132"/>
+			<attribute name="Acct-Mcast-In-Octets-64" type="octets" code="133"/>
+			<attribute name="Acct-Mcast-Out-Octets-64" type="octets" code="134"/>
+			<attribute name="Acct-Mcast-In-Packets-64" type="octets" code="135"/>
+			<attribute name="Acct-Mcast-Out-Packets-64" type="octets" code="136"/>
+			<attribute name="LAC-Port" type="integer" code="137"/>
+			<attribute name="LAC-Real-Port" type="integer" code="138"/>
+			<attribute name="LAC-Port-Type" type="integer" code="139"/>
+			<attribute name="LAC-Real-Port-Type" type="integer" code="140"/>
+			<attribute name="Acct-Dyn-Ac-Ent" type="string" code="141"/>
+			<attribute name="Session-Error-Code" type="integer" code="142"/>
+			<attribute name="Session-Error-Msg" type="string" code="143"/>
+			<attribute name="Acct-Update-Reason" type="integer" code="144"/>
+			<attribute name="Mac-Addr" type="string" code="145"/>
+			<attribute name="Vlan-Source-Info" type="string" code="146"/>
+			<attribute name="Acct-Mcast-In-Octets" type="integer" code="147"/>
+			<attribute name="Acct-Mcast-Out-Octets" type="integer" code="148"/>
+			<attribute name="Acct-Mcast-In-Packets" type="integer" code="149"/>
+			<attribute name="Acct-Mcast-Out-Packets" type="integer" code="150"/>
+			<attribute name="Reauth-Session-Id" type="string" code="151"/>
+			<attribute name="Qos-Rate-Inbound" type="string" code="156"/>
+			<attribute name="Qos-Rate-Outbound" type="string" code="157"/>
+			<attribute name="Service-Name" tag="2" type="string" code="190"/>
+            <attribute name="Service-Options" aliases="Service-Action" tag="1" type="integer" code="191"/>
+            <attribute name="Service-Parameter" tag="2" type="string" code="192"/>
+            <attribute name="Deactivate-Service-Name" tag="2" type="string" code="194"/>
+			<attribute name="Dynamic-QoS-Param" type="string" code="196"/>
+		</vendor>
+		<vendor name="Freeswitch" code="27880">
+            <attribute name="Freeswitch-AVPair" code="1" type="string" />
+            <attribute name="Freeswitch-CLID" code="2" type="string" />
+            <attribute name="Freeswitch-Dialplan" code="3" type="string" />
+            <attribute name="Freeswitch-Src" code="4" type="string" />
+            <attribute name="Freeswitch-Dst" code="5" type="integer" />
+            <attribute name="Freeswitch-Src-Channel" code="6" type="integer" />
+            <attribute name="Freeswitch-Dst-Channel" code="7" type="integer" />
+            <attribute name="Freeswitch-Ani" code="8" type="integer" />
+            <attribute name="Freeswitch-Aniii" code="9" type="string" />
+            <attribute name="Freeswitch-Lastapp" code="10" type="string" />
+            <attribute name="Freeswitch-Lastdata" code="11" type="string" />
+            <attribute name="Freeswitch-Disposition" code="12" type="string" />
+            <attribute name="Freeswitch-Hangupcause" code="13" type="integer" />
+            <attribute name="Freeswitch-Billusec" code="15" type="integer" />
+            <attribute name="Freeswitch-AMAFlags" code="16" type="integer" />
+            <attribute name="Freeswitch-RDNIS" code="17" type="string" />
+            <attribute name="Freeswitch-Context" code="18" type="string" />
+            <attribute name="Freeswitch-Source" code="19" type="string" />
+            <attribute name="Freeswitch-Callstartdate" code="20" type="string" />
+            <attribute name="Freeswitch-Callanswerdate" code="21" type="string" />
+            <attribute name="Freeswitch-Calltransferdate" code="22" type="string" />
+            <attribute name="Freeswitch-Callenddate" code="23" type="string" />
+            <attribute name="Freeswitch-Direction" code="24" type="string" />
+            <attribute name="Freeswitch-Other-Leg-Id" code="25" type="string" />
+            <attribute name="h323-conf-id" code="26" type="string" />
+        </vendor>
+        <vendor name="VasExperts" code="43823">
+        	<attribute name="VasExperts-Policing-Profile" code="1" type="string" />
+        	<attribute name="VasExperts-Service-Profile" code="2" type="string" />
+        	<attribute name="VasExperts-Enable-Service" code="3" type="string" />
+        	<attribute name="VasExperts-Multi-IP-User" code="4" type="octets" />
+        	<attribute name="VasExperts-UserName" code="5" type="string" />
+        	<attribute name="VasExperts-Service-Type" code="6" type="integer" />
+        	<attribute name="VasExperts-Restrict-User" code="7" type="integer" />
+			<attribute name="VasExperts-Acct-Traffic-Class-Name" code="16" type="string" />
+			<attribute name="VasExperts-Acct-Traffic-Class-Input-Octets" code="17" type="long" />
+			<attribute name="VasExperts-Acct-Traffic-Class-Output-Octets" code="18" type="long" />
+			<attribute name="VasExperts-Acct-Traffic-Class-Input-Packets" code="19" type="long" />
+			<attribute name="VasExperts-Acct-Traffic-Class-Output-Packets" code="20" type="long" />
+        	<attribute name="VasExperts-DHCP-RelayRemoteId" code="38" type="octets" />
+        	<attribute name="VasExperts-DHCP-RelayCircuitId" code="39" type="octets" />
+        	<attribute name="VasExperts-DHCP-Option" code="40" type="octets" />
+        	<attribute name="VasExperts-DHCP-DNS" code="41" type="ipaddr" />
+        	<attribute name="VasExperts-DHCP-Gateway" code="42" type="ipaddr" />
+        	<attribute name="VasExperts-BOOTP-SName" code="43" type="string" />
+        	<attribute name="VasExperts-BOOTP-File" code="44" type="string" />
+        </vendor>
+		<vendor name="Eltex" code="35265">
+			<attribute name="Eltex-AVPair" code="1" type="string"/>
+			<attribute name="Incoming-SIP-call-id" code="2" type="string"/>
+			<attribute name="Outgoing-SIP-call-id" code="3" type="string"/>
+			<attribute name="Incoming-RTP-local-address" code="4" type="ipaddr"/>
+			<attribute name="Incoming-RTP-remote-address" code="5" type="ipaddr"/>
+			<attribute name="Outgoing-RTP-local-address" code="6" type="ipaddr"/>
+			<attribute name="Outgoing-RTP-remote-address" code="7" type="ipaddr"/>
+			<attribute name="Disconnect-Code-Local" code="11" type="integer"/>
+		</vendor>
+	</vendors>
+</dictionary>
