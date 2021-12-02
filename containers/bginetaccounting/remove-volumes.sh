@@ -15,17 +15,13 @@ source ../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker run \
-    --name $CONTAINER_NAME \
-    --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
-    --detach \
-    --volume /etc/localtime:/etc/localtime:ro \
-    --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-conf:/opt/bgbilling/BGInetAccess/conf \
-    --volume $CONTAINER_NAME-data:/opt/bgbilling/BGInetAccess/data \
-    --volume $CONTAINER_NAME-log:/opt/bgbilling/BGInetAccess/log \
-    --publish 1951:1951 \
-    --publish 67:67/udp \
-    $IMAGE_TARGET
+# https://github.com/alexanderfefelov/docker-backpack/blob/main/utils/cleanup/prune-all.sh
+read -p "WARNING: The data will be deleted. Press Y to continue: " -n 1 -r
+echo
+if [ "$REPLY" != "Y" ]; then
+  exit
+fi
 
-docker logs --follow $CONTAINER_NAME
+docker volume rm $CONTAINER_NAME-data
+docker volume rm $CONTAINER_NAME-log
+docker volume rm $CONTAINER_NAME-conf

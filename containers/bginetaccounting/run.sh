@@ -21,11 +21,10 @@ docker run \
     --detach \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-conf:/opt/bgbilling/BGInetAccess/conf \
-    --volume $CONTAINER_NAME-data:/opt/bgbilling/BGInetAccess/data \
-    --volume $CONTAINER_NAME-log:/opt/bgbilling/BGInetAccess/log \
-    --publish 1951:1951 \
-    --publish 67:67/udp \
+    --volume $CONTAINER_NAME-conf:/opt/bgbilling/BGInetAccounting/conf \
+    --volume $CONTAINER_NAME-data:/opt/bgbilling/BGInetAccounting/data \
+    --volume $CONTAINER_NAME-log:/opt/bgbilling/BGInetAccounting/log \
+    --publish 1952:1952 \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME

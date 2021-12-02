@@ -1,0 +1,13 @@
+[Unit]
+Description=BGInetAccounting
+After=network.target activemq.service
+Requires=activemq.service
+
+[Service]
+Type=forking
+TimeoutStartSec=120s
+ExecStart=/opt/bgbilling/BGInetAccounting/bin/application.sh start
+ExecStop=/opt/bgbilling/BGInetAccounting/bin/application.sh stop
+
+[Install]
+WantedBy=multi-user.target

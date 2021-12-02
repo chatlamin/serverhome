@@ -13,8 +13,8 @@ RUN unzip -qq /opt/bgbilling/$BGBILLING_DOWNLOAD_FILE -d /opt/bgbilling
 
 ADD container/ /
 
-RUN chmod 744 /opt/bgbilling/BGInetAccess/bin/*.sh
+RUN chmod 744 /opt/bgbilling/BGInetAccounting/bin/*.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD ["/opt/bgbilling/BGInetAccess/bin/application.sh", "start"]
+CMD ["/opt/bgbilling/BGInetAccounting/bin/application.sh", "start"]
