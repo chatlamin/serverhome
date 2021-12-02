@@ -19,7 +19,6 @@ docker run \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
-    --restart unless-stopped \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume $CONTAINER_NAME-conf:/opt/bgbilling/BGInetAccess/conf \
@@ -28,7 +27,6 @@ docker run \
     --publish 1952:1952 \
     --publish 1951:1951 \
     --publish 67:67/udp \
-    --publish 68:68/udp \
     --publish 65200:9001 \
     $IMAGE_TARGET
 
