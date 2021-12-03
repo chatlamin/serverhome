@@ -27,6 +27,7 @@ docker run \
     --volume $CONTAINER_NAME-log:/mosquitto/log \
     --publish 9001:9001 \
     --publish 1883:1883 \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
