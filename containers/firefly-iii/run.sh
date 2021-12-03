@@ -31,6 +31,7 @@ docker run \
     --env DB_USERNAME=$DB_USERNAME \
     --env DB_PASSWORD=$DB_PASSWORD \
     --publish 65003:8080 \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
