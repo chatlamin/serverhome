@@ -26,6 +26,7 @@ docker run \
     --volume $CONTAINER_NAME-log:/var/log/dkron \
     --volume $CONTAINER_NAME-data:/dkron.data \
     --publish 65005:8080 \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET \
     agent \
     --server \
