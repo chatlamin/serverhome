@@ -24,6 +24,7 @@ docker run \
     --volume $CONTAINER_NAME-data:/var/lib/influxdb \
     --env TZ=Europe/Moscow \
     --publish 8086:8086 \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
