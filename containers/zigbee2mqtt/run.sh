@@ -25,6 +25,7 @@ docker run \
     --volume /run/udev:/run/udev:ro \
     --env TZ=Europe/Moscow \
     --publish 65009:8080 \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
