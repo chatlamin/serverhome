@@ -32,6 +32,7 @@ docker run \
     --env HOST_VAR=/host/var \
     --env HOST_RUN=/host/run \
     --env HOST_NAME_HOST=$HOST_NAME_HOST \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
