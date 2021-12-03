@@ -8,9 +8,9 @@ export NAME=mosquitto
 # Репозиторий
 EXPLORE=eclipse-mosquitto
 # Тэг образа старый
-TAG_OLD=2.0.12
+TAG_OLD=2.0.13
 # Тэг образа новый
-TAG_NEW=2.0.13
+TAG_NEW=2.0.14
 
 #--------------------------------------------------------------------
 # End settings
