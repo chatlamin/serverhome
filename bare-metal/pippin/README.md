@@ -248,7 +248,7 @@
         sudo pkexec visudo
 
         # Вписать в конец:
-        backuper ALL = NOPASSWD: /bin/mkdir, /bin/tar, /bin/gzip, /usr/bin/find, /bin/mv, /usr/bin/zip, /bin/rm, /usr/bin/mysqldump, /usr/bin/cp
+        backuper ALL = NOPASSWD: /bin/mkdir, /bin/tar, /bin/gzip, /usr/bin/find, /bin/mv, /usr/bin/zip, /bin/rm, /usr/bin/mysqldump, /usr/bin/cp, /usr/bin/chown
 
 ___
 
