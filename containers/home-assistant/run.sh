@@ -23,6 +23,7 @@ docker run \
     --network host \
     --volume $CONTAINER_NAME-conf:/config \
     --env TZ=Europe/Moscow \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
