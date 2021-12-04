@@ -24,6 +24,7 @@ docker run \
     --env TZ=Europe/Moscow \
     --env DEFAULT_LANGUAGE=ru_RU \
     --env APP_KEY=$APP_KEY \
+    --env STATIC_CRON_TOKEN=$STATIC_CRON_TOKEN \
     --env DB_CONNECTION=$DB_CONNECTION \
     --env DB_HOST=$DB_HOST \
     --env DB_PORT=$DB_PORT \

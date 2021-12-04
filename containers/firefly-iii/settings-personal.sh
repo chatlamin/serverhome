@@ -16,6 +16,8 @@ TAG_NEW=version-5.6.5
 # Этот ключ используется для создания файлов cookie приложений и безопасных вложений
 # https://github.com/firefly-iii/firefly-iii/blob/adc52f7b63a20e81bd0c7cb941e2f777beb8071a/app.json#L60
 APP_KEY=B6jBO5ejsj3gFE2Cc6zmMZC90NUMcUpn
+# https://docs.firefly-iii.org/firefly-iii/advanced-installation/cron/#static-cron-token
+STATIC_CRON_TOKEN=ohvahmu4yooy1uquoo3Baixaz7Aiyai3
 # Тип базы данных
 DB_CONNECTION=mysql
 # ip / dns базы данных
