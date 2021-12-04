@@ -8,9 +8,9 @@ export NAME=gitea
 # Репозиторий
 EXPLORE=gitea/gitea
 # Тэг образа старый
-TAG_OLD=start
+TAG_OLD=1.15.4
 # Тэг образа новый
-TAG_NEW=1.15.4
+TAG_NEW=1.15.7
 
 ##
 # Тип базы данных
