@@ -22,7 +22,6 @@ docker run \
     --restart unless-stopped \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-conf:/etc/gitea \
     --volume $CONTAINER_NAME-data:/data \
     --env GITEA__database__DB_TYPE=$DB_CONNECTION \
     --env GITEA__database__HOST=$DB_HOST:$DB_PORT \
@@ -31,7 +30,7 @@ docker run \
     --env GITEA__database__PASSWD=$DB_PASSWORD \
     --publish 65022:3000 \
     --publish 65023:22 \
-    $IMAGE_TARGET \
-    gitea --config=/etc/gitea/conf/app.ini
+    $HEALTHCHECK_SETTINGS \
+    $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
