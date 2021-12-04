@@ -26,6 +26,7 @@ docker run \
     --volume $CONTAINER_NAME-pass:/password \
     --volume $CONTAINER_NAME-data:/data \
     --publish 9000:9000 \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET \
     --admin-password-file '/password/portainer-ce-password'
 
