@@ -1,0 +1,1 @@
+https://github.com/grafana/loki/tree/main/clients/pkg/promtail
