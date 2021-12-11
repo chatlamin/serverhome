@@ -8,14 +8,14 @@ export NAME=firefly-iii
 # Репозиторий
 EXPLORE=fireflyiii/core
 # Тэг образа старый
-TAG_OLD=version-5.6.4
+TAG_OLD=version-5.6.5
 # Тэг образа новый
-TAG_NEW=version-5.6.5
+TAG_NEW=version-5.6.6
 
 ##
 # Этот ключ используется для создания файлов cookie приложений и безопасных вложений
 # https://github.com/firefly-iii/firefly-iii/blob/adc52f7b63a20e81bd0c7cb941e2f777beb8071a/app.json#L60
-APP_KEY=B6jBO5ejsj3gFE2Cc6zmMZC90NUMcUpn
+APP_KEY=5VT7xU4Q7jRejBaWsAYNHLnKt5MSKVk4
 # https://docs.firefly-iii.org/firefly-iii/advanced-installation/cron/#static-cron-token
 STATIC_CRON_TOKEN=ohvahmu4yooy1uquoo3Baixaz7Aiyai3
 # Тип базы данных

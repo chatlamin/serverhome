@@ -3,6 +3,7 @@ experemental/
 
 containers/plex/settings-secret.sh
 containers/traefik/settings-secret.sh
+containers/firefly-iii/settings-secret.sh
 
 containers/dkron/tools/populator/
 containers/healthchecks/tools/populator/
