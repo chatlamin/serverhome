@@ -4,7 +4,7 @@
 
 ##
 # Название проекта
-export NAME=snipe-ip
+export NAME=snipe-it
 # Репозиторий
 EXPLORE=snipe/snipe-it
 # Тэг образа старый
@@ -29,6 +29,8 @@ DB_PASSWORD=eefieph6Daeng2
 DB_CONTAINER_NAME=mysql-8
 # Пароль от root
 MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
+# Ключ приложения https://snipe-it.readme.io/docs/docker#start-your-snipe-it-container
+APP_KEY="base64:EX/qVxY66UO2o3/OcZjjlTEs7slfUwuTZ8KcYcB+UEc="
 
 #--------------------------------------------------------------------
 # End settings
