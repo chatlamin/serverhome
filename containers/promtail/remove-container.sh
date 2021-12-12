@@ -4,7 +4,8 @@
 # Settings
 #---------------------------------------------------------------------
 
-
+source settings-personal.sh
+source ../settings/settings-common.sh
 
 #--------------------------------------------------------------------
 # End settings
@@ -14,6 +15,5 @@
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-# https://grafana.com/docs/loki/latest/clients/docker-driver/#uninstalling
-docker plugin disable loki --force
-docker plugin rm loki
+docker stop $CONTAINER_NAME
+docker rm -f $CONTAINER_NAME

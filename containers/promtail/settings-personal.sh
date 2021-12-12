@@ -4,11 +4,11 @@
 
 ##
 # Название проекта
-export NAME=loki
+export NAME=promtail
 # Репозиторий
-EXPLORE=grafana/loki
+EXPLORE=grafana/promtail
 # Тэг образа старый
-TAG_OLD=2.2.1
+TAG_OLD=start
 # Тэг образа новый
 TAG_NEW=2.4.1
 

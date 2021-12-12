@@ -25,12 +25,12 @@ Username: `no external database support`
 Password: `no external database support`
 
 ## References to the original project
-Website: https://grafana.com/oss/loki/
+Website: https://grafana.com/oss/loki
 
-Documentation: https://grafana.com/docs/loki/latest/
+Documentation: https://grafana.com/docs/loki/latest
 
 Repository github: https://github.com/grafana/loki
 
-Repository docker github: https://github.com/grafana/loki/blob/main/loki-build-image/Dockerfile/
+Repository docker github: https://github.com/grafana/loki/blob/main/loki-build-image/Dockerfile
 
 Repository docker: https://hub.docker.com/r/grafana/loki

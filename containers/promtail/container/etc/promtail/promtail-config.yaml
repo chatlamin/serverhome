@@ -1,0 +1,29 @@
+server:
+  disable: false
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /data/positions.yaml
+
+clients:
+  - url: http://loki.serverhome.home:3100/loki/api/v1/push
+
+scrape_configs:
+  - job_name: varlogs
+    static_configs:
+    - targets:
+      - localhost
+      labels:
+        job: varlogs
+        host: ${HOSTNAME}
+        __path__: /mnt/log/hostlog/*log
+
+  - job_name: mosquitto
+    static_configs:
+    - targets:
+      - localhost
+      labels:
+        job: mosquitto
+        host: ${HOSTNAME}
+        __path__: /mnt/log/mosquitto/*log
