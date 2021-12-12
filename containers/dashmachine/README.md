@@ -13,16 +13,16 @@ Link: http://dashmachine.serverhome.home:65036/
 
 Login: `admin`
 
-Password: `Suo5ooBahb3ooL`
+Password: `admin`
 
 ## Database
-Type: `?`
+Type: `sqlite`
 
-Name: `?`
+Name: `site.db`
 
-Username: `?`
+Username: `-`
 
-Password: `?`
+Password: `-`
 
 ## References to the original project
 Website: https://github.com/rmountjoy92/DashMachine
