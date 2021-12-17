@@ -6,6 +6,7 @@
 
 source ../settings-personal.sh
 source ../../settings/settings-common.sh
+source ../public.env
 
 #--------------------------------------------------------------------
 # End settings
