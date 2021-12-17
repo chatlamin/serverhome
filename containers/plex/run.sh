@@ -7,9 +7,6 @@
 source settings-personal.sh
 source ../settings/settings-common.sh
 
-# optional
-source settings-secret.sh
-
 #--------------------------------------------------------------------
 # End settings
 #--------------------------------------------------------------------
@@ -19,6 +16,8 @@ source settings-secret.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker run \
+    --env-file private.env \
+    --env-file public.env \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
@@ -27,8 +26,6 @@ docker run \
     --volume $CONTAINER_NAME-movies:/movies \
     --volume $CONTAINER_NAME-serials:/serials \
     --volume $CONTAINER_NAME-transcode:/transcode \
-    --env PLEX_CLAIM=$PLEX_CLAIM \
-    --env TZ=Europe/Moscow \
     --publish 32400:32400 \
     --publish 8324:8324 \
     --publish 32410:32410/udp \
