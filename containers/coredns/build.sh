@@ -33,8 +33,11 @@ generate_config_files() {
 }
 
 generate_config_files
+export TAG_NEW
 docker build \
-    --build-arg IMAGE_SOURCE_NEW \
+    --build-arg OS \
+    --build-arg ARCHITECTURE \
+    --build-arg TAG_NEW \
     --tag $IMAGE_TARGET .
 
 rm --force container/etc/coredns/hosts

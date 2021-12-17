@@ -6,6 +6,7 @@
     errors
     reload
     prometheus 0.0.0.0:9153
+    health 0.0.0.0:8080
 
     hosts /etc/coredns/hosts home. {
         fallthrough

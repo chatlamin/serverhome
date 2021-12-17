@@ -26,6 +26,7 @@ docker run \
     --publish 53:53 \
     --publish 53:53/udp \
     --publish 65104:9153 \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
