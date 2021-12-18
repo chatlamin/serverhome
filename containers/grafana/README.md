@@ -1,7 +1,9 @@
 # grafana
+
 Hostname: `grafana.serverhome.home`
 
 ## Supported architectures
+
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
@@ -9,6 +11,7 @@ Hostname: `grafana.serverhome.home`
 | armhf         | ?       |
 
 ## Keys
+
 Link: http://grafana.serverhome.home:3000/
 
 Login: `admin`
@@ -16,6 +19,7 @@ Login: `admin`
 Password: `Thee2veih0hoo4`
 
 ## Database
+
 Type: `mysql-8`
 
 Name: `grafana`
@@ -25,6 +29,7 @@ Username: `grafana`
 Password: `shohg5Sei3igh3`
 
 ## References to the original project
+
 Website: https://grafana.com
 
 Documentation: https://grafana.com/docs/grafana/latest

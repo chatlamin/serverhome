@@ -16,6 +16,7 @@ source ../settings/settings-common.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker run \
+    --env-file public.env \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
@@ -23,14 +24,6 @@ docker run \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume $CONTAINER_NAME-conf:/etc/grafana \
-    --env GF_DATABASE_TYPE=$DB_CONNECTION \
-    --env GF_DATABASE_HOST=$DB_HOST \
-    --env GF_DATABASE_NAME=$DB_DATABASE \
-    --env GF_DATABASE_USER=$DB_USERNAME \
-    --env GF_DATABASE_PASSWORD=$DB_PASSWORD \
-    --env GF_SECURITY_ADMIN_USER=$ADMIN_USER \
-    --env GF_SECURITY_ADMIN_PASSWORD=$ADMIN_PASS \
-    --env GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=$DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH \
     --publish 65038:3000 \
     $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET

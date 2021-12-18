@@ -12,3 +12,5 @@ RUN apk add --quiet \
     && grafana-cli plugins install frser-sqlite-datasource \
     && grafana-cli plugins install redis-datasource \
     && grafana-cli plugins install alexanderzobnin-zabbix-app
+
+USER grafana
