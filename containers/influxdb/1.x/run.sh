@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------
 
 source settings-personal.sh
-source ../settings/settings-common.sh
+source ../../settings/settings-common.sh
 
 #--------------------------------------------------------------------
 # End settings
@@ -15,9 +15,16 @@ source ../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker stop $CONTAINER_NAME
-docker rm -f $CONTAINER_NAME
-docker rmi $IMAGE_TARGET_OLD
-docker rmi $IMAGE_SOURCE_OLD
-./build.sh
-./run.sh
+docker run \
+    --env-file public.env \
+    --name $CONTAINER_NAME \
+    --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
+    --detach \
+    --restart unless-stopped \
+    --volume $CONTAINER_NAME-conf:/etc/influxdb \
+    --volume $CONTAINER_NAME-data:/var/lib/influxdb \
+    --publish 8086:8086 \
+    $HEALTHCHECK_SETTINGS \
+    $IMAGE_TARGET
+
+docker logs --follow $CONTAINER_NAME
