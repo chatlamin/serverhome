@@ -4,13 +4,13 @@
 
 ##
 # Название проекта
-export NAME=influxdb-1-x
+export NAME=influxdb-2-x
 # Репозиторий
 EXPLORE=influxdb
 # Тэг образа старый
-TAG_OLD=1.8.9
+TAG_OLD=start
 # Тэг образа новый
-TAG_NEW=1.8.10
+TAG_NEW=2.1.1
 
 #--------------------------------------------------------------------
 # End settings

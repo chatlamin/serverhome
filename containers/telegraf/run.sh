@@ -16,21 +16,17 @@ source ../settings/settings-common.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker run \
+    --env-file public.env \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
     --network host \
     --privileged \
+    --user telegraf:$(stat -c '%g' /var/run/docker.sock) \
     --restart unless-stopped \
     --volume $CONTAINER_NAME-conf:/etc/telegraf \
     --volume /var/run/docker.sock:/var/run/docker.sock \
     --volume /:/host:ro \
-    --env HOST_MOUNT_PREFIX=/host \
-    --env HOST_ETC=/host/etc \
-    --env HOST_PROC=/host/proc \
-    --env HOST_SYS=/host/sys \
-    --env HOST_VAR=/host/var \
-    --env HOST_RUN=/host/run \
     --env HOST_NAME_HOST=$HOST_NAME_HOST \
     $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
