@@ -6,11 +6,19 @@
 # Название проекта
 export NAME=confluence
 # Репозиторий
-EXPLORE=atlassian/confluence-server
+EXPLORE=atlassian/confluence
 # Тэг образа старый
 TAG_OLD=start
 # Тэг образа новый
-TAG_NEW=7.13
+TAG_NEW=7.14.2-ubuntu
+
+##
+# Имя контейнера базы данных
+DB_CONTAINER_NAME=mysql-8
+# Пароль от root
+MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
+# Имя базы данных
+DATABASE_NAME=confluence
 
 #--------------------------------------------------------------------
 # End settings

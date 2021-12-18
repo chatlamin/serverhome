@@ -1,7 +1,9 @@
 # confluence
+
 Hostname: `confluence.serverhome.home`
 
 ## Supported architectures
+
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
@@ -9,6 +11,7 @@ Hostname: `confluence.serverhome.home`
 | armhf         | -       |
 
 ## Keys
+
 Link: http://confluence.serverhome.home:65018/
 
 Login:
@@ -16,18 +19,20 @@ Login:
 Password:
 
 ## Database
-Type:
 
-Name:
+Type: `mysql-8`
 
-Username:
+Name: `confluence`
 
-Password:
+Username: `confluence`
+
+Password: `tahloukeCh6Aem`
 
 ## References to the original project
-Website: https://www.atlassian.com/ru/software/confluence/
 
-Documentation: https://confluence.atlassian.com/doc/confluence-data-center-and-server-documentation-135922.html/
+Website: https://www.atlassian.com/ru/software/confluence
+
+Documentation: https://confluence.atlassian.com/doc/confluence-data-center-and-server-documentation-135922.html
 
 Repository github:
 

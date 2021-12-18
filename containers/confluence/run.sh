@@ -16,6 +16,7 @@ source ../settings/settings-common.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker run \
+    --env-file public.env \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
@@ -24,6 +25,7 @@ docker run \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume $CONTAINER_NAME-data:/var/atlassian/application-data/confluence \
     --publish 65018:8090 \
+    $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
