@@ -1,14 +1,19 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
 #---------------------------------------------------------------------
 # Settings
 #---------------------------------------------------------------------
+
+source settings-personal.sh
+source ../settings/settings-common.sh
 
 #--------------------------------------------------------------------
 # End settings
 #--------------------------------------------------------------------
 
-# Exit immediately if a pipeline, which may consist of a single simple command,
-# a list, or a compound command returns a non-zero status
-set -e
+# https://github.com/alexanderfefelov/scripts/blob/master/install/ops/install-docker.sh
+# Elevate privileges
+[ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-mosquitto_sub -h localhost -p 1883 -t '#' -u admin -P aireeV7ahk8rah -C 1
+docker stop $CONTAINER_NAME
+docker rm -f $CONTAINER_NAME
