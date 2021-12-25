@@ -68,6 +68,9 @@ port,containers/$CONTAINER_NAME
 65039,promtail
 65040,snape-it
 65041,redis
+65045,mysql-5-7-master
+65046,mysql-5-7-slave-1
+65047,mysql-5-7-slave-2
 65050,traefik
 65051,traefik
 65055,rocketchat

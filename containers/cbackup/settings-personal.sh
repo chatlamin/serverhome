@@ -18,7 +18,7 @@ DB_USERNAME=cbackup
 # Пароль базы данных
 DB_PASSWORD=Aebaxeivoo6eiv
 # Имя контейнера базы данных
-DB_CONTAINER_NAME=mysql-5-7-master
+DB_CONTAINER_NAME=mysql-5-7
 # Пароль от root
 MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
 # Пароль пользователя cbackup

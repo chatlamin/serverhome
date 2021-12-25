@@ -30,7 +30,7 @@ docker run \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume $CONTAINER_NAME-conf:/etc/mysql \
     --volume $CONTAINER_NAME-data:/var/lib/mysql \
-    --publish 65020:3306 \
+    --publish 65045:3306 \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME

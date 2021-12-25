@@ -30,7 +30,7 @@ docker run \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume $CONTAINER_NAME-conf:/etc/mysql \
     --volume $CONTAINER_NAME-data:/var/lib/mysql \
-    --publish 65021:3306 \
+    --publish 65046:3306 \
     $IMAGE_TARGET
 
 docker run --rm --link $CONTAINER_NAME:$CONTAINER_NAME martin/wait -p 3306 -t 600

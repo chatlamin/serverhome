@@ -12,7 +12,7 @@ Hostname: `mysql-5-7-slave-2.serverhome.home`
 
 ## Keys
 
-Link: `mysql-5-7-slave-2.serverhome.home:65022`
+Link: `mysql-5-7-slave-2.serverhome.home:65047`
 
 Login: `root`
 
