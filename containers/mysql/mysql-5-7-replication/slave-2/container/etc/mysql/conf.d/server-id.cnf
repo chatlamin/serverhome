@@ -1,0 +1,4 @@
+[mysqld]
+
+# https://dev.mysql.com/doc/refman/5.7/en/replication-options.html#sysvar_server_id
+server-id=424

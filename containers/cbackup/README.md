@@ -9,7 +9,7 @@ Hostname: `cbackup.serverhome.home`
 | armhf         | ?       |
 
 ## Keys
-Link: http://cbackup.serverhome.home:65015/cbackup/index.php
+Link: http://cbackup.serverhome.home:65015/cbackup/install/index.php
 
 Login: `your need to go through the registration procedure`
 

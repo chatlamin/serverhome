@@ -1,11 +1,41 @@
-# mysql-8-reptication
+# mysql-5-7-slave-1
 
-Запустить по очереди:
+Hostname: `mysql-5-7-slave-1.serverhome.home`
 
-```
-master/build.sh
-slave-1/build.sh
-slave-2/build.sh
-master/run.sh
-slave-1/run.sh
-slave-2/run.sh
+## Supported architectures
+
+| Architectures | Support |
+| :------------ | :------ |
+| amd64         | +       |
+| arm64         | -       |
+| armhf         | -       |
+
+## Keys
+
+Link: `mysql-5-7-slave-1.serverhome.home:65021`
+
+Login: `root`
+
+Password: `Dae2fiiChohng0`
+
+## Database
+
+Type: `no external database support`
+
+Name: `no external database support`
+
+Username: `no external database support`
+
+Password: `no external database support`
+
+## References to the original project
+
+Website: https://www.mysql.com
+
+Documentation: https://dev.mysql.com/doc
+
+Repository github: https://github.com/mysql/mysql-server
+
+Repository docker github: https://github.com/docker-library/mysql
+
+Repository docker: https://hub.docker.com/_/mysql

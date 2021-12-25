@@ -1,0 +1,7 @@
+port,containers/$CONTAINER_NAME
+1951,bginetaccess
+1952,bginetaccounting
+65001,bookstack
+65015,cbackup
+65018,confluence
+65200,cbackup
