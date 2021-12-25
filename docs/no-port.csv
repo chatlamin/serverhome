@@ -1,2 +1,4 @@
-containers/$CONTAINER_NAME
-autoheal
+containers/$CONTAINER_NAME,
+autoheal,
+curator,
+filebeat,

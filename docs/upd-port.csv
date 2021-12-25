@@ -1,2 +1,11 @@
 port,containers/$CONTAINER_NAME
+53,coredns
 67,bginetaccess
+5514,logstash
+6881,qbittorrent
+32410,plex
+32412,plex
+32413,plex
+32414,plex
+65010,pi-hole
+65026,ntp
