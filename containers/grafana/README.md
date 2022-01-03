@@ -12,7 +12,7 @@ Hostname: `grafana.serverhome.home`
 
 ## Keys
 
-Link: http://grafana.serverhome.home:3000/
+Link: http://grafana.serverhome.home:65038/
 
 Login: `admin`
 
