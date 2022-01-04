@@ -11,4 +11,4 @@
 # a list, or a compound command returns a non-zero status
 set -e
 
-nc -z localhost 9995
+nc -z -u localhost 9995
