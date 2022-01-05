@@ -43,6 +43,7 @@ port,containers/$CONTAINER_NAME
 65010,pi-hole
 65011,homer
 65012,scrutiny
+65013,vault
 65014,zabbix_web
 65015,cbackup
 65016,telegraf

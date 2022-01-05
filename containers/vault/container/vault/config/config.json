@@ -1,0 +1,13 @@
+ui = true
+
+listener "tcp" {
+  address = "0.0.0.0:8200"
+  tls_disable = "true"
+}
+
+storage "mysql" {
+  address = "mysql-8.serverhome.home:3306"
+  username = "vault"
+  password = "seego2Ohzae2Wu"
+  database = "vault"
+}

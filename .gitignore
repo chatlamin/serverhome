@@ -1,5 +1,4 @@
 .vscode/
-experemental/
 
 containers/*/*/private.env
 containers/*/private.env
