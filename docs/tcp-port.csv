@@ -32,7 +32,9 @@ port,containers/$CONTAINER_NAME
 27019,mongodb-3
 32400,plex
 32469,plex
+51413,transmission
 65001,bookstack
+65002,transmission
 65003,firefly-iii
 65004,qbittorrent
 65005,dkron

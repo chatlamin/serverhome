@@ -8,5 +8,6 @@ port,containers/$CONTAINER_NAME
 32412,plex
 32413,plex
 32414,plex
+51413,transmission
 65010,pi-hole
 65026,ntp
