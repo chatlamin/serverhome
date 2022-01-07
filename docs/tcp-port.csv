@@ -82,6 +82,8 @@ port,containers/$CONTAINER_NAME
 65050,traefik
 65051,traefik
 65055,rocketchat
+65056,emby
+65057,emby
 65100,pi-hole_exporter
 65101,qbittorrent_exporter
 65102,mongodb_exporter
