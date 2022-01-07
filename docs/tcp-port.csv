@@ -58,6 +58,7 @@ port,containers/$CONTAINER_NAME
 65023,gitea
 65024,wikijs
 65025,vaultwarden
+65026,uptime-kuma
 65027,youtrack
 65028,mysql-8-master
 65029,mysql-8-slave-1
