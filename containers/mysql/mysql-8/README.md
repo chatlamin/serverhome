@@ -1,7 +1,9 @@
 # mysql-8
+
 Hostname: `mysql-8.serverhome.home`
 
 ## Supported architectures
+
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
@@ -9,6 +11,7 @@ Hostname: `mysql-8.serverhome.home`
 | armhf         | ?       |
 
 ## Keys
+
 Link: `mysql-8.serverhome.home:3306`
 
 Login: `root`
@@ -16,6 +19,7 @@ Login: `root`
 Password: `Dae2fiiChohng0`
 
 ## Database
+
 Type: `no external database support`
 
 Name: `no external database support`
@@ -25,6 +29,7 @@ Username: `no external database support`
 Password: `no external database support`
 
 ## References to the original project
+
 Website: https://www.mysql.com
 
 Documentation: https://dev.mysql.com/doc
