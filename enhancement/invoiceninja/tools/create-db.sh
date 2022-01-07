@@ -18,7 +18,8 @@ source ../public.env
 
 # https://github.com/alexanderfefelov/docker-backpack/blob/main/grafana/init/initialize-database.sql
 # создаем БД, пользователя и права
-docker exec -i $DB_CONTAINER_NAME /usr/bin/mysql -u root --password=$MYSQL_ROOT_PASSWORD <<< "CREATE DATABASE $DB_DATABASE;"
-docker exec -i $DB_CONTAINER_NAME /usr/bin/mysql -u root --password=$MYSQL_ROOT_PASSWORD <<< "CREATE USER IF NOT EXISTS '$DB_USERNAME'@'%' IDENTIFIED WITH mysql_native_password BY '$DB_PASSWORD';"
-docker exec -i $DB_CONTAINER_NAME /usr/bin/mysql -u root --password=$MYSQL_ROOT_PASSWORD <<< "GRANT ALL ON $DB_DATABASE.* TO '$DB_USERNAME'@'%';"
-docker exec -i $DB_CONTAINER_NAME /usr/bin/mysql -u root --password=$MYSQL_ROOT_PASSWORD <<< "show databases;"
+docker exec -i $DB_CONTAINER_NAME /usr/bin/mysql -u root --password=$MARIADB_ROOT_PASSWORD <<< "CREATE DATABASE $DB_DATABASE;"
+docker exec -i $DB_CONTAINER_NAME /usr/bin/mysql -u root --password=$MARIADB_ROOT_PASSWORD <<< "CREATE USER IF NOT EXISTS '$DB_USERNAME'@'%' IDENTIFIED BY '$DB_PASSWORD';"
+docker exec -i $DB_CONTAINER_NAME /usr/bin/mysql -u root --password=$MARIADB_ROOT_PASSWORD <<< "GRANT ALL ON $DB_DATABASE.* TO '$DB_USERNAME'@'%';"
+docker exec -i $DB_CONTAINER_NAME /usr/bin/mysql -u root --password=$MARIADB_ROOT_PASSWORD <<< "flush privileges;"
+docker exec -i $DB_CONTAINER_NAME /usr/bin/mysql -u root --password=$MARIADB_ROOT_PASSWORD <<< "show databases;"

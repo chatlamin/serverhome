@@ -23,11 +23,11 @@ docker run \
     --restart unless-stopped \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-public:/var/app/public \
-    --volume $CONTAINER_NAME-storage:/var/app/storage \
     --publish 9000:9000 \
-    --publish 65043:80 \
     $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME
+
+#    --volume $CONTAINER_NAME-public:/var/www/app/public \
+#    --volume $CONTAINER_NAME-storage:/var/www/app/storage \

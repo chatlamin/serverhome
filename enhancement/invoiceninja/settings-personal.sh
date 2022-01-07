@@ -10,13 +10,13 @@ EXPLORE=invoiceninja/invoiceninja
 # Тэг образа старый
 TAG_OLD=start
 # Тэг образа новый
-TAG_NEW=5.3.39
+TAG_NEW=5.3.38
 
 ##
 # Имя контейнера базы данных
-DB_CONTAINER_NAME=mysql-8
+DB_CONTAINER_NAME=mariadb
 # Пароль от root
-MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
+MARIADB_ROOT_PASSWORD=uvaeshah3Ohn5i
 
 #--------------------------------------------------------------------
 # End settings
