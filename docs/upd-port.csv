@@ -3,6 +3,7 @@ port,containers/$CONTAINER_NAME
 67,bginetaccess
 5514,logstash
 6881,qbittorrent
+7359,jellyfin
 9995,flow-collector
 32410,plex
 32412,plex

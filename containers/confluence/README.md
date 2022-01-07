@@ -14,9 +14,9 @@ Hostname: `confluence.serverhome.home`
 
 Link: http://confluence.serverhome.home:65018/
 
-Login:
+Login: `your need to go through the registration procedure`
 
-Password:
+Password: `your need to go through the registration procedure`
 
 ## Database
 
