@@ -84,6 +84,11 @@ port,containers/$CONTAINER_NAME
 65055,rocketchat
 65056,emby
 65057,emby
+65058,bareos-webui
+65059,bareos-director
+65060,bareos-storage
+65061,bareos-client
+65062,bareos-php-fpm
 65100,pi-hole_exporter
 65101,qbittorrent_exporter
 65102,mongodb_exporter
