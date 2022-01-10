@@ -1,14 +1,17 @@
 # portainer-ce
+
 Hostname: `portainer-ce.serverhome.home`
 
 ## Supported architectures
+
 | Architectures | Support |
 | :------------ | :------ |
-| amd64         | ?       |
+| amd64         | +       |
 | arm64         | +       |
 | armhf         | ?       |
 
 ## Keys
+
 Link: http://portainer-ce.serverhome.home:9000/
 
 Login: `admin`
@@ -16,21 +19,23 @@ Login: `admin`
 Password: `Ohwie9lahmo8Th`
 
 ## Database
-Type: `no external database support`
 
-Name: `no external database support`
+Type: `BoltDB`
 
-Username: `no external database support`
+Name: `/data/portainer.db`
 
-Password: `no external database support`
+Username: `-`
+
+Password: `-`
 
 ## References to the original project
-Website: https://www.portainer.io/products/community-edition/
 
-Documentation: https://documentation.portainer.io/
+Website: https://www.portainer.io/products/community-edition
 
-Repository github: https://github.com/portainer/portainer/
+Documentation: https://documentation.portainer.io
 
-Repository docker github: https://github.com/portainer/portainer/blob/develop/build/linux/Dockerfile/
+Repository github: https://github.com/portainer/portainer
 
-Repository docker: https://hub.docker.com/r/portainer/portainer-ce/
+Repository docker github: https://github.com/portainer/portainer/blob/develop/build/linux/Dockerfile
+
+Repository docker: https://hub.docker.com/r/portainer/portainer-ce

@@ -8,9 +8,9 @@ export NAME=portainer-ce
 # Репозиторий
 EXPLORE=portainer/portainer-ce
 # Тэг образа старый
-TAG_OLD=2.9.0
+TAG_OLD=2.9.3-alpine
 # Тэг образа новый
-TAG_NEW=2.9.3-alpine
+TAG_NEW=2.11.0-alpine
 
 #--------------------------------------------------------------------
 # End settings
