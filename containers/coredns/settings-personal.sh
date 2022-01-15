@@ -8,9 +8,9 @@ export NAME=coredns
 # Репозиторий
 EXPLORE=coredns/coredns
 # Тэг образа старый
-TAG_OLD=start
+TAG_OLD=1.8.6
 # Тэг образа новый
-TAG_NEW=1.8.6
+TAG_NEW=1.8.7
 
 #--------------------------------------------------------------------
 # End settings
