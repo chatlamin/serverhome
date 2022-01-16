@@ -23,13 +23,16 @@ global:
 #
 entryPoints:
   web:
-    address: :80
+    address: ":80"
 
   websecure:
-    address: :443
+    address: ":443"
 
   dashboard:
-    address: :8080
+    address: ":8080"
+
+  ping:
+    address: ":8081"
 
 ################################################################
 # Traefik logs configuration
@@ -118,13 +121,13 @@ api:
 ################################################################
 
 # Enable ping
-#ping:
+ping:
   # Name of the related entry point
   #
   # Optional
   # Default: "traefik"
   #
-#  entryPoint: traefik
+  entryPoint: "ping"
 
 ################################################################
 # Docker configuration backend
@@ -156,5 +159,5 @@ providers:
     #
 #    exposedByDefault: false
   file:
-    directory: /etc/traefik/dynamic/conf
-
+    filename: /etc/traefik/dynamic/conf/dynamic.yaml
+    watch: true
