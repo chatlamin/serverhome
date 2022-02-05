@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Exit immediately if a pipeline, which may consist of a single simple command,
+# a list, or a compound command returns a non-zero status
+set -e
+
 #---------------------------------------------------------------------
 # Settings
 #---------------------------------------------------------------------
@@ -66,7 +70,6 @@ function uploadFile
         echo "$PROJECT - Yandex.Disk error: $json_error"
     else
         echo "$PROJECT - Copying file to Yandex.Disk success"
-        curl -m 10 --retry 5 http://healthchecks.serverhome.home:8000/ping/cbe5f636-e844-4286-bac1-6aaa7c9fb27e
     fi
     else
         echo 'Some errors occured. Check log file for detail'
