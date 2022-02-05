@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+# Exit immediately if a pipeline, which may consist of a single simple command,
+# a list, or a compound command returns a non-zero status
+set -e
+
 #---------------------------------------------------------------------
 # Settings
 #---------------------------------------------------------------------
@@ -22,8 +27,6 @@ BACKUP_DIR=/data1/backups/local/mysql/$DB_DATABASE
 COUNT=7
 # Минимальный размер бэкапа в килобайтах
 SIZE_MIN=30
-# healthchecks ping url
-PING_URL=http://healthchecks.serverhome.home:8000/ping/5c080195-d31b-4b77-b40e-d6738bd2e6d3
 # Путь для удаленной копии
 REMOTE_DIR=/data1/backups/remote/mysql/$DB_DATABASE
 
@@ -56,7 +59,9 @@ sudo tar -cvzpf $BACKUP_DIR/$TIMESTAMP/tar/backup.tar.gz  --absolute-names \
     $BACKUP_DIR/$TIMESTAMP/dump
 
 # Ротация бэкапов
-sudo find $BACKUP_DIR -mtime +$COUNT -delete
+sudo find $BACKUP_DIR -type f -mtime +$COUNT -exec rm -rf {} \;
+sudo find $BACKUP_DIR -type d -mtime +$COUNT -exec rm -rf {} \;
+sudo find $BACKUP_DIR -type d -empty -delete
 
 # Проверяем размер бэкапа. Если меньше полученного в SIZE_MIN - ошибка
 CURRENT=$(du -s $BACKUP_DIR/$TIMESTAMP/tar | awk '{print $1}')
@@ -64,14 +69,13 @@ if
 [ $CURRENT -gt $SIZE_MIN ];
 then
 echo "ВСЕ ХОРОШО: Размер записанного архива нормальный"
-curl -m 10 --retry 5 $PING_URL
 else
 echo "ОШИБКА: Размер записанного архива менее $SIZE_MIN киллобайт"
 exit 1
 fi
 
 # Удаляем все из папки для удаленной копии
-sudo rm -dr $REMOTE_DIR/*
+sudo rm --force --dir --recursive $REMOTE_DIR/*
 
 # Создаем папку для удаленной копии
 sudo mkdir -p $REMOTE_DIR/$TIMESTAMP

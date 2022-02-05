@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+# Exit immediately if a pipeline, which may consist of a single simple command,
+# a list, or a compound command returns a non-zero status
+set -e
+
 #---------------------------------------------------------------------
 # Settings
 #---------------------------------------------------------------------
@@ -14,8 +19,6 @@ TARGET=$HOME/github/serverhome
 COUNT=7
 # Минимальный размер бэкапа в килобайтах
 SIZE_MIN=100
-# healthchecks ping url
-PING_URL=http://healthchecks.serverhome.home:8000/ping/4be5f431-f38c-4e05-8a70-d92968916b13
 # Путь для удаленной копии
 REMOTE_DIR=/data1/backups/remote/project
 
@@ -31,7 +34,9 @@ sudo tar -czpf $BACKUP_DIR/$TIMESTAMP/backup.tar.gz \
     --absolute-names $TARGET
 
 # Ротация бэкапов
-sudo find $BACKUP_DIR -mtime +$COUNT -delete
+sudo find $BACKUP_DIR -type f -mtime +$COUNT -exec rm -rf {} \;
+sudo find $BACKUP_DIR -type d -mtime +$COUNT -exec rm -rf {} \;
+sudo find $BACKUP_DIR -type d -empty -delete
 
 # Проверяем размер бэкапа. Если меньше полученного в SIZE_MIN - ошибка
 CURRENT=$(du -s $BACKUP_DIR/$TIMESTAMP | awk '{print $1}')
@@ -39,14 +44,13 @@ if
 [ $CURRENT -gt $SIZE_MIN ];
 then
 echo "ВСЕ ХОРОШО: Размер записанного архива нормальный"
-curl -m 10 --retry 5 $PING_URL
 else
 echo "ОШИБКА: Размер записанного архива менее $SIZE_MIN киллобайт"
 exit 1
 fi
 
 # Удаляем все из папки для удаленной копии
-sudo rm -dr $REMOTE_DIR/*
+sudo rm --force --dir --recursive $REMOTE_DIR/*
 
 # Создаем папку для удаленной копии
 sudo mkdir -p $REMOTE_DIR/$TIMESTAMP

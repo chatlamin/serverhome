@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+# Exit immediately if a pipeline, which may consist of a single simple command,
+# a list, or a compound command returns a non-zero status
+set -e
+
 #---------------------------------------------------------------------
 # Settings
 #---------------------------------------------------------------------
@@ -16,7 +21,7 @@ EXCLUDE_2="/var/lib/docker/volumes/plex-movies"
 EXCLUDE_3="/var/lib/docker/volumes/plex-serials"
 EXCLUDE_4="/var/lib/docker/volumes/plex-transcode"
 EXCLUDE_5="/var/lib/docker/volumes/duplicati-backups"
-EXCLUDE_6="/var/lib/docker/volumes/influxdb-data"
+EXCLUDE_6="/var/lib/docker/volumes/influxdb-1-data"
 EXCLUDE_7="/var/lib/docker/volumes/loki-data"
 EXCLUDE_8="/var/lib/docker/volumes/mosquitto-data"
 EXCLUDE_9="/var/lib/docker/volumes/mysql-8-data"
@@ -31,8 +36,6 @@ EXCLUDE_16="/var/lib/docker/volumes/elasticsearch-data"
 COUNT=7
 # Минимальный размер бэкапа в килобайтах
 SIZE_MIN=100
-# healthchecks ping url
-PING_URL=http://healthchecks.serverhome.home:8000/ping/f427dbc6-5203-478b-904b-beac4b554c95
 # Путь для удаленной копии
 REMOTE_DIR=/data1/backups/remote/docker-volumes
 
@@ -44,7 +47,7 @@ REMOTE_DIR=/data1/backups/remote/docker-volumes
 sudo mkdir -p $BACKUP_DIR/$TIMESTAMP
 
 # Делаем бэкап в помощью утилиты tar
-sudo tar -czpf $BACKUP_DIR/$TIMESTAMP/backup.tar.gz \
+sudo tar -cpzf $BACKUP_DIR/$TIMESTAMP/backup.tar.gz \
     --exclude "$EXCLUDE_1" \
     --exclude "$EXCLUDE_2" \
     --exclude "$EXCLUDE_3" \
@@ -64,7 +67,9 @@ sudo tar -czpf $BACKUP_DIR/$TIMESTAMP/backup.tar.gz \
     --absolute-names $TARGET
 
 # Ротация бэкапов
-sudo find $BACKUP_DIR -mtime +$COUNT -delete
+sudo find $BACKUP_DIR -type f -mtime +$COUNT -exec rm -rf {} \;
+sudo find $BACKUP_DIR -type d -mtime +$COUNT -exec rm -rf {} \;
+sudo find $BACKUP_DIR -type d -empty -delete
 
 # Проверяем размер бэкапа. Если меньше полученного в SIZE_MIN - ошибка
 CURRENT=$(du -s $BACKUP_DIR/$TIMESTAMP | awk '{print $1}')
@@ -72,14 +77,13 @@ if
 [ $CURRENT -gt $SIZE_MIN ];
 then
 echo "ВСЕ ХОРОШО: Размер записанного архива нормальный"
-curl -m 10 --retry 5 $PING_URL
 else
 echo "ОШИБКА: Размер записанного архива менее $SIZE_MIN киллобайт"
 exit 1
 fi
 
 # Удаляем все из папки для удаленной копии
-sudo rm -dr $REMOTE_DIR/*
+sudo rm --force --dir --recursive $REMOTE_DIR/*
 
 # Создаем папку для удаленной копии
 sudo mkdir -p $REMOTE_DIR/$TIMESTAMP
