@@ -7,6 +7,7 @@ port,containers/$CONTAINER_NAME
 1883,mosquitto
 1951,bginetaccess
 1952,bginetaccounting
+2049,nfs-server
 3100,loki
 3306,mysql-8
 5044,logstash

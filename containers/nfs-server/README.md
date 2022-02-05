@@ -6,8 +6,8 @@ Hostname: `nfs-server.serverhome.home`
 
 | Architectures | Support |
 | :------------ | :------ |
-| amd64         | ?       |
-| arm64         | -       |
+| amd64         | +       |
+| arm64         | ?       |
 | armhf         | ?       |
 
 ## Keys
