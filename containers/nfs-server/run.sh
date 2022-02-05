@@ -24,7 +24,7 @@ docker run \
     --privileged \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-share:/nfsshare \
+    --volume $CONTAINER_NAME-share:/nfs-server-share \
     --publish 2049:2049 \
     $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET

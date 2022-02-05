@@ -26,6 +26,6 @@ https://blogs.oracle.com/cloud-infrastructure/post/mounting-oci-file-storage-and
 - target=/mnt-point - путь тома внутри контейнера
 - volume-driver=local - драйвер тома
 - volume-opt=type=nfs - тип драйвера
-- volume-opt=device=:/ - каталог на nfs-server
+- volume-opt=device=:/ - каталог на nfs-server. Если нужно указать какой то конкретную точку, которая с стороны nfs-server выглядит как `/nfs-server-share/mysql-backup`, с стороны клиента это будет `/mysql-backup`. Часть пути `/nfs-server-share` опускается.
 - volume-opt=o=addr=192.168.88.4 - ip адрес nfs-server
 - rw,nfsvers=4,async - доп опции (аналогично команде mount -o)
