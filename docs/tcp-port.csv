@@ -90,6 +90,8 @@ port,containers/$CONTAINER_NAME
 65060,bareos-storage
 65061,bareos-client
 65062,bareos-php-fpm
+65063,jenkins
+65064,jenkins
 65100,pi-hole_exporter
 65101,qbittorrent_exporter
 65102,mongodb_exporter

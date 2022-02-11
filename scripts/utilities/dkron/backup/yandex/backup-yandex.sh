@@ -69,7 +69,7 @@ function uploadFile
     then
         echo "$PROJECT - Yandex.Disk error: $json_error"
     else
-        echo "$PROJECT - Copying file to Yandex.Disk success"
+        logger "echo "$PROJECT - Copying file to Yandex.Disk success""
     fi
     else
         echo 'Some errors occured. Check log file for detail'
