@@ -25,7 +25,7 @@ docker run \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume $CONTAINER_NAME-data:/var/jenkins_home \
     --publish 65063:8080 \
-    --publish 65064:50000 \
+    --publish 50000:50000 \
     $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
