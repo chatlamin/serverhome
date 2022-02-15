@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------
 
 source settings-personal.sh
-source ../settings/settings-common.sh
+source ../../settings/settings-common.sh
 
 #--------------------------------------------------------------------
 # End settings
@@ -15,5 +15,6 @@ source ../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker stop $CONTAINER_NAME
-docker rm -f $CONTAINER_NAME
+docker build \
+    --build-arg IMAGE_SOURCE_NEW \
+    --tag $IMAGE_TARGET .

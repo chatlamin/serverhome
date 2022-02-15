@@ -1,22 +1,22 @@
-# jenkins-agent
+# jenkins-node-1
 
-Hostname: `jenkins.serverhome.home`
+Hostname: `jenkins-node-1.serverhome.home`
 
 ## Supported architectures
 
 | Architectures | Support |
 | :------------ | :------ |
-| amd64         | ?       |
-| arm64         | +       |
+| amd64         | +       |
+| arm64         | ?       |
 | armhf         | ?       |
 
 ## Keys
 
-Link: http://jenkins.serverhome.home:65063/
+Link: `jenkins-node-1.serverhome.home`
 
-Login: `your need to go through the registration procedure`
+Login: `no authentication support`
 
-Password: `your need to go through the registration procedure`
+Password: `no authentication support`
 
 ## Database
 
@@ -34,8 +34,8 @@ Website: https://www.jenkins.io
 
 Documentation: https://www.jenkins.io/doc
 
-Repository github: https://github.com/jenkinsci/jenkins
+Repository github: https://github.com/jenkinsci/docker-inbound-agent
 
-Repository docker github: https://github.com/jenkinsci/docker
+Repository docker github: https://github.com/jenkinsci/docker-inbound-agent
 
 Repository docker: https://hub.docker.com/r/jenkins/inbound-agent
