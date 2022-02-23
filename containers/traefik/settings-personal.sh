@@ -8,9 +8,9 @@ export NAME=traefik
 # Репозиторий
 EXPLORE=traefik
 # Тэг образа старый
-TAG_OLD=v2.5.7
+TAG_OLD=v2.6.0
 # Тэг образа новый
-TAG_NEW=v2.6.0
+TAG_NEW=v2.6.1
 
 #--------------------------------------------------------------------
 # End settings
