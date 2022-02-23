@@ -8,9 +8,9 @@ export NAME=qbittorrent
 # Репозиторий
 EXPLORE=linuxserver/qbittorrent
 # Тэг образа старый
-TAG_OLD=version-14.3.9.99202110311443-7435-01519b5e7ubuntu20.04.1
+TAG_OLD=4.4.0
 # Тэг образа новый
-TAG_NEW=4.4.0
+TAG_NEW=4.4.1
 
 #--------------------------------------------------------------------
 # End settings
