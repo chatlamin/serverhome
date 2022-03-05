@@ -1,0 +1,57 @@
+---
+resolve_dns: false
+interval: 3600
+use_syslog: false
+debug: false
+threads: 30
+timeout: 20
+retries: 3
+prompt: !ruby/regexp /^([\w.@-]+[#>]\s?)$/
+rest: 0.0.0.0:8888
+next_adds_job: false
+vars: {}
+groups: {}
+models: {}
+pid: "/root/.config/oxidized/pid"
+crash:
+  directory: "/root/.config/oxidized/crashes"
+  hostnames: false
+stats:
+  history_size: 10
+input:
+  default: ssh
+  debug: false
+  ssh:
+    secure: false
+  verify_host_key: never
+  utf8_encoded: true
+
+output:
+  default: git
+  git:
+    user: oxidized
+    email: admin@serverhome.home
+    repo: "/root/.config/oxidized/oxidized.git"
+
+#output:
+#  default: file
+#  file:
+#    directory: "/root/.config/oxidized/configs"
+
+source:
+  default: csv
+  csv:
+    file: "/root/.config/oxidized/router.db"
+    delimiter: !ruby/regexp /:/
+    map:
+      name: 0
+      ip: 1
+      model: 2
+      port: 3
+      username: 4
+      password: 5
+    gpg: false
+model_map:
+  juniper: junos
+  cisco: ios
+  mikrotik rb 750: routeros

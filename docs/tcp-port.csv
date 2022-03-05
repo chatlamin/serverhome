@@ -19,6 +19,7 @@ port,containers/$CONTAINER_NAME
 8086,influxdb-2-x
 8123,home-assistant
 8324,plex
+8888,oxidized
 9000,portainer-ce
 9001,mosquitto
 9090,prometheus
