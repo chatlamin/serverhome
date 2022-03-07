@@ -98,4 +98,5 @@ port,containers/$CONTAINER_NAME
 65102,mongodb_exporter
 65103,rocketchat
 65104,coredns
+65105,nexus3
 65200,cbackup
