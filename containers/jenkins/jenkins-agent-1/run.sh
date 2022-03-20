@@ -15,12 +15,18 @@ source ../../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-# https://github.com/alexanderfefelov/docker-backpack/blob/main/utils/cleanup/prune-all.sh
-read -p "WARNING: The data will be deleted. Press Y to continue: " -n 1 -r
-echo
-if [ "$REPLY" != "Y" ]; then
-  exit
-fi
+docker run \
+    --env-file public.env \
+    --name $CONTAINER_NAME \
+    --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
+    --detach \
+    --restart unless-stopped \
+    --volume /etc/localtime:/etc/localtime:ro \
+    --volume /etc/timezone:/etc/timezone:ro \
+    --volume $CONTAINER_NAME-data:/home/jenkins/agent \
+    --volume $CONTAINER_NAME-cache:/home/jenkins/.jenkins \
+    --volume $CONTAINER_NAME-scripts:/var/lib/scripts \
+    --volume $CONTAINER_NAME-ssh:/root/.ssh \
+    $IMAGE_TARGET
 
-docker volume rm $CONTAINER_NAME-data
-docker volume rm $CONTAINER_NAME-cache
+docker logs --follow $CONTAINER_NAME

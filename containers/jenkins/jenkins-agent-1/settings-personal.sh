@@ -4,13 +4,13 @@
 
 ##
 # Название проекта
-export NAME=jenkins-node-1
+export NAME=jenkins-agent-1
 # Репозиторий
 EXPLORE=jenkins/inbound-agent
 # Тэг образа старый
-TAG_OLD=start
+TAG_OLD=4.10-2
 # Тэг образа новый
-TAG_NEW=4.10-2
+TAG_NEW=4.13-1
 
 #--------------------------------------------------------------------
 # End settings

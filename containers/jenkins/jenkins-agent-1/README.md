@@ -1,18 +1,18 @@
-# jenkins-node-1
+# jenkins-agent-1
 
-Hostname: `jenkins-node-1.serverhome.home`
+Hostname: `jenkins-agent-1.serverhome.home`
 
 ## Supported architectures
 
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
-| arm64         | ?       |
+| arm64         | +       |
 | armhf         | ?       |
 
 ## Keys
 
-Link: `jenkins-node-1.serverhome.home`
+Link: `jenkins-agent-1.serverhome.home`
 
 Login: `no authentication support`
 
