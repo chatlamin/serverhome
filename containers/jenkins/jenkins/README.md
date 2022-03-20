@@ -6,7 +6,7 @@ Hostname: `jenkins.serverhome.home`
 
 | Architectures | Support |
 | :------------ | :------ |
-| amd64         | ?       |
+| amd64         | +       |
 | arm64         | +       |
 | armhf         | ?       |
 
