@@ -27,6 +27,7 @@ docker run \
     --volume $CONTAINER_NAME-cache:/home/jenkins/.jenkins \
     --volume $CONTAINER_NAME-scripts:/var/lib/scripts \
     --volume $CONTAINER_NAME-ssh:/root/.ssh \
+    --volume $CONTAINER_NAME-backups:/var/lib/backups \
     $IMAGE_TARGET
 
 docker logs --follow $CONTAINER_NAME

@@ -26,3 +26,4 @@ docker volume rm $CONTAINER_NAME-data
 docker volume rm $CONTAINER_NAME-cache
 docker volume rm $CONTAINER_NAME-scripts
 docker volume rm $CONTAINER_NAME-ssh
+docker volume rm $CONTAINER_NAME-backups
