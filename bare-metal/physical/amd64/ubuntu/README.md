@@ -2,25 +2,7 @@
 
 ## Исходные данные
 
-| Характеристики |  | Кол-во |
-| --- | --- | --- |
-| Производитель | - |  |
-| Модель | - |  |
-| Материнская плата | kllisre x99 |  |
-| Монтажная единица | 2U |  |
-| Серийный номер | - |  |
-| Ярлык | gandalf.serverhome.home |  |
-| Hostname | gandalf.serverhome.home |  |
-| OS Version | [ubuntu-20.04.2-live-server-amd64](https://releases.ubuntu.com/20.04/ubuntu-20.04.2-live-server-amd64.iso) |  |
-| CPU | Intel Xeon E5-2630L v3 1.8GHz | 1 |
-| Memory | 8GB DDR4 2666 МГц | 2 |
-| Сеть | Gigabit LAN ports - RG-45 | 1 |
-| Слоты системы хранения | 3 |  |
-| Система хранения | OCZ Vertex 4 SATA 3 128GB | 1 |
-| Блок питания | ExeGate ServerPRO-500ADS 500 Вт | 1 |
-| IPMI | - |  |
-| BIOS version | 0.12 x64 |  |
-| IPMI version | - |  |
+OS Version [ubuntu-20.04.2-live-server-amd64](https://releases.ubuntu.com/20.04/ubuntu-20.04.2-live-server-amd64.iso)
 
 ## Установка OS
 
@@ -37,7 +19,7 @@
 11. Установки профиля
 
 - Ваше имя: username
-- Your servers name: gandalf
+- Your servers name: server1
 - Введите имя пользователя: username
 - Задайте пароль: ***
 - Подтвердите пароль: ***
@@ -45,7 +27,6 @@
 
 12. Установка SSH: выбрать Install OpenSSH server.
 13. Featured Server Snapc: ничего не выбирать, по умолчанию - Готово.
-
 
 ## Настройка OS
 
@@ -86,47 +67,35 @@
 
        mkdir -p $HOME/github
        cd $HOME/github
-       git clone https://github.com/alexanderfefelov/scripts
        git clone git@github.com:chatlamin/serverhome.git
-       git clone git@github.com:chatlamin/gandalf.system.git
 
 8. Подготавливаем профиль и OS для работы
 
-       cd $HOME/github/scripts/install/ && ./RUN-ME-FIRST.sh
-       cd $HOME/github/scripts/install/ && ./install-useful-tools.sh
-       cd $HOME/github/scripts/install/ops/ && ./install-docker.sh
-       cd $HOME/github/scripts/install/ops/ && ./install-docker-compose.sh
+       cd $HOME/github/serverhome/scripts/install/amd64/ubuntu/ && ./install-tools.sh
+       cd $HOME/github/serverhome/scripts/install/amd64/ubuntu/ && ./install-docker.sh
+       cd $HOME/github/serverhome/scripts/install/amd64/ubuntu/ && ./install-docker-compose.sh
 
-9. Синхронизируем каталог /etc с репозиторием
-
-       sudo cp -r /etc $HOME/github/gandalf.system
-       cd $HOME/github/gandalf.system
-       sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
-       git add --all .
-       git commit -m "start"
-       git push
-
-10. Меняем hostname
+9. Меняем hostname
 
     Редактируем файл hostname
 
         sudo mcedit /etc/hostname
-    Меняем текущий hostname на gandalf.serverhome.home
+    Меняем текущий hostname на server1.serverhome.home
     <details>
     <summary>Полный конфиг</summary>
 
-        gandalf.serverhome.home
+        server1.serverhome.home
     </details>
 
     Редактируем файл hosts
 
         sudo mcedit /etc/hosts
-    Меняем текущий hostname на gandalf.serverhome.home
+    Меняем текущий hostname на server1.serverhome.home
     <details>
     <summary>Полный конфиг</summary>
 
         127.0.0.1 localhost
-        127.0.1.1 gandalf.serverhome.home
+        127.0.1.1 server1.serverhome.home
         
         # The following lines are desirable for IPv6 capable hosts
         ::1     ip6-localhost ip6-loopback
@@ -137,29 +106,11 @@
 
     </details>
 
-11. Фиксируем изменения hostname и hosts
-
-        sudo cp -r /etc $HOME/github/gandalf.system
-        cd $HOME/github/gandalf.system
-        sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
-        git add --all .
-        git commit -m "Настройка hostname"
-        git push
-
-12. Устанавливаем правильную timezone
+10. Устанавливаем правильную timezone
 
         sudo timedatectl set-timezone Europe/Moscow
 
-13. Фиксируем изменения timezone
-
-        sudo cp -r /etc $HOME/github/gandalf.system
-        cd $HOME/github/gandalf.system
-        sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
-        git add --all .
-        git commit -m "Настройка timezone"
-        git push
-
-14. Настройка статического ip https://linuxize.com/post/how-to-configure-static-ip-address-on-ubuntu-20-04/
+11. Настройка статического ip https://linuxize.com/post/how-to-configure-static-ip-address-on-ubuntu-20-04/
 
         sudo mcedit /etc/netplan/00-installer-config.yaml
 
@@ -172,6 +123,7 @@
           ethernets:
             eth0:
               dhcp4: no
+              optional: true
               addresses:
               - 192.168.88.4/24
               gateway4: 192.168.88.1
@@ -182,7 +134,7 @@
         sudo netplan generate
         sudo netplan apply
 
-15. Отключаем на хосте кэширующий dns systemd-resolved для работы dns сервера в докер-контейнере
+12. Отключаем на хосте кэширующий dns systemd-resolved для работы dns сервера в докер-контейнере
 
         sudo systemctl disable systemd-resolved.service
         sudo systemctl stop systemd-resolved
@@ -197,21 +149,11 @@
         sudo docker network inspect bridge
     </details>
 
-16. Фиксируем изменения netplan
-
-        sudo cp -r /etc $HOME/github/gandalf.system
-        cd $HOME/github/gandalf.system
-        sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
-        git add --all .
-        git commit -m "Настройка netplan"
-        git push
-
-
-18. Перезагрузка
+13. Перезагрузка
 
         sudo reboot
 
-19. Перенастраиваем swap
+14. Перенастраиваем swap
 
         swapon --show
         swapoff /swap.img
@@ -244,21 +186,13 @@
     Добавляем в конец
 
         vm.vfs_cache_pressure=50
-20. Фиксируем изменения swap
 
-        sudo cp -r /etc $HOME/github/gandalf.system
-        cd $HOME/github/gandalf.system
-        sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
-        git add --all .
-        git commit -m "Настройка swap"
-        git push
-
-21. Создать служебного пользователя для резервного копирования
+15. Создать служебного пользователя для резервного копирования
 
         sudo adduser backuper
         sudo usermod -aG sudo backuper
 
-22. Настроить команды, которые пользователь backuper может делать без ввода пароля
+16. Настроить команды, которые пользователь backuper может делать без ввода пароля
 
         sudo pkexec visudo
 
