@@ -19,14 +19,9 @@ docker run \
     --env-file public.env \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
-    --detach \
-    --restart unless-stopped \
-    --volume $CONTAINER_NAME-conf:/config \
-    --volume $CONTAINER_NAME-data:/downloads \
-    --publish 65004:65004 \
-    --publish 6881:6881 \
-    --publish 6881:6881/udp \
-    $HEALTHCHECK_SETTINGS \
+    --rm \
+    --security-opt apparmor:unconfined \
+    --cap-add SYS_ADMIN \
+    --device /dev/fuse \
+    --mount type=bind,source=/data1,target=/data,bind-propagation=slave \
     $IMAGE_TARGET
-
-docker logs --follow $CONTAINER_NAME

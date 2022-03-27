@@ -15,18 +15,13 @@ source ../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker run \
-    --env-file public.env \
-    --name $CONTAINER_NAME \
-    --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
-    --detach \
-    --restart unless-stopped \
-    --volume $CONTAINER_NAME-conf:/config \
-    --volume $CONTAINER_NAME-data:/downloads \
-    --publish 65004:65004 \
-    --publish 6881:6881 \
-    --publish 6881:6881/udp \
-    $HEALTHCHECK_SETTINGS \
-    $IMAGE_TARGET
+# https://github.com/alexanderfefelov/docker-backpack/blob/main/utils/cleanup/prune-all.sh
+read -p "WARNING: The data will be deleted. Press Y to continue: " -n 1 -r
+echo
+if [ "$REPLY" != "Y" ]; then
+  exit
+fi
 
-docker logs --follow $CONTAINER_NAME
+docker volume rm $CONTAINER_NAME-conf
+docker volume rm $CONTAINER_NAME-data
+docker volume rm $CONTAINER_NAME-logs
