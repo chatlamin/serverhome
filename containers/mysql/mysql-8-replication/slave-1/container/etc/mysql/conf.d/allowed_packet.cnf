@@ -1,0 +1,4 @@
+[mysqld]
+
+# https://confluence.atlassian.com/confkb/mysqlsyntaxerrorexception-row-size-too-large-658735905.html
+max_allowed_packet=512M

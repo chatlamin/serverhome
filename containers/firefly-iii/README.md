@@ -16,7 +16,7 @@ Login: `your need to go through the registration procedure`
 Password: `your need to go through the registration procedure`
 
 ## Database
-Type: `mysql-8`
+Type: `mysql-8-master`
 
 Name: `firefly_iii`
 

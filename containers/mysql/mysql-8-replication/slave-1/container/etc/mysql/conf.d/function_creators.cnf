@@ -1,0 +1,4 @@
+[mysqld]
+
+# https://confluence.atlassian.com/confkb/install-upgrade-confluence-7-11+-fails-with-error-you-do-not-have-the-super-privilege-and-binary-logging-is-enabled-1044096915.html
+log_bin_trust_function_creators=1

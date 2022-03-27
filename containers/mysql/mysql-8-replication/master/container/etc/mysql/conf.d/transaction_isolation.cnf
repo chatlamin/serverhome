@@ -1,0 +1,4 @@
+[mysqld]
+
+# http://confluence.atlassian.com/x/GAtmDg
+transaction-isolation=READ-COMMITTED
