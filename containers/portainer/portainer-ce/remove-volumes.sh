@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------
 
 source settings-personal.sh
-source ../settings/settings-common.sh
+source ../../settings/settings-common.sh
 
 #--------------------------------------------------------------------
 # End settings
