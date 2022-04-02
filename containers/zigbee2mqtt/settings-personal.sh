@@ -8,9 +8,9 @@ export NAME=zigbee2mqtt
 # Репозиторий
 EXPLORE=koenkk/zigbee2mqtt
 # Тэг образа старый
-TAG_OLD=1.23.0
+TAG_OLD=1.24.0
 # Тэг образа новый
-TAG_NEW=1.24.0
+TAG_NEW=1.25.0
 
 ##
 # Имя zigbee устройства

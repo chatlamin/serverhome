@@ -16,6 +16,7 @@ source ../settings/settings-common.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker run \
+    --env-file public.env \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
@@ -23,7 +24,6 @@ docker run \
     --device $ZIGBEE_DONGLE:/dev/ttyACM0 \
     --volume $CONTAINER_NAME-data:/app/data \
     --volume /run/udev:/run/udev:ro \
-    --env TZ=Europe/Moscow \
     --publish 65009:8080 \
     $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
