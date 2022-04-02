@@ -1,5 +1,5 @@
   - platform: sql
-    db_url: mysql://home_assistant:chah6viCaapeeD@mysql-8.serverhome.home:3306/home_assistant?charset=utf8mb4
+    db_url: mysql://home_assistant:chah6viCaapeeD@mysql-8-master.serverhome.home:65028/home_assistant?charset=utf8mb4
     queries:
       - name: DB size
         query: 'SELECT table_schema "database", Round(Sum(data_length + index_length) / 1048576, 2) "value" FROM information_schema.tables WHERE table_schema="home_assistant" GROUP BY table_schema;'
