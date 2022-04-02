@@ -103,4 +103,5 @@ port,containers/$CONTAINER_NAME
 65107,quay
 65108,gitlab-ce
 65109,gitlab-ce
+65110,filebrowser
 65200,cbackup
