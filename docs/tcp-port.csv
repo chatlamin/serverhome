@@ -104,4 +104,5 @@ port,containers/$CONTAINER_NAME
 65108,gitlab-ce
 65109,gitlab-ce
 65110,filebrowser
+65111,doublecmd
 65200,cbackup
