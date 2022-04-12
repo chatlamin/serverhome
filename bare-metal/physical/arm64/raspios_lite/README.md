@@ -2,33 +2,17 @@
 
 ## Исходные данные
 
-| Характеристики |  | Кол-во |
-| --- | --- | --- |
-| Производитель | Raspberry Pi |  |
-| Модель | Raspberry Pi 4 Model B |  |
-| Материнская плата | - |  |
-| Монтажная единица | non-rack |  |
-| Серийный номер | - |  |
-| Ярлык | pippin.serverhome.home |  |
-| Hostname | pippin.serverhome.home |  |
-| OS Version | [raspios_lite_arm64-2021-05-28](https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2021-05-28/2021-05-07-raspios-buster-arm64-lite.zip) |  |
-| CPU | Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz | 1 |
-| Memory | 4GB LPDDR4-3200 SDRAM | 1 |
-| Сеть | Gigabit LAN ports - RG-45 | 1 |
-| Слоты системы хранения | - |  |
-| Система хранения | SSD Samsung 850 EVO MZ-M5E120 - 120 GB (USB) | 1 |
-| Блок питания | ONEPLUS 6T, 5 В/4A | 1 |
-| IPMI | - |  |
-| BIOS version | c305221a6d7e532693cc7ff57fddfc8649def167 |  |
-| IPMI version | - |  |
+OS Version [2022-04-04-raspios-bullseye-arm64-lite](https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64-lite.img.xz)
 
 ## Установка OS
 
-1. Скачать актуальную версию дистрибутива raspios https://downloads.raspberrypi.org/raspios_lite_arm64/images/
+1. Скачать актуальную версию дистрибутива raspios-bullseye-arm64-lite https://downloads.raspberrypi.org/raspios_lite_arm64/images/
 2. Скачать утилиту для записи образа https://sourceforge.net/projects/win32diskimager/
-3. Записать через утилиту образ дистрибутива raspios на устройство, которое будет использоваться как системный диск (micro-sd карта, ssd usb диск и т.д)
-4. После записи, в корне раздела boot создать пустой файл с именем `ssh`
+3. Записать через утилиту установочный образ дистрибутива ubuntu-server на устройство, которое будет использоваться как системный диск (microsd карта, usb ssd диск)
+4. В разделе boot создать пустой файл с именем `ssh`
 5. Подключить системный диск к raspberry pi, подать питание
+6. Выбираем язык раскладки English (EU)
+7. Ввести имя пользоваля и пароль
 
 ## Настройка OS
 
@@ -37,8 +21,6 @@
 
        sudo apt update
        sudo apt upgrade
-       sudo reboot
-       sudo rpi-update
        sudo apt install mc git
 
 3. Настраиваем пользователей
@@ -71,137 +53,138 @@
 
        mkdir -p $HOME/github
        cd $HOME/github
-       git clone https://github.com/alexanderfefelov/scripts
        git clone git@github.com:chatlamin/serverhome.git
-       git clone git@github.com:chatlamin/pippin.system.git
 
 8. Подготавливаем профиль и OS для работы
 
-        cd $HOME/github/scripts/install/ && ./RUN-ME-FIRST.sh
-        cd $HOME/github/scripts/install/ && ./install-useful-tools.sh
+       cd $HOME/github/serverhome/scripts/install/arm64/raspios_lite/ && ./install-tools.sh
+       cd $HOME/github/serverhome/scripts/install/arm64/raspios_lite/ && ./install-docker.sh
+       cd $HOME/github/serverhome/scripts/install/arm64/raspios_lite/ && ./install-docker-compose.sh
 
-   <details>
-   <summary>на 24.07.2021</summary>
-   Эти пакеты не устанавливаются. Удалить из скрипта установки:
-
-   E: Unable to locate package bat
-
-   E: Unable to locate package petname
-
-   E: Unable to locate package clickhouse-client
-
-   E: Package 'mongodb-clients' has no installation candidate
-
-   E: Package 'mysql-client' has no installation candidate
-
-   При установке smb выбрать no
-
-   </details>
-
-9. Установка docker
-
-       apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
-       curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-       echo "deb [arch=arm64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-       apt-get update
-       apt-get install docker-ce docker-ce-cli containerd.io
-
-10. Синхронизируем каталог /etc с репозиторием
-
-        sudo cp -r /etc $HOME/github/pippin.system
-        cd $HOME/github/pippin.system
-        sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
-        git add --all .
-        git commit -m "start"
-        git push
-
-11. Меняем hostname
+9. Меняем hostname
 
     Редактируем файл hostname
 
-        sudo mcedit /etc/hostname
-    Меняем текущий hostname на pippin.serverhome.home
+       sudo mcedit /etc/hostname
+    Меняем текущий hostname на server1.serverhome.home
     <details>
     <summary>Полный конфиг</summary>
 
-        pippin.serverhome.home
+       server1.serverhome.home
     </details>
 
     Редактируем файл hosts
 
-        sudo mcedit /etc/hosts
-    Меняем текущий hostname на pippin.serverhome.home
+       sudo mcedit /etc/hosts
+    Меняем текущий hostname на server1.serverhome.home
+
     <details>
     <summary>Полный конфиг</summary>
+       127.0.0.1<----->localhost
+       ::1<---><------>localhost ip6-localhost ip6-loopback
+       ff02::1><------>ip6-allnodes
+       ff02::2><------>ip6-allrouters
 
-        127.0.0.1<----->localhost
-        ::1<---><------>localhost ip6-localhost ip6-loopback
-        ff02::1><------>ip6-allnodes
-        ff02::2><------>ip6-allrouters
-
-        127.0.1.1<-----><------>pippin.serverhome.home
-
+       127.0.1.1<-----><------>server1.serverhome.home
     </details>
 
-12. Фиксируем изменения hostname и hosts
 
-        sudo cp -r /etc $HOME/github/pippin.system
-        cd $HOME/github/pippin.system
-        sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
-        git add --all .
-        git commit -m "Настройка hostname"
-        git push
-
-13. Устанавливаем правильную timezone
+10. Устанавливаем правильную timezone
 
         sudo timedatectl set-timezone Europe/Moscow
 
-14. Фиксируем изменения timezone
+11. Настройка статического ip https://linuxhint.com/raspberry_pi_static_ip_setup/
 
-        sudo cp -r /etc $HOME/github/pippin.system
-        cd $HOME/github/pippin.system
-        sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
-        git add --all .
-        git commit -m "Настройка timezone"
-        git push
+        sudo mcedit /etc/dhcpcd.conf
 
-15. Отключаем Avahi-daemon https://www.spaetzle.info/raspberry-server/#Stop_the_avahi_service
+    <details>
+    <summary>Полный конфиг</summary>
 
-        sudo systemctl stop avahi-daemon.service
-        sudo systemctl stop avahi-daemon.socket
-        sudo systemctl disable avahi-daemon.service
-        sudo systemctl disable avahi-daemon.socket
+        # A sample configuration for dhcpcd.
+        # See dhcpcd.conf(5) for details.
 
-16. Настройка статического ip https://raspberrypi.stackexchange.com/a/106914
+        # Allow users of this group to interact with dhcpcd via the control socket.
+        #controlgroup wheel
 
-        sudo systemctl stop dhcpcd
-        sudo systemctl disable dhcpcd
-        sudo touch /etc/network/interfaces.d/eth0
-        sudo mcedit /etc/network/interfaces.d/eth0
-        auto eth0
-        allow-hotplug eth0
-        iface eth0 inet static
-        address xxx.xxx.xxx.xxx
-        netmask 255.xxx.xxx.xxx
-        gateway xxx.xxx.xxx.xxx
-        dns-nameservers 172.17.0.1 8.8.8.8
+        # Inform the DHCP server of our hostname for DDNS.
+        hostname
 
-17. Отключаем кэширующий dns systemd-resolved
+        # Use the hardware address of the interface for the Client ID.
+        clientid
+        # or
+        # Use the same DUID + IAID as set in DHCPv6 for DHCPv4 ClientID as per RFC4361.
+        # Some non-RFC compliant DHCP servers do not reply with this set.
+        # In this case, comment out duid and enable clientid above.
+        #duid
+
+        # Persist interface configuration when dhcpcd exits.
+        persistent
+
+        # Rapid commit support.
+        # Safe to enable by default because it requires the equivalent option set
+        # on the server to actually work.
+        option rapid_commit
+
+        # A list of options to request from the DHCP server.
+        option domain_name_servers, domain_name, domain_search, host_name
+        option classless_static_routes
+        # Respect the network MTU. This is applied to DHCP routes.
+        option interface_mtu
+
+        # Most distributions have NTP support.
+        #option ntp_servers
+
+        # A ServerID is required by RFC2131.
+        require dhcp_server_identifier
+
+        # Generate SLAAC address using the Hardware Address of the interface
+        #slaac hwaddr
+        # OR generate Stable Private IPv6 Addresses based from the DUID
+        slaac private
+
+        # Example static IP configuration:
+        interface eth0
+        static ip_address=192.168.88.2/24
+        #static ip6_address=fd51:42f8:caae:d92e::ff/64
+        static routers=192.168.88.1
+        static domain_name_servers=172.17.0.1 8.8.8.8
+
+        # It is possible to fall back to a static IP if DHCP fails:
+        # define static profile
+        #profile static_eth0
+        #static ip_address=192.168.1.23/24
+        #static routers=192.168.1.1
+        #static domain_name_servers=192.168.1.1
+
+        # fallback to static profile on eth0
+        #interface eth0
+        #fallback static_eth0
+
+    </details>
+
+12. Отключаем на хосте кэширующий dns systemd-resolved для работы dns сервера в докер-контейнере
 
         sudo systemctl disable systemd-resolved.service
         sudo systemctl stop systemd-resolved
         sudo rm /etc/resolv.conf
 
-18. Перезагрузка
+    <details>
+    <summary>Возможные проблемы</summary>
+    Докер сеть bridge может быть 172.18.0.0/16. Проверяем так:
+
+        sudo docker network inspect bridge
+    </details>
+
+13. Перезагрузка
 
         sudo reboot
 
-19. Перенастраиваем swap
+14. Перенастраиваем swap
 
         swapon --show
         swapoff /var/swap
         rm -f /var/swap
-        fallocate -l 2G /swapfile
+        fallocate -l 4G /swapfile
         chmod 600 /swapfile
         mkswap /swapfile
         swapon /swapfile
@@ -229,40 +212,3 @@
     Добавляем в конец
 
         vm.vfs_cache_pressure=50
-20. Фиксируем изменения swap
-
-        sudo cp -r /etc $HOME/github/pippin.system
-        cd $HOME/github/pippin.system
-        sudo chown -R ВАШ_ЛОГИН:ВАШ_ЛОГИН etc/
-        git add --all .
-        git commit -m "Настройка swap"
-        git push
-
-21. Создать служебного пользователя для резервного копирования
-
-        sudo adduser backuper
-        sudo usermod -aG sudo backuper
-
-22. Настроить команды, которые пользователь backuper может делать без ввода пароля
-
-        sudo pkexec visudo
-
-        # Вписать в конец:
-        backuper ALL = NOPASSWD: /bin/mkdir, /bin/tar, /bin/gzip, /usr/bin/find, /bin/mv, /usr/bin/zip, /bin/rm, /usr/bin/mysqldump, /usr/bin/cp, /usr/bin/chown
-
-___
-
-Тест скорости:
-
-
-SSD Samsung 850 EVO MZ-M5E120 - 120 GB (USB)
-```
-time sh -c "dd if=/dev/zero of=/data1/ddfile.tmp bs=1M count=10000"
-10000+0 records in
-10000+0 records out
-10485760000 bytes (10 GB, 9.8 GiB) copied, 55.6507 s, 188 MB/s
-
-real    0m55.663s
-user    0m0.090s
-sys     0m40.042s
-```
