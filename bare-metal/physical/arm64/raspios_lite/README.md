@@ -80,6 +80,7 @@ OS Version [2022-04-04-raspios-bullseye-arm64-lite](https://downloads.raspberryp
 
     <details>
     <summary>Полный конфиг</summary>
+
        127.0.0.1<----->localhost
        ::1<---><------>localhost ip6-localhost ip6-loopback
        ff02::1><------>ip6-allnodes
