@@ -10,6 +10,7 @@ port,containers/$CONTAINER_NAME
 2049,nfs-server
 3100,loki
 3306,mysql-8
+4449,mysterium
 5044,logstash
 5514,logstash
 5601,kibana
