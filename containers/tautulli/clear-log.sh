@@ -15,15 +15,5 @@ source ../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker run \
-    --name $CONTAINER_NAME \
-    --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
-    --detach \
-    --restart unless-stopped \
-    --volume $CONTAINER_NAME-conf:/config \
-    --volume $CONTAINERS_VOLUMES/"$PLEX_LOGS":/plex_logs \
-    --publish 65008:8181 \
-    $HEALTHCHECK_SETTINGS \
-    $IMAGE_TARGET
-
-docker logs --follow $CONTAINER_NAME
+# https://stackoverflow.com/a/42510314
+echo "" > $(docker inspect --format='{{.LogPath}}' $CONTAINER_NAME)
