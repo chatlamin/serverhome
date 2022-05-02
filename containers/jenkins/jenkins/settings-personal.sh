@@ -8,9 +8,9 @@ export NAME=jenkins
 # Репозиторий
 EXPLORE=jenkins/jenkins
 # Тэг образа старый
-TAG_OLD=2.339
+TAG_OLD=2.340
 # Тэг образа новый
-TAG_NEW=2.340
+TAG_NEW=2.345
 
 #--------------------------------------------------------------------
 # End settings
