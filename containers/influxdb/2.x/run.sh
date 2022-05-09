@@ -23,7 +23,7 @@ docker run \
     --restart unless-stopped \
     --volume $CONTAINER_NAME-conf:/etc/influxdb2 \
     --volume $CONTAINER_NAME-data:/var/lib/influxdb2 \
-    --publish 8086:8086 \
+    --publish 65112:8086 \
     $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 

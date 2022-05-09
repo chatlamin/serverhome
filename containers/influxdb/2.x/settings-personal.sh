@@ -8,9 +8,9 @@ export NAME=influxdb-2-x
 # Репозиторий
 EXPLORE=influxdb
 # Тэг образа старый
-TAG_OLD=start
+TAG_OLD=2.1.1
 # Тэг образа новый
-TAG_NEW=2.1.1
+TAG_NEW=2.2.0
 
 #--------------------------------------------------------------------
 # End settings

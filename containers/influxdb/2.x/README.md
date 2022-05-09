@@ -6,33 +6,33 @@ Hostname: `influxdb-2-x.serverhome.home`
 
 | Architectures | Support |
 | :------------ | :------ |
-| amd64         | ?       |
+| amd64         | +       |
 | arm64         | +       |
 | armhf         | ?       |
 
 ## Keys
 
-Link: `influxdb-2-x.serverhome.home:8086`
+Link: http://influxdb-2-x.serverhome.home:65112
 
-Login: `no authentication support`
+Login: `admin`
 
-Password: `no authentication support`
+Password: `ohh3rae3Eephae`
 
 ## Database
 
-Type: `no external database support`
+Type: `influxdb`
 
-Name: `no external database support`
+Name: `serverhome`
 
-Username: `no external database support`
+Username: `admin`
 
-Password: `no external database support`
+Password: `ohh3rae3Eephae`
 
 ## References to the original project
 
 Website: https://www.influxdata.com/products/influxdb
 
-Documentation: https://docs.influxdata.com/influxdb/v2.1
+Documentation: https://docs.influxdata.com/influxdb
 
 Repository github: https://github.com/influxdata/influxdb
 
