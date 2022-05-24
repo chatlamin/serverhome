@@ -8,13 +8,13 @@ export NAME=grafana
 # Репозиторий
 EXPLORE=grafana/grafana
 # Тэг образа старый
-TAG_OLD=8.3.4
+TAG_OLD=8.4.1
 # Тэг образа новый
-TAG_NEW=8.4.1
+TAG_NEW=8.5.3
 
 ##
 # Имя контейнера базы данных
-DB_CONTAINER_NAME=mysql-8
+DB_CONTAINER_NAME=mysql-8-master
 # Пароль от root
 MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
 
