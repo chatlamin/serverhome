@@ -14,6 +14,7 @@ port,containers/$CONTAINER_NAME
 5044,logstash
 5514,logstash
 5601,kibana
+6080,webvirtcloud
 6881,qbittorrent
 8000,healthchecks
 8086,influxdb-1-x
@@ -95,6 +96,7 @@ port,containers/$CONTAINER_NAME
 65062,bareos-php-fpm
 65063,jenkins
 65064,docker-virt-manager
+65065,webvirtcloud
 65100,pi-hole_exporter
 65101,qbittorrent_exporter
 65102,mongodb_exporter
