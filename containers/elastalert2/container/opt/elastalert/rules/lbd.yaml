@@ -1,0 +1,76 @@
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#name
+name: lbd
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#type
+type: frequency
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#index
+index: syslog-*
+
+# https://elastalert2.readthedocs.io/en/latest/running_elastalert.html#disabling-a-rule
+is_enabled: true
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#frequency
+num_events: 1
+#terms_size: 100
+#use_terms_query: true
+timeframe:
+  minutes: 5
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#realert
+realert:
+  minutes: 5
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#timestamp-type
+timestamp_field: "@timestamp"
+timestamp_type: "iso"
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#use-local-time
+use_local_time: true
+query_timezone: "Europe/Mocsow"
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#use-strftime-index
+use_strftime_index: false
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#query-key
+query_key:
+  - "host"
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#alert-subject
+alert_subject: "Петля: host {0}"
+alert_subject_args:
+  - "host"
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#alert-content
+alert_text_type: alert_text_only
+alert_text_args: ["message", "host", "@timestamp"]
+alert_text: "Сообщение: {0}"
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html#filter
+filter:
+  - query:
+      query_string:
+        query: "message: LBD"
+
+# https://elastalert2.readthedocs.io/en/latest/ruletypes.html?highlight=use_strftime_index#rocket-chat
+alert:
+  - "rocketchat"
+# укажи rocketchat webhook
+rocket_chat_webhook_url: ''
+# https://emojipedia.org/apple/
+rocket_chat_emoji_override: ':bomb:'
+rocket_chat_msg_color: 'danger'
+rocket_chat_text_string: "LBD detected"
+rocket_chat_alert_fields:
+  - title: "Узел сети"
+    value: host
+  - title: "Кол-во сообщений"
+    value: num_hits
+
+generate_kibana_discover_url: True
+kibana_discover_app_url: "http://kibana.serverhome.home:5601/app/discover#/"
+kibana_discover_index_pattern_id: "f7b300c0-87fa-11ec-a16b-b16d90d5a5dd"
+kibana_discover_version: "7.15.1"
+rocket_chat_attach_kibana_discover_url: True
+rocket_chat_kibana_discover_color: "#ec4b98"
+rocket_chat_kibana_discover_title: "Посмотреть в Kibana"
