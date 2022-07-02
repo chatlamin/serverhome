@@ -8,9 +8,9 @@ export NAME=filebrowser
 # Репозиторий
 EXPLORE=filebrowser/filebrowser
 # Тэг образа старый
-TAG_OLD=start
+TAG_OLD=v2.21.1-s6
 # Тэг образа новый
-TAG_NEW=v2.21.1-s6
+TAG_NEW=v2.22.2
 
 #--------------------------------------------------------------------
 # End settings
