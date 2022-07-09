@@ -8,9 +8,9 @@ export NAME=tautulli
 # Репозиторий
 EXPLORE=tautulli/tautulli
 # Тэг образа старый
-TAG_OLD=v2.7.7
+TAG_OLD=v2.9.7
 # Тэг образа новый
-TAG_NEW=v2.9.7
+TAG_NEW=v2.10.2
 
 ##
 # Путь к логам plex
