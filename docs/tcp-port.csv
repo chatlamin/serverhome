@@ -111,4 +111,5 @@ port,containers/$CONTAINER_NAME
 65111,doublecmd
 65112,influxdb-2-x
 65113,esphome
+65114,nginx
 65200,cbackup
