@@ -28,12 +28,12 @@ port,containers/$CONTAINER_NAME
 9200,elasticsearch
 9300,elasticsearch
 9600,logstash
-10051,zabbix_server
 10060,zabbix_proxy
 11211,memcached
 27017,mongodb-1
 27018,mongodb-2
 27019,mongodb-3
+31150,zabbix-server-1-pgsql
 32400,plex
 32469,plex
 50000,jenkins
@@ -51,10 +51,8 @@ port,containers/$CONTAINER_NAME
 65011,homer
 65012,scrutiny
 65013,vault
-65014,zabbix_web
 65015,cbackup
 65016,telegraf
-65017,zabbix_agent
 65018,confluence
 65019,postgresql
 65020,mysql-5-7
@@ -68,8 +66,8 @@ port,containers/$CONTAINER_NAME
 65028,mysql-8-master
 65029,mysql-8-slave-1
 65030,mysql-8-slave-2
-65031,zabbix_agent2
-65032,zabbix_agent2
+65031,zabbix-agent2
+65032,zabbix-agent2
 65035,heimdall
 65036,dashmachine
 65037,organizr
@@ -112,4 +110,6 @@ port,containers/$CONTAINER_NAME
 65112,influxdb-2-x
 65113,esphome
 65114,nginx
+65115,timescaledb-zabbix
+65116,zabbix-web-nginx-pgsql
 65200,cbackup
