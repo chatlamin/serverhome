@@ -1,9 +1,16 @@
 .vscode/
 
+containers/*/*/*/*/private.env
+containers/*/*/*/private.env
 containers/*/*/private.env
 containers/*/private.env
 
 containers/dkron/tools/populator/
 containers/healthchecks/tools/populator/
+
+enhancement/*/*/*/*/private.env
+enhancement/*/*/*/private.env
+enhancement/*/*/private.env
+enhancement/*/private.env
 
 scripts/utilities/dkron/backup/yandex/settings-secret.sh
