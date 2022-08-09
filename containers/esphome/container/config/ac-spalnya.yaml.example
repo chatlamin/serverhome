@@ -4,8 +4,8 @@ external_components:
     refresh: 0s
 
 substitutions:
-  devicename: ac_detskaya
-  upper_devicename: detskaya
+  devicename: ac_spalnya
+  upper_devicename: spalnya
 
 esphome:
   name: $devicename
@@ -18,8 +18,8 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Name-Foo Fallback Hotspot"
-    password: "UcleV4ceas87"
+    ssid: "Ac-Spalnya Fallback Hotspot"
+    password: "Ke4DYfBhBaYG"
 
 logger:
   level: INFO
@@ -28,10 +28,10 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "PlJDHGSgKKiSx7+2FAgEU5jzjq4YGRheRAQUEnTq2t4="
+    key: "IhTvxCGT9wB95SQUhh/6DpYvj0k7amSTz8OZm2WMJuw="
 
 ota:
-  password: "28aef6aefab5d13d0ffa4386d11c1eda"
+  password: "f9103690d7a32ca4ca44d798ea258a2c"
 
 # Example configuration entry
 web_server:
