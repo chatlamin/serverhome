@@ -12,7 +12,7 @@ Hostname: `esphome.serverhome.home`
 
 ## Keys
 
-Link: `esphome.serverhome.home`
+Link: http://esphome.serverhome.home:65113/
 
 Login: `no authentication support`
 

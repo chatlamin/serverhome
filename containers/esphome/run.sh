@@ -21,6 +21,8 @@ docker run \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
     --restart unless-stopped \
+    --privileged \
+    --volume /dev/ttyUSB0:/dev/ttyUSB0 \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume $CONTAINER_NAME-conf:/config \
