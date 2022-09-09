@@ -2,7 +2,9 @@ port,containers/$CONTAINER_NAME
 53,coredns
 53,pi-hole
 80,traefik
+80,nginx-proxy-manager
 443,traefik
+443,nginx-proxy-manager
 1433,mssql
 1883,mosquitto
 1951,bginetaccess
@@ -112,4 +114,5 @@ port,containers/$CONTAINER_NAME
 65114,nginx
 65115,timescaledb-zabbix
 65116,zabbix-web-nginx-pgsql
+65117,nginx-proxy-manager
 65200,cbackup
