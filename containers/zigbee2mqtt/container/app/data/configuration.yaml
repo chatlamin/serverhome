@@ -6,7 +6,7 @@ mqtt:
   user: admin
   password: aireeV7ahk8rah
 serial:
-  port: /dev/ttyACM0
+  port: tcp://192.168.88.20:6638
 experimental:
   new_api: true
 frontend:

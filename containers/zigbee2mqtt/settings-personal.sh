@@ -8,13 +8,9 @@ export NAME=zigbee2mqtt
 # Репозиторий
 EXPLORE=koenkk/zigbee2mqtt
 # Тэг образа старый
-TAG_OLD=1.25.1
+TAG_OLD=1.26.0
 # Тэг образа новый
-TAG_NEW=1.26.0
-
-##
-# Имя zigbee устройства
-ZIGBEE_DONGLE=/dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0014DA4E53-if00
+TAG_NEW=1.27.2
 
 #--------------------------------------------------------------------
 # End settings

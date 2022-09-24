@@ -21,9 +21,7 @@ docker run \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
     --restart unless-stopped \
-    --device $ZIGBEE_DONGLE:/dev/ttyACM0 \
     --volume $CONTAINER_NAME-data:/app/data \
-    --volume /run/udev:/run/udev:ro \
     --publish 65009:8080 \
     $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
