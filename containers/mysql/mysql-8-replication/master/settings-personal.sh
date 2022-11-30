@@ -8,9 +8,9 @@ export NAME=mysql-8-master
 # Репозиторий
 EXPLORE=mysql/mysql-server
 # Тэг образа старый
-TAG_OLD=8.0.29
+TAG_OLD=8.0.30
 # Тэг образа новый
-TAG_NEW=8.0.30
+TAG_NEW=8.0.31
 
 #--------------------------------------------------------------------
 # End settings
