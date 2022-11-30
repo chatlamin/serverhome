@@ -8,9 +8,9 @@ export NAME=plex
 # Репозиторий
 EXPLORE=linuxserver/plex
 # Тэг образа старый
-TAG_OLD=version-1.29.0.6244-819d3678c
+TAG_OLD=version-1.29.1.6316-f4cdfea9c
 # Тэг образа новый
-TAG_NEW=version-1.29.1.6316-f4cdfea9c
+TAG_NEW=version-1.29.2.6364-6d72b0cf6
 
 #--------------------------------------------------------------------
 # End settings
