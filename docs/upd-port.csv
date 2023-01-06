@@ -1,6 +1,7 @@
 port,containers/$CONTAINER_NAME
 53,coredns
 67,bginetaccess
+1900,jellyfin
 5514,logstash
 6881,qbittorrent
 7359,jellyfin

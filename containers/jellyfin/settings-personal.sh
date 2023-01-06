@@ -8,9 +8,9 @@ export NAME=jellyfin
 # Репозиторий
 EXPLORE=jellyfin/jellyfin
 # Тэг образа старый
-TAG_OLD=start
+TAG_OLD=10.7.7
 # Тэг образа новый
-TAG_NEW=10.7.7
+TAG_NEW=10.8.8
 
 #--------------------------------------------------------------------
 # End settings
