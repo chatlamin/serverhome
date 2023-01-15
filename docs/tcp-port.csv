@@ -115,4 +115,6 @@ port,containers/$CONTAINER_NAME
 65115,timescaledb-zabbix
 65116,zabbix-web-nginx-pgsql
 65117,nginx-proxy-manager
+65118,restreamer-instance-1
+65119,restreamer-instance-2
 65200,cbackup

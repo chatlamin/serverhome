@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------
 
 source settings-personal.sh
-source ../settings/settings-common.sh
+source ../../settings/settings-common.sh
 
 #--------------------------------------------------------------------
 # End settings
@@ -15,7 +15,5 @@ source ../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker rmi $IMAGE_TARGET
-docker rmi $IMAGE_TARGET_OLD
-docker rmi $IMAGE_SOURCE_NEW
-docker rmi $IMAGE_SOURCE_OLD
+# https://stackoverflow.com/a/42510314
+echo "" > $(docker inspect --format='{{.LogPath}}' $CONTAINER_NAME)

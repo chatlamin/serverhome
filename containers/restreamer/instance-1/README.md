@@ -1,6 +1,6 @@
-# restreamer
+# restreamer-instance-1
 
-Hostname: `restreamer.serverhome.home`
+Hostname: `restreamer-instance-1.serverhome.home`
 
 ## Supported architectures
 
@@ -12,11 +12,11 @@ Hostname: `restreamer.serverhome.home`
 
 ## Keys
 
-Link: http://restreamer.serverhome.home:8080/
+Link: http://restreamer-instance-1.serverhome.home:65118/ui/
 
 Login: `admin`
 
-Password: `admin`
+Password: `lui0kuuSohgh6x`
 
 ## Database
 

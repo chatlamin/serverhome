@@ -4,13 +4,13 @@
 
 ##
 # Название проекта
-export NAME=restreamer
+export NAME=restreamer-instance-2
 # Репозиторий
 EXPLORE=datarhei/restreamer
 # Тэг образа старый
-TAG_OLD=start
+TAG_OLD=2.3.0
 # Тэг образа новый
-TAG_NEW=2.3.0
+TAG_NEW=2.4.2
 
 #--------------------------------------------------------------------
 # End settings
