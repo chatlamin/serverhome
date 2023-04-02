@@ -8,9 +8,9 @@ export NAME=qbittorrent
 # Репозиторий
 EXPLORE=linuxserver/qbittorrent
 # Тэг образа старый
-TAG_OLD=4.4.5
+TAG_OLD=4.5.0
 # Тэг образа новый
-TAG_NEW=4.5.0
+TAG_NEW=4.5.2
 
 #--------------------------------------------------------------------
 # End settings
