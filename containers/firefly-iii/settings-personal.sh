@@ -8,9 +8,9 @@ export NAME=firefly-iii
 # Репозиторий
 EXPLORE=fireflyiii/core
 # Тэг образа старый
-TAG_OLD=version-5.7.15
+TAG_OLD=version-6.0.6
 # Тэг образа новый
-TAG_NEW=version-6.0.6
+TAG_NEW=version-6.0.9
 
 # Пароль от root
 MYSQL_ROOT_PASSWORD=Dae2fiiChohng0
