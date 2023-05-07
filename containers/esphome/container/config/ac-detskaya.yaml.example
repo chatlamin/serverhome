@@ -1,5 +1,5 @@
 external_components:
-  - source: github://GrKoR/esphome_aux_ac_component@dev
+  - source: github://GrKoR/esphome_aux_ac_component
     components: [ aux_ac ]
     refresh: 0s
 
@@ -52,47 +52,51 @@ sensor:
 
 climate:
   - platform: aux_ac
-    name: $upper_devicename
+    name: ${upper_devicename}
     id: aux_id
     uart_id: ac_uart_bus
     period: 7s
     show_action: true
     display_inverted: true
     indoor_temperature:
-      name: $upper_devicename Indoor Temperature
+      name: ${upper_devicename} Indoor Temperature
       id: ${devicename}_indoor_temp
       internal: false
     display_state:
-      name: $upper_devicename Display State
+      name: ${upper_devicename} Display State
       id: ${devicename}_display_state
       internal: false
     outdoor_temperature:
-      name: $upper_devicename Outdoor Temperature
+      name: ${upper_devicename} Outdoor Temperature
       id: ${devicename}_outdoor_temp
       internal: false
     outbound_temperature:
-      name: $upper_devicename Colant Outbound Temperature
+      name: ${upper_devicename} Colant Outbound Temperature
       id: ${devicename}_outbound_temp
       internal: false
     inbound_temperature:
-      name: $upper_devicename Colant Inbound Temperature
+      name: ${upper_devicename} Colant Inbound Temperature
       id: ${devicename}_inbound_temp
       internal: false
     compressor_temperature:
-      name: $upper_devicename Compressor Temperature
+      name: ${upper_devicename} Compressor Temperature
       id: ${devicename}_strange_temp
       internal: false
     defrost_state:
-      name: $upper_devicename Defrost State
+      name: ${upper_devicename} Defrost State
       id: ${devicename}_defrost_state
       internal: false
     invertor_power:
-      name: $upper_devicename Invertor Power
+      name: ${upper_devicename} Invertor Power
       id: ${devicename}_invertor_power
       internal: false
     preset_reporter:
-      name: $upper_devicename Preset Reporter
+      name: ${upper_devicename} Preset Reporter
       id: ${devicename}_preset_reporter
+      internal: false
+    vlouver_state:
+      name: ${upper_devicename} VLouvers State
+      id: ${devicename}_vlouver_state
       internal: false
     visual:
       min_temperature: 16
@@ -117,3 +121,79 @@ climate:
       - VERTICAL
       - HORIZONTAL
       - BOTH
+
+switch:
+  - platform: template
+    name: ${upper_devicename} Display
+    lambda: |-
+      if (id(${devicename}_display_state).state) {
+        return true;
+      } else {
+        return false;
+      }
+    turn_on_action:
+      - aux_ac.display_on: aux_id
+    turn_off_action:
+      - aux_ac.display_off: aux_id
+
+button:
+  - platform: template
+    name: ${upper_devicename} VLouver Stop
+    icon: "mdi:circle-small"
+    on_press:
+      - aux_ac.vlouver_stop: aux_id
+    
+  - platform: template
+    name: ${upper_devicename} VLouver Swing
+    icon: "mdi:pan-vertical"
+    on_press:
+      - aux_ac.vlouver_swing: aux_id
+    
+  - platform: template
+    name: ${upper_devicename} VLouver Top
+    icon: "mdi:pan-up"
+    on_press:
+      - aux_ac.vlouver_top: aux_id
+    
+  - platform: template
+    name: ${upper_devicename} VLouver Middle Above
+    icon: "mdi:pan-top-left"
+    on_press:
+      - aux_ac.vlouver_middle_above: aux_id
+    
+  - platform: template
+    name: ${upper_devicename} VLouver Middle
+    icon: "mdi:pan-left"
+    on_press:
+      - aux_ac.vlouver_middle: aux_id
+    
+  - platform: template
+    name: ${upper_devicename} VLouver Middle Below
+    icon: "mdi:pan-bottom-left"
+    on_press:
+      - aux_ac.vlouver_middle_below: aux_id
+    
+  - platform: template
+    name: ${upper_devicename} VLouver Bottom
+    icon: "mdi:pan-down"
+    on_press:
+      - aux_ac.vlouver_bottom: aux_id
+
+
+number:
+  - platform: template
+    name: ${upper_devicename} Vertical Louvers
+    id: ${devicename}_vlouver
+    icon: "mdi:circle-small"
+    mode: "slider"
+    min_value: 0
+    max_value: 6
+    step: 1
+    update_interval: 2s
+    lambda: |-
+      return id(${devicename}_vlouver_state).state;
+    set_action:
+      then:
+        - aux_ac.vlouver_set:
+            id: aux_id
+            position: !lambda "return x;"
