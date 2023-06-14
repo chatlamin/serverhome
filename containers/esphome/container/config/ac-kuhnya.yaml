@@ -4,8 +4,8 @@ external_components:
     refresh: 0s
 
 substitutions:
-  devicename: ac_detskaya
-  upper_devicename: detskaya
+  devicename: ac_kuhnya
+  upper_devicename: kuhnya
 
 esphome:
   name: $devicename
@@ -18,8 +18,8 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Name-Foo Fallback Hotspot"
-    password: "UcleV4ceas87"
+    ssid: "Ac-Kuhnya Fallback Hotspot"
+    password: "8SeWoYXr9Psi"
 
 logger:
   level: INFO
@@ -28,10 +28,10 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "PlJDHGSgKKiSx7+2FAgEU5jzjq4YGRheRAQUEnTq2t4="
+    key: "wdcRRho+Ny3vpBzbfEcer/wgXrfLPRUbmqN5IkOU9LM="
 
 ota:
-  password: "28aef6aefab5d13d0ffa4386d11c1eda"
+  password: "9c767115440f3364bef1a4223ad555d1"
 
 # Example configuration entry
 web_server:
@@ -86,9 +86,9 @@ climate:
       name: ${upper_devicename} Defrost State
       id: ${devicename}_defrost_state
       internal: false
-    invertor_power:
-      name: ${upper_devicename} Invertor Power
-      id: ${devicename}_invertor_power
+    inverter_power:
+      name: ${upper_devicename} Inverter Power
+      id: ${devicename}_inverter_power
       internal: false
     preset_reporter:
       name: ${upper_devicename} Preset Reporter
@@ -197,3 +197,4 @@ number:
         - aux_ac.vlouver_set:
             id: aux_id
             position: !lambda "return x;"
+    
