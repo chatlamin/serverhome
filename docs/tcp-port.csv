@@ -118,3 +118,4 @@ port,containers/$CONTAINER_NAME
 65118,restreamer-instance-1
 65119,restreamer-instance-2
 65200,cbackup
+65201,librespeed
