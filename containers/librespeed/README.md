@@ -1,36 +1,36 @@
-# qbittorrent
-Hostname: `qbittorrent.serverhome.home`
+# librespeed
+Hostname: `librespeed.serverhome.home`
 
 ## Supported architectures
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
-| arm64         | +       |
+| arm64         | ?       |
 | armhf         | ?       |
 
 ## Keys
-Link: http://qbittorrent.serverhome.home:65004/
+Link: http://librespeed.serverhome.home:65201/
 
-Login: `admin`
+Login: `?`
 
-Password: `il8oquee9eHo6m`
+Password: `?`
 
 ## Database
-Type: `no external database support`
+Type: `?`
 
-Name: `no external database support`
+Name: `?`
 
-Username: `no external database support`
+Username: `?`
 
-Password: `no external database support`
+Password: `?`
 
 ## References to the original project
-Website: https://www.qbittorrent.org
+Website: https://librespeed.org/
 
-Documentation: https://github.com/qbittorrent/qBittorrent/wiki
+Documentation: https://github.com/librespeed/speedtest/wiki
 
-Repository github: https://github.com/qbittorrent/qBittorrent
+Repository github: https://github.com/librespeed/speedtest
 
-Repository docker github: https://github.com/linuxserver/docker-qbittorrent
+Repository docker github: https://github.com/librespeed/speedtest/blob/master/Dockerfile
 
-Repository docker: https://hub.docker.com/r/linuxserver/qbittorrent
+Repository docker: https://hub.docker.com/r/adolfintel/speedtest
