@@ -29,6 +29,7 @@ docker run \
     --volume $CONTAINER_NAME-conf:/etc/traefik \
     --volume $CONTAINER_NAME-log:/var/log/traefik \
     --volume $CONTAINER_NAME-cert:/etc/cert \
+    --volume $CONTAINER_NAME-plugins:/plugins-local/src \
     --publish 65050:8080 \
     --publish 65051:8081 \
     --publish 80:80 \

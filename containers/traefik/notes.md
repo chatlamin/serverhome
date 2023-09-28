@@ -17,3 +17,7 @@
     CLOUDFLARE_API_KEY=
 
 Настройка TLS Challenge https://doc.traefik.io/traefik/user-guides/docker-compose/acme-tls/
+
+## plugins version
+
+- [geoblock](https://github.com/PascalMinder/geoblock) v0.2.6

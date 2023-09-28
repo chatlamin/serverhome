@@ -12,3 +12,19 @@ http:
       basicAuth:
         users:
         - admin:$apr1$qZ4KaIbW$Hf.kGIAf7TXJkU0NorLLF1
+    geoblock-ru:
+      plugin:
+        geoblock:
+          allowLocalRequests: true
+          logLocalRequests: true
+          logAllowedRequests: true
+          logApiRequests: true
+          api: "https://get.geojs.io/v1/ip/country/{ip}"
+          apiTimeoutMs: 750                                 # optional
+          cacheSize: 15
+          forceMonthlyUpdate: true
+          allowUnknownCountries: false
+          unknownCountryApiResponse: "nil"
+          blackListMode: false
+          countries:
+            - RU

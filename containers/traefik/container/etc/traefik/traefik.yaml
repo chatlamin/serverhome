@@ -161,3 +161,8 @@ providers:
   file:
     filename: /etc/traefik/dynamic/conf/dynamic.yaml
     watch: true
+
+experimental:
+  localPlugins:
+    geoblock:
+      moduleName: github.com/PascalMinder/geoblock
