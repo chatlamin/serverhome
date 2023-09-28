@@ -21,3 +21,4 @@
 ## plugins version
 
 - [geoblock](https://github.com/PascalMinder/geoblock) v0.2.6
+- [traefik-plugin-geoblock](https://github.com/nscuro/traefik-plugin-geoblock) v0.11.0

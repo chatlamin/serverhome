@@ -164,5 +164,7 @@ providers:
 
 experimental:
   localPlugins:
-    geoblock:
+    geoblock-PascalMinder:
       moduleName: github.com/PascalMinder/geoblock
+    geoblock-nscuro:
+      moduleName: github.com/nscuro/traefik-plugin-geoblock

@@ -12,9 +12,10 @@ http:
       basicAuth:
         users:
         - admin:$apr1$qZ4KaIbW$Hf.kGIAf7TXJkU0NorLLF1
-    geoblock-ru:
+
+    geoblock-PascalMinder-ru:
       plugin:
-        geoblock:
+        geoblock-PascalMinder:
           allowLocalRequests: true
           logLocalRequests: true
           logAllowedRequests: true
@@ -28,3 +29,19 @@ http:
           blackListMode: false
           countries:
             - RU
+
+    geoblock-nscuro-ru:
+      plugin:
+        geoblock-nscuro:
+          # Enable this plugin?
+          enabled: true
+          # Path to ip2location database file
+          databaseFilePath: /plugins-local/src/github.com/nscuro/traefik-plugin-geoblock/IP2LOCATION-LITE-DB1.IPV6.BIN
+          # Whitelist of countries to allow (ISO 3166-1 alpha-2)
+          allowedCountries: [ "RU" ]
+          # Allow requests from private / internal networks?
+          allowPrivate: true
+          # HTTP status code to return for disallowed requests (default: 403)
+          disallowedStatusCode: 403
+          # Add CIDR to be whitelisted, even if in a non-allowed country
+          allowedIPBlocks: ["66.249.64.0/19"]
