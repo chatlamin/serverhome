@@ -8,9 +8,9 @@ export NAME=jenkins-agent-1
 # Репозиторий
 EXPLORE=jenkins/inbound-agent
 # Тэг образа старый
-TAG_OLD=4.13.3-1
+TAG_OLD=3077.vd69cf116da_6f-3
 # Тэг образа новый
-TAG_NEW=3077.vd69cf116da_6f-3
+TAG_NEW=3148.v532a_7e715ee3-10
 
 #--------------------------------------------------------------------
 # End settings
