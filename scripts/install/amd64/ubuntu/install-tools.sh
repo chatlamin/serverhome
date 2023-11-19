@@ -33,9 +33,7 @@ sudo apt-get -qq install \
     nfs-client \
     cifs-utils \
     libatomic1 `# для mydumper/myloader https://github.com/mydumper/mydumper#ubuntu--debian` \
-    clickhouse-client \
     influxdb-client \
-    mongodb-clients \
     mysql-client \
     postgresql-client \
     redis-tools
