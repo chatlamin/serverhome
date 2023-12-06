@@ -10,9 +10,8 @@ net.listen('0.0.0.0', 8453, {kind = 'webmgmt'})
 
 log_level('info')
 -- log_level('debug')
-hints.add_hosts('/etc/knot-resolver/hosts.generated')
+hints.add_hosts('/etc/knot-resolver/hosts.static')
+cache.open(2 * GB, 'lmdb:///var/cache/knot-resolver')
 
-cache.open(200 * MB, 'lmdb:///var/cache/knot-resolver')
--- cache.size = 1 * GB
 print(cache.current_storage)
 print(cache.current_size)

@@ -8,9 +8,9 @@ export NAME=knot-resolver
 # Репозиторий
 EXPLORE=cznic/knot-resolver
 # Тэг образа старый
-TAG_OLD=start
+TAG_OLD=v5.5.3
 # Тэг образа новый
-TAG_NEW=v5.5.3
+TAG_NEW=v5.7.0
 
 #--------------------------------------------------------------------
 # End settings

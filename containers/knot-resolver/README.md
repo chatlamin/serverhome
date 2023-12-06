@@ -3,7 +3,6 @@
 Hostname: `knot-resolver.serverhome.home`
 
 ## Supported architectures
-
 | Architectures | Support |
 | :------------ | :------ |
 | amd64         | +       |
@@ -12,21 +11,21 @@ Hostname: `knot-resolver.serverhome.home`
 
 ## Keys
 
-Link: `knot-resolver.serverhome.home:53`
+Link: http://knot-resolver.serverhome.home:65202
 
-Login: `-`
+Login: `no authentication support`
 
-Password: `-`
+Password: `no authentication support`
 
 ## Database
 
-Type: `-`
+Type: `no external database support`
 
-Name: `-`
+Name: `no external database support`
 
-Username: `-`
+Username: `no external database support`
 
-Password: `-`
+Password: `no external database support`
 
 ## References to the original project
 

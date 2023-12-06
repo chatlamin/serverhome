@@ -1,5 +1,5 @@
 port,containers/$CONTAINER_NAME
-53,coredns
+53,coredns / knot-resolver
 67,bginetaccess
 1900,jellyfin
 5514,logstash

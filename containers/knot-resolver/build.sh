@@ -27,7 +27,7 @@ generate_config_files() {
   export IP_ADDRESS
   envsubst \
     < build/template.custom.list \
-    > container/etc/knot-resolver/hosts.generated
+    > container/etc/knot-resolver/hosts.static
 
   echo ...config files generated
 }
@@ -37,4 +37,4 @@ docker build \
     --build-arg IMAGE_SOURCE_NEW \
     --tag $IMAGE_TARGET .
 
-#rm --force container/etc/knot-resolver/hosts.generated
+rm --force container/etc/knot-resolver/hosts.static

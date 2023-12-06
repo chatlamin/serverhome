@@ -1,10 +1,11 @@
 port,containers/$CONTAINER_NAME
-53,coredns
+53,coredns / knot-resolver
 53,pi-hole
 80,traefik
 80,nginx-proxy-manager
 443,traefik
 443,nginx-proxy-manager
+853,knot-resolver
 1433,mssql
 1883,mosquitto
 1951,bginetaccess
@@ -23,6 +24,7 @@ port,containers/$CONTAINER_NAME
 8086,influxdb-2-x
 8123,home-assistant
 8324,plex
+8443,knot-resolver
 8888,oxidized
 9000,portainer-ce
 9001,mosquitto
@@ -119,3 +121,4 @@ port,containers/$CONTAINER_NAME
 65119,restreamer-instance-2
 65200,cbackup
 65201,librespeed
+65202,knot-resolver

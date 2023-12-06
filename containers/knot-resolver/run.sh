@@ -16,6 +16,7 @@ source ../settings/settings-common.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker run \
+    --env-file public.env \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
@@ -28,7 +29,7 @@ docker run \
     --publish 53:53/udp \
     --publish 853:853 \
     --publish 8443:443 \
-    --publish 63182:8453 \
+    --publish 65202:8453 \
     $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
 
