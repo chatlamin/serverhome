@@ -15,15 +15,19 @@ source ../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker create \
+docker run \
     --env-file private.env \
     --env-file public.env \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
+    --detach \
     --restart unless-stopped \
-    --volume /etc/localtime:/etc/localtime:ro \
-    --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-upload:/var/www/html/storage/upload \
-    --publish 65003:8080 \
+    --shm-size="8G" \
+    --volume $CONTAINER_NAME-data:/var/cache/zoneminder \
+    --volume $CONTAINER_NAME-conf:/config \
+    --publish 65203:80 \
+    --publish 65204:9000 \
     $HEALTHCHECK_SETTINGS \
     $IMAGE_TARGET
+
+docker logs --follow $CONTAINER_NAME

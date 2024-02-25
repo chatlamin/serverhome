@@ -15,15 +15,12 @@ source ../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker create \
-    --env-file private.env \
-    --env-file public.env \
-    --name $CONTAINER_NAME \
-    --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
-    --restart unless-stopped \
-    --volume /etc/localtime:/etc/localtime:ro \
-    --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-upload:/var/www/html/storage/upload \
-    --publish 65003:8080 \
-    $HEALTHCHECK_SETTINGS \
-    $IMAGE_TARGET
+# https://github.com/alexanderfefelov/docker-backpack/blob/main/utils/cleanup/prune-all.sh
+read -p "WARNING: The data will be deleted. Press Y to continue: " -n 1 -r
+echo
+if [ "$REPLY" != "Y" ]; then
+  exit
+fi
+
+docker volume rm $CONTAINER_NAME-data
+docker volume rm $CONTAINER_NAME-conf

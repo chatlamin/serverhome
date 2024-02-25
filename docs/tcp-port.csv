@@ -122,3 +122,5 @@ port,containers/$CONTAINER_NAME
 65200,cbackup
 65201,librespeed
 65202,knot-resolver
+65203,zoneminder
+65204,zoneminder

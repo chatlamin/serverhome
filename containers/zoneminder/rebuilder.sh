@@ -15,15 +15,8 @@ source ../settings/settings-common.sh
 # Elevate privileges
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
-docker create \
-    --env-file private.env \
-    --env-file public.env \
-    --name $CONTAINER_NAME \
-    --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
-    --restart unless-stopped \
-    --volume /etc/localtime:/etc/localtime:ro \
-    --volume /etc/timezone:/etc/timezone:ro \
-    --volume $CONTAINER_NAME-upload:/var/www/html/storage/upload \
-    --publish 65003:8080 \
-    $HEALTHCHECK_SETTINGS \
-    $IMAGE_TARGET
+./remove-container.sh
+./remove-volumes.sh
+./remove-images.sh
+./build.sh
+./run.sh
