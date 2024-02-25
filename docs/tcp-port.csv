@@ -124,3 +124,4 @@ port,containers/$CONTAINER_NAME
 65202,knot-resolver
 65203,zoneminder
 65204,zoneminder
+65205,motioneye
