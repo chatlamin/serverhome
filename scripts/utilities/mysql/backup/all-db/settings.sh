@@ -6,9 +6,9 @@
 # Текущее время
 TIMESTAMP=$(date '+%d-%m-%Y_%H-%M-%S')
 # ip / dns базы данных
-DB_HOST=mysql.serverhome.home
+DB_HOST=mysql-8-master.serverhome.home
 # Порт базы данных
-DB_PORT=3306
+DB_PORT=65028
 # Пользователь базы данных
 DB_USERNAME=root
 # Пароль базы данных

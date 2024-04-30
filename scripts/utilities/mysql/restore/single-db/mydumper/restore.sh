@@ -14,7 +14,7 @@ DB_PASSWORD=Dae2fiiChohng0
 # Домашний каталог текущего пользователя
 export HOME=$(bash <<< "echo ~$SUDO_USER")
 # http://stackoverflow.com/a/246128
-BASEDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+BASEDIR="$(dirname -- "$BASH_SOURCE")"
 # Имя базы данных
 DB=firefly_iii
 # Каталог локальных дампов БД

@@ -4,9 +4,9 @@
 #---------------------------------------------------------------------
 
 # ip / dns сервера баз данных
-DB_HOST=mysql-8.serverhome.home
+DB_HOST=mysql-8-master.serverhome.home
 # Порт сервера баз данных
-DB_PORT=3306
+DB_PORT=65028
 # Пользователь сервера баз данных
 DB_USERNAME=root
 # Пароль сервера баз данных
@@ -14,11 +14,11 @@ DB_PASSWORD=Dae2fiiChohng0
 # Домашний каталог текущего пользователя
 export HOME=$(bash <<< "echo ~$SUDO_USER")
 # http://stackoverflow.com/a/246128
-BASEDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+BASEDIR="$(dirname -- "$BASH_SOURCE")"
 # Имя базы данных
-DB=firefly_iii
+DB=nginx_proxy_manager
 # Каталог локальных дампов БД
-LOCAL_DUMPS=/$HOME/backups/mysql/$DB
+LOCAL_DUMPS=$HOME/backups/mysql/$DB
 # Кол-во ядер
 THREADS=2
 
@@ -42,4 +42,5 @@ $BASEDIR/mydumper \
     --triggers \
     --events \
     --lock-all-tables \
-    --routines
+    --routines \
+    --dirty
