@@ -33,4 +33,9 @@ sudo apt-get -qq install \
     influxdb-client \
     default-mysql-client \
     postgresql-client \
-    redis-tools
+    redis-tools \
+    rsync \
+    smartmontools \
+    lm-sensors
+
+
