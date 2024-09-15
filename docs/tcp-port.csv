@@ -42,6 +42,7 @@ port,containers/$CONTAINER_NAME
 32469,plex
 50000,jenkins
 51413,transmission
+51821,wg-easy
 65001,bookstack
 65002,transmission
 65003,firefly-iii

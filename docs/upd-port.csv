@@ -11,5 +11,6 @@ port,containers/$CONTAINER_NAME
 32413,plex
 32414,plex
 51413,transmission
+51821,wg-easy
 65010,pi-hole
 65026,ntp
