@@ -16,12 +16,14 @@ source ../settings/settings-common.sh
 [ $UID -eq 0 ] || exec sudo bash "$0" "$@"
 
 docker run \
-    --env-file private.env \
     --env-file public.env \
     --cap-add=NET_ADMIN \
     --cap-add=SYS_MODULE \
-    --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
-    --sysctl="net.ipv4.ip_forward=1" \
+    --sysctl net.ipv4.ip_forward=1 \
+    --sysctl net.ipv4.conf.all.src_valid_mark=1 \
+    --sysctl net.ipv6.conf.all.disable_ipv6=0 \
+    --sysctl net.ipv6.conf.all.forwarding=1 \
+    --sysctl net.ipv6.conf.default.forwarding=1 \
     --name $CONTAINER_NAME \
     --hostname $CONTAINER_NAME.$DOCKER_HOST_DOMEN \
     --detach \
@@ -29,6 +31,7 @@ docker run \
     --volume /etc/localtime:/etc/localtime:ro \
     --volume /etc/timezone:/etc/timezone:ro \
     --volume $CONTAINER_NAME-conf:/etc/wireguard \
+    --volume /lib/modules:/lib/modules:ro \
     --publish 51820:51820/udp \
     --publish 51821:51821 \
     $HEALTHCHECK_SETTINGS \
